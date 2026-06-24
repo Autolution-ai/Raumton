@@ -1,38 +1,18 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { ArrowDown, ChevronRight } from 'lucide-react'
 
 const WORDS = ['Berlin', 'hört', 'besser.']
 
 export default function Hero() {
-  const videoRef = useRef<HTMLVideoElement>(null)
-
-  useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.play().catch(() => {})
-    }
-  }, [])
-
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#0A0A0A]">
-      {/* Video Background */}
+      {/* Dark Gradient Background */}
       <div className="absolute inset-0 z-0">
-        <video
-          ref={videoRef}
-          className="w-full h-full object-cover opacity-30"
-          autoPlay
-          muted
-          loop
-          playsInline
-          poster="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80"
-        >
-          <source src="" type="video/mp4" />
-        </video>
-        {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0A]/60 via-transparent to-[#0A0A0A]" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0A0A0A]/80 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0A0A0A] via-[#0F0F0F] to-[#0A0A0A]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(200,169,110,0.08),transparent)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_40%_at_80%_80%,rgba(200,169,110,0.04),transparent)]" />
       </div>
 
       {/* Decorative vertical line */}
