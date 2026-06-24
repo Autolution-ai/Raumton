@@ -188,7 +188,7 @@ export default function AnfrageFormular() {
                             key={key}
                             type={type}
                             placeholder={label}
-                            value={(form as Record<string, string>)[key] || ''}
+                            value={String((form as Record<string, unknown>)[key] ?? '')}
                             onChange={(e) => setForm((f) => ({ ...f, [key]: e.target.value }))}
                             className="w-full border border-[#E2DDD6] px-4 py-3 text-sm text-[#1C1917] placeholder:text-[#A8A29E] focus:border-[#B8955A] outline-none"
                           />
