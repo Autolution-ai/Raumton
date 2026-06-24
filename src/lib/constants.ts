@@ -97,7 +97,7 @@ export const TESTIMONIALS = [
   {
     id: 5,
     zitat:
-      'raumton hat unseren Showroom in eine Wohlfühloase verwandelt. Kunden bleiben länger, sind entspannter – und kaufen mehr. ROI in weniger als einem Jahr.',
+      'raumton hat unseren Showroom in eine Wohfühloase verwandelt. Kunden bleiben länger, sind entspannter – und kaufen mehr. ROI in weniger als einem Jahr.',
     name: 'Michael H.',
     position: 'Filialleiter',
     unternehmen: 'Berliner Einzelhandel',
@@ -164,18 +164,15 @@ export const FAQS = [
 ]
 
 export const KUNDEN_LOGOS = [
-  { name: 'Sparkasse', src: '/logos/sparkasse.svg' },
-  { name: 'HelloFresh', src: '/logos/hellofresh.svg' },
-  { name: 'BVG', src: '/logos/bvg.svg' },
-  { name: 'Commerzbank', src: '/logos/commerzbank.svg' },
-  { name: 'Deutsche Bahn', src: '/logos/deutschebahn.svg' },
-  { name: 'Lieferando', src: '/logos/lieferando.svg' },
-  { name: 'Berliner Philharmoniker', src: '/logos/philharmoniker.svg' },
-  { name: 'UNESCO', src: '/logos/unesco.svg' },
-  { name: 'Fraunhofer', src: '/logos/fraunhofer.svg' },
-  { name: 'ENERTRAG', src: '/logos/enertrag.svg' },
-  { name: 'Diakonie', src: '/logos/diakonie.svg' },
-  { name: 'DENA', src: '/logos/dena.svg' },
+  { name: 'Deutsche Bahn', src: 'https://logo.clearbit.com/deutschebahn.com' },
+  { name: 'BVG', src: 'https://logo.clearbit.com/bvg.de' },
+  { name: 'HelloFresh', src: 'https://logo.clearbit.com/hellofresh.de' },
+  { name: 'Commerzbank', src: 'https://logo.clearbit.com/commerzbank.de' },
+  { name: 'Sparkasse', src: 'https://logo.clearbit.com/sparkasse.de' },
+  { name: 'Berliner Philharmoniker', src: 'https://logo.clearbit.com/berliner-philharmoniker.de' },
+  { name: 'Fraunhofer', src: 'https://logo.clearbit.com/fraunhofer.de' },
+  { name: 'UNESCO', src: 'https://logo.clearbit.com/unesco.org' },
+  { name: 'Lieferando', src: 'https://logo.clearbit.com/lieferando.de' },
 ]
 
 export const LEISTUNGEN = [
