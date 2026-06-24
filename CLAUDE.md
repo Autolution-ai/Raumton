@@ -286,7 +286,7 @@ Details: siehe `CLAUDE-Master-Website Kopie.md`
 | Phase 0 | Onboarding | ✅ abgeschlossen |
 | Phase 1 | Recherche (Konkurrenz, Zielgruppe, Keywords) | ✅ abgeschlossen |
 | Phase 2 | Struktur | ✅ abgeschlossen |
-| Phase 3 | Build | ⬜ |
+| Phase 3 | Build | ✅ abgeschlossen |
 | Phase 4 | QA + DSGVO/Security | ⬜ |
 | Phase 5 | Deployment | ⬜ |
 
@@ -328,9 +328,9 @@ Details: siehe `CLAUDE-Master-Website Kopie.md`
 - **Subheadline:** „Individuelle Schallabsorber – geplant, gefertigt und montiert von raumton in Berlin-Schöneberg."
 - **CTA (primär):** „Jetzt kostenlose Beratung anfragen" → scrollt zu Anfrageformular
 - **CTA (sekundär):** „Referenzen ansehen" → /referenzen
-- **Visual:** Fullscreen-Video (Higgsfield) oder hochwertige Fotografie Showroom/Montage
+- **Visual:** Dunkler Gradient mit subtilen Gold-Akzenten
 - **Trust-Badge:** „1.500+ Projekte · 15+ Jahre · Made in Berlin"
-- **Animation:** GSAP ScrollTrigger — Headline-Wörter per SplitText einblenden, Video parallax
+- **Animation:** Framer Motion — Headline-Wörter word-by-word einblenden
 
 #### 3. Social Proof Strip (direkt unter Hero)
 - Logos der bekanntesten Kunden: BVG, Deutsche Bahn, HelloFresh, Berliner Philharmoniker, Commerzbank, Sparkasse, Fraunhofer
@@ -388,6 +388,7 @@ Details: siehe `CLAUDE-Master-Website Kopie.md`
   4. Kontaktdaten (Name · E-Mail · Tel · Adresse optional)
 - **Bestätigung:** Inline-Success-Message „Danke! Wir melden uns innerhalb von 1 Werktag."
 - **Animation:** Progress-Bar zwischen Steps, smooth transitions
+- **Backend:** Resend API via Next.js Server Action
 
 #### 10. FAQ Preview (NEU)
 - **Headline:** „Häufige Fragen"
