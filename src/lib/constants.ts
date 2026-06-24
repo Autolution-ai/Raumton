@@ -117,7 +117,7 @@ export const FAQS = [
     frage: 'Was kostet eine Raumakustik-Lösung ungefähr?',
     antwort:
       'Die Kosten hängen von Raumgröße, Produkt-Mix und Montageaufwand ab. Als Orientierung: Ein einfacher Konferenzraum (ca. 30 m²) liegt ab ca. 1.500–3.000 €. Großraumbüros oder Restaurants werden individuell kalkuliert. Alle Preise verstehen sich inkl. Planung und Montage. Wir erstellen Ihr persönliches Angebot kostenlos.',
-    kategorie: 'preise',
+    kategorie: 'ablauf',
   },
   {
     id: 3,
