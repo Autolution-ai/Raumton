@@ -87,21 +87,18 @@ ISTA, Fraunhofer, Hella Aglaia, Lekker, Securitas, Spreewaldhof
 
 ---
 
-## OFFENE FRAGEN – VOM NUTZER ZU BEANTWORTEN
+## PROJEKTENTSCHEIDUNGEN – BESTÄTIGT
 
-> Die folgenden Punkte konnten nicht aus der bestehenden Website entnommen werden.
-> Bitte beantworten, bevor Phase 1 (Recherche) beginnt.
-
-| # | Frage | Status |
+| # | Frage | Antwort |
 |---|---|---|
-| 1 | Was ist das **Hauptziel** des Relaunches? (Mehr Anfragen / Modernisierung / neue Features) | ⬜ offen |
-| 2 | Gibt es ein **Briefing-Dokument** oder Intake-Formular? | ⬜ offen |
-| 3 | **Farben & Logo:** Gibt es ein CI-Manual? Soll die CI der neuen Website von der alten abweichen? | ⬜ offen |
-| 4 | **Stil:** Bold/Industriell \| Minimalistisch \| Warm/Nahbar \| Energetisch \| Luxuriös | ⬜ offen |
-| 5 | **Pflicht-Sektionen:** Was muss NEU sein? (Karriere, FAQ, Preise, Blog, Konfigurator…) | ⬜ offen |
-| 6 | **Mitbewerber / Inspiration:** URLs von Websites die gut gefallen oder Konkurrenten | ⬜ offen |
-| 7 | **Sprache:** Bleibt Deutsch? Englische Version geplant? | ⬜ offen |
-| 8 | **Domain:** Selbe URL (raumton.com) oder Wechsel? | ⬜ offen |
+| 1 | **Hauptziel** des Relaunches | **Mehr Anfragen** – Website als Lead-Maschine |
+| 2 | **Briefing-Dokument** | Keines – CLAUDE.md ist das Briefing |
+| 3 | **CI / Farben** | **CI bleibt gleich** – bestehende Farben und Logo übernehmen |
+| 4 | **Stil** | **Premium / Luxuriös** – dunkel, hochwertig, viel Weißraum |
+| 5 | **Neue Sektionen** | **FAQ** hinzufügen |
+| 6 | **Mitbewerber** | Claude recherchiert eigenständig – Stärken nutzen, Schwächen besser machen |
+| 7 | **Sprache** | **Nur Deutsch** |
+| 8 | **Domain** | Selbe URL: raumton.com |
 
 ---
 
@@ -140,8 +137,8 @@ Details: siehe `CLAUDE-Master-Website Kopie.md`
 
 | Phase | Inhalt | Status |
 |---|---|---|
-| Phase 0 | Onboarding (Offene Fragen oben beantworten) | 🔄 in Arbeit |
-| Phase 1 | Recherche (Crawl alt, Konkurrenz, Zielgruppe, Keywords) | ⬜ |
+| Phase 0 | Onboarding | ✅ abgeschlossen |
+| Phase 1 | Recherche (Crawl alt, Konkurrenz, Zielgruppe, Keywords) | 🔄 in Arbeit |
 | Phase 2 | Struktur | ⬜ |
 | Phase 3 | Build | ⬜ |
 | Phase 4 | QA + DSGVO/Security | ⬜ |
