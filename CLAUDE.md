@@ -201,34 +201,78 @@ ISTA, Fraunhofer, Hella Aglaia, Lekker, Securitas, Spreewaldhof
 
 ---
 
+---
+
+### Nationale Wettbewerber (Website-Analyse)
+
+#### EASY Noise Control — easy-noisecontrol.de
+- **Hero:** "Ihr Spezialist für Raumakustik" / #wirsindakustik
+- **Stärken:** 1.207 verifizierte Bewertungen (Score 9.2/10), 500+ Projekte/Jahr, Online-Shop, eigene Messsoftware "Acoustic Advisor", Webshop mit Direktkauf
+- **Schwächen:** Keine Berliner Verankerung, sehr breit (wirkt generisch), kein Eigenfertigungsnachweis, keine emotionale Markenstory
+
+#### WILSON Akustik — wilson-akustik.de
+- **Hero:** Projektreferenzen im Slider, kein klarer Claim
+- **Stärken:** Authentische Expertenstory seit 1986 (brit. Musikszene), technische Tiefe, DIN-Normen-Kompetenz, Denkmalschutz-Nische
+- **Schwächen:** Website veraltet, keine Bewertungen, sehr wenige Referenzprojekte sichtbar, keine Preisinfo
+
+#### aixFOAM — aixfoam.de
+- **Hero:** "Schallabsorber gegen Lärm und Hall – seit über 65 Jahren!"
+- **Stärken:** 65 Jahre Marktpräsenz, breiteste Produktpalette, günstigste Preise, Online-Shop, 3D-Raumplaner-Tool, echte Kundenbewertungen (Trusted Shops), 7 Länder-Shops
+- **Schwächen:** Kein Installations-Service, Schaumstoff-Ästhetik wirkt im Premiumbereich limitierend, kaum emotionale Differenzierung
+
+#### TEXAA — texaa.de
+- **Hero:** "Schallwirksame Paneele und akustische Lösungen"
+- **Stärken:** Ästhetisch führend, klare Architekten-Nische, eigenes Textil "Aeria" als Differenzierungsmerkmal, Büro Frankfurt
+- **Schwächen:** Null Preistransparenz, kein Online-Kauf, ausschließlich Architekten-Vertrieb, kein Social Proof in Zahlen
+
+#### acousticpearls — acousticpearls.de
+- **Hero:** "Das Gefühl von Raum" / "Hocheffektive Akustiklösungen mit maximaler Designvielfalt"
+- **Stärken:** Made in Germany, Greenguard-zertifiziert, eigene Planungsapp (DIN 18041), Händlernetz
+- **Schwächen:** Website teilweise 404, kein Direktvertrieb, sehr schmaler Vertriebskanal, Website technisch instabil
+
+---
+
 ### Positionierungs-Matrix
 
-**Was ALLE Konkurrenten machen:**
-- Betonen Qualität und Erfahrung
-- Zeigen Produkte und Anwendungsfälle
-- Bieten Kontaktformular/Telefon
+**Was machen ALLE gleich — davon abheben:**
 
-**Was KEINER so kommuniziert wie raumton:**
-- Showroom in Berlin (physisch erlebbar) → **raumton's stärkstes Alleinstellungsmerkmal**
-- 1.500+ Kunden **mit Namen/Logos belegt** (DAX40, Bundesministerien)
-- Zweite Generation Familienunternehmen + Nachhaltigkeitsstory kombiniert
-- Konkrete Lieferzeit (3 Wochen) als Versprechen
+| Gemeinsamkeit | Differenzierungschance für raumton |
+|---|---|
+| Kein Self-Service / nur Kontakt-Formular | Online-Anfrage-Tool mit Raumtyp + m²-Eingabe |
+| Keine/kaum verifizierte Kundenbewertungen mit Zitaten | Google-Widget + Testimonials mit Name/Firma/Logo |
+| Kein Educational Content | Akustik-Ratgeber, Guides, Rechner → SEO + Vertrauen |
+| Ergebnisse in Zahlen kaum kommuniziert | "Nachhall von X auf Y Sek." als Ergebnisversprechen |
+| Kaum Video-Content | Vorher/Nachher-Demo, Showroom-Tour, Montage-Zeitraffer |
 
-**Positionierungslücken – dort angreifen:**
-1. **Showroom als Vertrauensanker** prominenter herausstellen als jeder Wettbewerber
-2. **Nachhaltigkeitsnachweis** (keine Mineralfasern, 100% recycelbar) als eigenes Trust-Signal – kein Berliner Wettbewerber kommuniziert das so klar
-3. **Familien-Story** (Ulli Müller → Leo Ripper, 2. Generation) als emotionalen Differenziator nutzen
-4. **Konkrete Zahlen** (1.500+ Kunden, 15+ Jahre, 3 Wochen Lieferzeit, 300+ Farben) überall sichtbar machen
+**Was macht KEINER — dort angreifen:**
+
+| Lücke im Markt | Opportunity |
+|---|---|
+| Keiner zeigt Vorher/Nachher-Messungen (RT60) systematisch | Case Studies mit Dezibel-Zahlen → nachprüfbarer Beweis |
+| Keiner hat klar kommunizierte Garantie/Nachbesserung | "raumton-Versprechen": Kostenlose Nachmessung 4 Wochen nach Montage |
+| Keiner bietet transparentes Einstiegspaket | "Starter-Paket Konferenzraum ab X €" |
+| Keiner zeigt Mitarbeiter/Manufaktur von innen | "Gefertigt von [Name] in Berlin-Schöneberg" |
+| Kein Berliner Lokalstolz als Markenbestandteil | "Berliner Manufaktur seit 2006" — EASY/WILSON kommen aus NRW |
+| Kein Nachhaltigkeit-Nachweis der eigenen Produktion | Materialien, kurze Lieferwege, Recycling als eigene Story |
 
 ---
 
 ### Top 5 Empfehlungen für die neue raumton-Website
 
-1. **Showroom-CTA in die Navigation** – "Showroom besuchen" als Hauptaktion neben "Anfrage stellen"
-2. **Kundenlogo-Carousel sofort unter dem Hero** – Rolls-Royce, Auswärtiges Amt, Vattenfall, Deutsche Bahn sehen → Vertrauen sofort
-3. **Nachhaltigkeit als eigene Sektion** – Keine Mineralfasern, 100% recycelbar, Berliner Produktion → Kein Konkurrent macht das so explizit
-4. **Prozess-Timeline visuell** – 4 Schritte (Anfrage → Analyse → Angebot → Montage) prominent als "So einfach geht's"
-5. **Zweite-Generation-Story** – Leo Ripper sichtbar machen. Menschen kaufen von Menschen. Kein Wettbewerber hat eine solche Story.
+**1. Verifizierten Social Proof skalieren**
+EASY Noise Control hat 1.207 Bewertungen Score 9.2 — raumton hat keine einzige öffentliche Kundenstimme, obwohl die Referenzliste beeindruckender ist. Sofortmaßnahme: Google-Bewertungswidget auf der Startseite + 10 Testimonials mit Name/Position/Logo aktiv einsammeln.
+
+**2. Digitalen Erstkontakt radikal vereinfachen**
+4-Felder-Online-Anfrage-Formular: Raumtyp → Fläche (m²) → Herausforderung → Kontakt. Automatische Bestätigung: "Wir melden uns innerhalb von 1 Werktag." Kein einziger Wettbewerber bietet das — echter Marktweißraum.
+
+**3. Ergebnisse statt Produkte kommunizieren — mit Messzahlen**
+Niemand kommuniziert konsequent messbare Ergebnisse. Hero-Versprechen: "raumton reduziert Ihren Nachhall messbar — durchschnittlich von X auf Y Sekunden." Jede Case Study mit RT60-Vorher/Nachher → nachprüfbar und einzigartig.
+
+**4. Berliner Lokalbindung als Markenstärke aktiv ausspielen**
+EASY kommt aus Mönchengladbach, WILSON aus Westmünsterland, aixFOAM aus NRW. Raumton ist die einzige Berliner Fertigung. "Gefertigt in Berlin-Schöneberg" als permanenter Badge. Sektion "Unsere Werkstatt" mit echten Mitarbeitern und Maschinen.
+
+**5. Content-Hub aufbauen — SEO + Vertrauen + passive Leads**
+raumton.com hat null Content. aixFOAM dominiert Google mit FAQ-Seiten, EASY rankt über Raumtyp-Guides. Quartalsweise 4 Ratgeber-Seiten: "Wie laut ist Ihr Büro wirklich?", "Konferenzraum akustisch optimieren", "Schallabsorber vs. Akustiksegel", "Raumakustik für Restaurants". Passiver Lead-Strom ohne Kaltakquise.
 
 ---
 
