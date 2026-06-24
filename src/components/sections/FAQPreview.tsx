@@ -1,92 +1,90 @@
 'use client'
 
 import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion, AnimatePresence, useInView } from 'framer-motion'
+import { useRef } from 'react'
 import Link from 'next/link'
 import { Plus, Minus, ArrowRight } from 'lucide-react'
-import { fadeUp, staggerContainer, viewportOptions } from '@/lib/animations'
-import { FAQS } from '@/lib/constants'
 
-const PREVIEW_IDS = [1, 2, 3, 4, 5]
-const PREVIEW_FAQS = FAQS.filter((f) => PREVIEW_IDS.includes(f.id))
+const FAQS = [
+  { f: 'Wie lange dauert ein Projekt von Beratung bis Montage?', a: 'In der Regel 3–5 Wochen: ca. 1 Woche für Beratung und Planung, dann 3 Wochen Fertigungs- und Lieferzeit, plus Montagetermin nach Absprache.' },
+  { f: 'Was kostet eine Raumakustik-Lösung ungefähr?', a: 'Das hängt stark von Raumgröße, Produkt und Umfang ab. Ein erstes Angebot erstellen wir kostenlos und unverbindlich nach dem Beratungsgespräch.' },
+  { f: 'Kommen Sie auch außerhalb von Berlin?', a: 'Ja, wir arbeiten deutschlandweit. Außerhalb Berlins können Anfahrtskosten anfallen — sprechen Sie uns einfach an.' },
+  { f: 'Sind Ihre Materialien nachhaltig?', a: 'Wir verwenden keine mineralfaserhaltigen Materialien. Alle unsere Produkte sind 100 % recycelbar. Kurze Lieferwege durch eigene Berliner Produktion.' },
+  { f: 'Kann ich Muster vor dem Kauf bestellen?', a: 'Ja. Wir empfehlen einen Besuch in unserem Showroom in Berlin-Schöneberg, wo Sie Qualität und Farben direkt erleben können. Auf Anfrage senden wir auch Muster zu.' },
+]
 
 export default function FAQPreview() {
   const [open, setOpen] = useState<number | null>(null)
+  const ref = useRef(null)
+  const inView = useInView(ref, { once: true, margin: '-60px' })
 
   return (
-    <section className="section-padding bg-[#0D0D0D]">
-      <div className="container-narrow">
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={viewportOptions}
-          variants={fadeUp}
-          className="text-center mb-14"
-        >
-          <span className="text-[#C8A96E] text-sm tracking-widest uppercase mb-4 block">
-            FAQ
-          </span>
-          <h2
-            className="text-4xl sm:text-5xl text-white"
-            style={{ fontFamily: 'var(--font-playfair), serif' }}
-          >
-            Häufige Fragen.
-          </h2>
-        </motion.div>
+    <section className="bg-white section-padding">
+      <div className="container-wide" ref={ref}>
+        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-14">
+          <div>
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6 }}
+              className="flex items-center gap-3 mb-4"
+            >
+              <div className="divider" />
+              <span className="section-label">Häufige Fragen</span>
+            </motion.div>
+            <motion.h2
+              initial={{ opacity: 0, y: 24 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              style={{ fontFamily: 'var(--font-display), serif' }}
+              className="text-[clamp(2rem,4vw,3.5rem)] font-light text-[#1C1917]"
+            >
+              Ihre Fragen. Unsere Antworten.
+            </motion.h2>
+          </div>
+          <motion.div initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : {}} transition={{ delay: 0.2 }}>
+            <Link href="/faq" className="flex items-center gap-2 text-sm text-[#B8955A] hover:gap-3 transition-all font-medium">
+              Alle Fragen <ArrowRight size={14} />
+            </Link>
+          </motion.div>
+        </div>
 
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={viewportOptions}
-          variants={staggerContainer}
-          className="space-y-px"
-        >
-          {PREVIEW_FAQS.map((faq) => (
-            <motion.div key={faq.id} variants={fadeUp} className="border border-[#1A1A1A]">
+        <div className="divide-y divide-[#E2DDD6]">
+          {FAQS.map((faq, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0 }}
+              animate={inView ? { opacity: 1 } : {}}
+              transition={{ duration: 0.5, delay: 0.1 + i * 0.07 }}
+            >
               <button
-                onClick={() => setOpen(open === faq.id ? null : faq.id)}
-                className="w-full flex items-start justify-between gap-4 p-6 text-left bg-[#141414] hover:bg-[#171717] transition-colors"
+                onClick={() => setOpen(open === i ? null : i)}
+                className="w-full flex items-center justify-between gap-4 py-5 text-left group"
               >
-                <span className="text-white text-base font-medium pr-4">{faq.frage}</span>
-                <span className="flex-shrink-0 mt-0.5 text-[#C8A96E]">
-                  {open === faq.id ? <Minus size={18} /> : <Plus size={18} />}
+                <span className="text-[#1C1917] text-sm font-medium group-hover:text-[#B8955A] transition-colors">
+                  {faq.f}
+                </span>
+                <span className="text-[#B8955A] flex-shrink-0">
+                  {open === i ? <Minus size={16} /> : <Plus size={16} />}
                 </span>
               </button>
               <AnimatePresence>
-                {open === faq.id && (
+                {open === i && (
                   <motion.div
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: 'auto', opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.3, ease: 'easeInOut' }}
+                    transition={{ duration: 0.3 }}
                     className="overflow-hidden"
                   >
-                    <div className="px-6 pb-6 bg-[#141414]">
-                      <p className="text-[#A0A0A0] leading-relaxed text-sm border-t border-[#1A1A1A] pt-4">
-                        {faq.antwort}
-                      </p>
-                    </div>
+                    <p className="pb-5 text-[#6B6560] text-sm leading-relaxed">{faq.a}</p>
                   </motion.div>
                 )}
               </AnimatePresence>
             </motion.div>
           ))}
-        </motion.div>
-
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={viewportOptions}
-          variants={fadeUp}
-          className="text-center mt-10"
-        >
-          <Link
-            href="/faq"
-            className="inline-flex items-center gap-2 text-sm text-[#C8A96E] hover:gap-3 transition-all"
-          >
-            Alle {FAQS.length} Fragen ansehen <ArrowRight size={14} />
-          </Link>
-        </motion.div>
+        </div>
       </div>
     </section>
   )
