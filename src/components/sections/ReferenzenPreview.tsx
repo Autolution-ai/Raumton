@@ -10,19 +10,19 @@ const PROJEKTE = [
   {
     kunde: 'Brasserie Colette Tim Raue',
     branche: 'Gastronomie',
-    beschreibung: 'Wandabsorber und Deckensegel für das Berliner Restaurant — weniger Lärm, mehr Genuss.',
+    beschreibung: 'Wandabsorber und Deckensegel für das Berliner Gourmet-Restaurant. Kein einziger Schließtag während der Installation.',
     bild: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=700&q=80',
   },
   {
     kunde: 'Auswärtiges Amt Berlin',
     branche: 'Öffentlich',
-    beschreibung: 'Akustikoptimierung für Konferenz- und Besprechungsräume in der Bundesbehörde.',
-    bild: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=700&q=80',
+    beschreibung: 'Konferenz- und Besprechungsräume einer Bundesbehörde. Repräsentativ im Auftritt, messbar im Ergebnis.',
+    bild: 'https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=700&q=80',
   },
   {
     kunde: 'RepRisk Germany GmbH',
     branche: 'Büro',
-    beschreibung: 'Großraumbüro in Berlin — maßgefertigte Decken- und Wandabsorber in Corporate-Farben.',
+    beschreibung: 'Offener Grundriss, harte Böden, viele Schreibtische. Maßgefertigte Absorber in den Corporate-Farben des Unternehmens.',
     bild: 'https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=700&q=80',
   },
 ]

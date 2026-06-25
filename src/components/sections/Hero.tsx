@@ -60,8 +60,8 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.7 }}
               className="text-[#6B6560] text-lg leading-relaxed max-w-md mb-10"
             >
-              raumton plant, fertigt und montiert individuelle Schallabsorber –
-              direkt aus Berlin-Schöneberg, seit fast zwei Jahrzehnten.
+              raumton plant, fertigt und montiert individuelle Schallabsorber.
+              Direkt aus Berlin-Schöneberg, seit fast zwei Jahrzehnten.
             </motion.p>
 
             <motion.div
