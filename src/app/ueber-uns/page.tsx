@@ -46,17 +46,22 @@ export default function UeberUnsPage() {
           </div>
         </section>
 
-        {/* Story */}
+        {/* Story mit echtem Foto */}
         <section className="bg-white section-padding">
           <div className="container-wide">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
-              <div className="relative h-[480px] overflow-hidden">
+              <div className="relative h-[500px] overflow-hidden">
                 <Image
-                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80"
-                  alt="raumton Werkstatt Berlin"
+                  src="https://raw.githubusercontent.com/Autolution-ai/Raumton/main/Raumton-Inhaber.webp"
+                  alt="Ulli Müller und Leo Ripper in der raumton Werkstatt Berlin-Schöneberg"
                   fill
-                  className="object-cover"
+                  className="object-cover object-top"
+                  priority
                 />
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/50 to-transparent p-6">
+                  <p className="text-white text-sm font-medium">Ulli Müller &amp; Leo Ripper</p>
+                  <p className="text-white/70 text-xs">Gründer &amp; Geschäftsführung · Berlin-Schöneberg</p>
+                </div>
               </div>
               <div>
                 <h2

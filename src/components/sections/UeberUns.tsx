@@ -44,13 +44,13 @@ export default function UeberUns() {
             initial={{ opacity: 0, x: -20 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8 }}
-            className="relative h-[400px] lg:h-[520px]"
+            className="relative h-[400px] lg:h-[520px] overflow-hidden"
           >
             <Image
-              src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=85"
-              alt="raumton Manufaktur Berlin-Schöneberg"
+              src="https://raw.githubusercontent.com/Autolution-ai/Raumton/main/Raumton-Inhaber.webp"
+              alt="Ulli Müller und Leo Ripper – Gründer und Geschäftsführer von raumton in der Berliner Werkstatt"
               fill
-              className="object-cover"
+              className="object-cover object-top"
             />
           </motion.div>
 
