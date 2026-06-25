@@ -5,7 +5,7 @@ export const REFERENZEN = [
     branche: 'Industrie',
     ort: 'Berlin',
     beschreibung:
-      'Akustikoptimierung eines Konferenzzentrums – messbar bessere Sprachverständlichkeit bei Meetings.',
+      'Im Konferenzzentrum mussten alle lauter sprechen – weil alle lauter sprechen mussten. Dieser Kreislauf ist jetzt durchbrochen.',
     bild: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80',
     tag: 'buero',
   },
@@ -15,7 +15,7 @@ export const REFERENZEN = [
     branche: 'Gastronomie',
     ort: 'Berlin',
     beschreibung:
-      'Elegante Wandabsorber im Restaurantdesign integriert – ohne Kompromiss bei der Ästhetik.',
+      'Die Wandabsorber verschwinden im Raumdesign der Brasserie. Der Unterschied ist trotzdem ab dem ersten Abend zu hören.',
     bild: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80',
     tag: 'gastro',
   },
@@ -25,7 +25,7 @@ export const REFERENZEN = [
     branche: 'Bildung',
     ort: 'Berlin',
     beschreibung:
-      'Lärmreduzierung in Gruppenräumen – mehr Ruhe für Kinder und Erzieherinnen.',
+      'Gruppenräume, in denen Kinder sich gegenseitig verstehen. Das klingt selbstverständlich – war es hier vorher nicht.',
     bild: 'https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&q=80',
     tag: 'bildung',
   },
@@ -35,7 +35,7 @@ export const REFERENZEN = [
     branche: 'Öffentlich',
     ort: 'Berlin',
     beschreibung:
-      'Maßgeschneiderte Deckenabsorber für Konferenzräume in repräsentativer Bundesbehörde.',
+      'Maßgeschneiderte Deckenabsorber für Berliner Bundesbehörde – repräsentativ im Auftritt, messbar im Ergebnis.',
     bild: 'https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?w=800&q=80',
     tag: 'buero',
   },
@@ -45,7 +45,7 @@ export const REFERENZEN = [
     branche: 'Büro',
     ort: 'Berlin',
     beschreibung:
-      'Großraumbüro-Optimierung mit Decken- und Wandabsorbern – deutlich reduzierter Geräuschpegel.',
+      'Offener Grundriss, harte Böden, viele Schreibtische. Eigentlich ein akustischer Alptraum. Jetzt nicht mehr.',
     bild: 'https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800&q=80',
     tag: 'buero',
   },
@@ -55,7 +55,7 @@ export const REFERENZEN = [
     branche: 'Gastronomie',
     ort: 'Berlin',
     beschreibung:
-      'Akustische Optimierung bei laufendem Betrieb – Gäste sprechen jetzt miteinander, nicht gegen den Lärm.',
+      'Optimierung bei laufendem Betrieb, kein einziger Schließtag. Gäste unterhalten sich jetzt miteinander – nicht mehr gegen den Raum.',
     bild: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80',
     tag: 'gastro',
   },
@@ -65,15 +65,15 @@ export const TESTIMONIALS = [
   {
     id: 1,
     zitat:
-      'Wir haben die Veränderung sofort gespürt. Meetings im Konferenzraum sind endlich wieder produktiv – kein Nachhall, keine Erschöpfung. raumton hat exakt das geliefert, was versprochen wurde.',
+      'Der Konferenzraum ist endlich wieder benutzbar. Vorher haben wir Meetings angespannt beendet – wegen des Halls, nicht wegen des Inhalts. Seit raumton schreiben wir einfach das Protokoll und gehen.',
     name: 'Sandra K.',
     position: 'Office Managerin',
-    unternehmen: 'Berliner Technologieunternehmen',
+    unternehmen: 'Technologieunternehmen, Berlin',
   },
   {
     id: 2,
     zitat:
-      'Unsere Gäste haben es sofort bemerkt. Die Atmosphäre ist ruhiger, angenehmer – und die Bewertungen für unsere Gastronomie sind seitdem messbar besser.',
+      'Ein Gast hat mich gefragt, was ich verändert habe – er wusste nicht genau warum, aber er fand es angenehmer. Das ist eigentlich das größte Kompliment.',
     name: 'Thomas R.',
     position: 'Inhaber',
     unternehmen: 'Restaurant, Berlin Mitte',
@@ -81,7 +81,7 @@ export const TESTIMONIALS = [
   {
     id: 3,
     zitat:
-      'Professionell von Anfang bis Ende. Die Beratung war ehrlich, das Design perfekt auf unsere CI abgestimmt, die Montage blitzsauber. Absolute Empfehlung.',
+      'Die Beratung war direkt und ehrlich. Kein Upselling, keine Übertreibungen – einfach: das passt für Ihren Raum, das nicht. Das hat Vertrauen geschaffen, bevor auch nur ein Absorber an der Wand hing.',
     name: 'Dr. Monika S.',
     position: 'Geschäftsführerin',
     unternehmen: 'Unternehmensberatung, Berlin',
@@ -89,7 +89,7 @@ export const TESTIMONIALS = [
   {
     id: 4,
     zitat:
-      'Endlich können unsere Kinder sich konzentrieren. Der Geräuschpegel in den Gruppenräumen ist dramatisch gesunken. Das Team war toll und sehr schnell.',
+      'Die Kinder sind ruhiger geworden – nicht weil wir es verlangt haben, sondern weil der Raum es ihnen einfach ermöglicht. Ich hätte nicht gedacht, dass Akustik so einen Unterschied macht.',
     name: 'Katrin W.',
     position: 'Kita-Leiterin',
     unternehmen: 'Kita Jeverstraße, Berlin',
@@ -97,7 +97,7 @@ export const TESTIMONIALS = [
   {
     id: 5,
     zitat:
-      'raumton hat unseren Showroom in eine Wohfühloase verwandelt. Kunden bleiben länger, sind entspannter – und kaufen mehr. ROI in weniger als einem Jahr.',
+      'Kunden setzen sich jetzt hin. Sie schauen länger, fragen mehr. Früher sind sie einfach durchgelaufen. Ich hatte den Unterschied unterschätzt, bevor ich ihn gesehen habe.',
     name: 'Michael H.',
     position: 'Filialleiter',
     unternehmen: 'Berliner Einzelhandel',
@@ -117,7 +117,7 @@ export const FAQS = [
     frage: 'Was kostet eine Raumakustik-Lösung ungefähr?',
     antwort:
       'Die Kosten hängen von Raumgröße, Produkt-Mix und Montageaufwand ab. Als Orientierung: Ein einfacher Konferenzraum (ca. 30 m²) liegt ab ca. 1.500–3.000 €. Großraumbüros oder Restaurants werden individuell kalkuliert. Alle Preise verstehen sich inkl. Planung und Montage. Wir erstellen Ihr persönliches Angebot kostenlos.',
-    kategorie: 'ablauf',
+    kategorie: 'preise',
   },
   {
     id: 3,
@@ -181,7 +181,7 @@ export const LEISTUNGEN = [
     title: 'Büro & Großraumbüro',
     headline: 'Mehr Konzentration. Weniger Lärm.',
     beschreibung:
-      'Wir optimieren Ihre Büroakustik messbar – für konzentriertes Arbeiten, produktive Meetings und weniger Mitarbeiterfluktuation.',
+      'Wir messen, planen und optimieren Ihre Büroakustik – damit Mitarbeiter sich konzentrieren können, Meetings funktionieren und niemand nach Feierabend erschöpft nach Hause geht.',
     icon: 'building-2',
     punkte: [
       'Großraumbüros & Open Spaces',
@@ -195,7 +195,7 @@ export const LEISTUNGEN = [
     title: 'Gastronomie & Restaurant',
     headline: 'Gäste bleiben länger, wenn es angenehm ist.',
     beschreibung:
-      'Schlechte Akustik kostet Umsatz. Wir integrieren Schallabsorber so dezent in Ihr Raumdesign, dass Gäste die Lösung nicht sehen – aber sofort fühlen.',
+      'Zu laute Restaurants verlieren Gäste – still und ohne Kündigung. Wir integrieren Schallabsorber so, dass Gäste die Lösung nicht sehen, aber sofort merken, dass sie sich wohlfühlen.',
     icon: 'utensils',
     punkte: [
       'Restaurants & Cafés',
@@ -207,9 +207,9 @@ export const LEISTUNGEN = [
   {
     slug: 'bildung',
     title: 'Bildung & Kita',
-    headline: 'Lernen braucht Stille.',
+    headline: 'Kinder werden nicht ruhiger befohlen.',
     beschreibung:
-      'Kinder und Lehrkräfte sind besonders empfindlich gegenüber Lärm. Mit unseren robusten, bunten Absorbern schaffen wir angenehme Lernumgebungen.',
+      'Aber wenn der Raum es zulässt, werden sie es von selbst. Unsere robusten, farbigen Absorber passen in jede Lernumgebung – ohne Einschränkungen für den laufenden Betrieb.',
     icon: 'graduation-cap',
     punkte: [
       'Kitas & Krippen',
@@ -225,24 +225,24 @@ export const PROZESS_SCHRITTE = [
     nr: '01',
     title: 'Kostenlose Beratung',
     beschreibung:
-      'Telefonisch oder direkt vor Ort in Berlin-Schöneberg. Wir hören zu und verstehen Ihre Situation.',
+      'Telefonisch, per Video oder direkt im Showroom – wir hören zu, bevor wir irgendetwas empfehlen.',
   },
   {
     nr: '02',
     title: 'Messung & Analyse',
     beschreibung:
-      'Professionelle RT60-Messung Ihres Raumes. Sie erhalten einen Bericht mit Ist-Zustand und Prognose.',
+      'Wir messen die Akustik Ihres Raumes und zeigen Ihnen, wo das Problem liegt – und was danach realistisch besser wird.',
   },
   {
     nr: '03',
     title: 'Planung & Design',
     beschreibung:
-      'Individuelle Lösung mit 3D-Visualisierung. Farben, Formen und Materialien passend zu Ihrem Raum.',
+      'Individuelle Lösung mit 3D-Visualisierung. Farben, Formen und Materialien passend zu Ihrem Raum – und Ihrem CI.',
   },
   {
     nr: '04',
     title: 'Fertigung & Montage',
     beschreibung:
-      'Made in Berlin-Schöneberg. Montage in der Regel in einem Tag – blitzsauber und termingerecht.',
+      'Gefertigt in Berlin-Schöneberg. Montage in der Regel in einem Tag – blitzsauber und termingerecht.',
   },
 ]
