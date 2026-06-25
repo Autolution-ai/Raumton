@@ -299,7 +299,7 @@ Details: siehe `CLAUDE-Master-Website Kopie.md`
 ```
 /                    → Startseite (Hauptkonversionsseite)
 /leistungen          → Leistungsübersicht + Einzelseiten
-/leistungen/buero    → Akustik für Büros / Großraumbüro
+/leistungen/buero    → Akustik für Büros / Großraumbuero
 /leistungen/gastro   → Akustik für Gastronomie / Restaurants
 /leistungen/bildung  → Akustik für Bildungseinrichtungen
 /referenzen          → Referenzprojekte (Case Studies)
@@ -318,27 +318,27 @@ Details: siehe `CLAUDE-Master-Website Kopie.md`
 #### 1. Navigation (sticky, transparent → solid on scroll)
 - Logo links
 - Links: Leistungen | Referenzen | Showroom | Über uns | FAQ
-- CTA rechts: „Kostenlos beraten lassen" (Primär-Button, filled)
+- CTA rechts: „Kostenlos beraten lassen“ (Primär-Button, filled)
 - Mobile: Hamburger → Fullscreen Overlay
 - **Animation:** Fade-in on load, background blur transition on scroll
 
 #### 2. Hero — Hauptversprechen
-- **Headline:** „Berlin hört besser. Seit 2006."
-  *(Alternativ: „Wir machen Räume angenehm leise.")*
-- **Subheadline:** „Individuelle Schallabsorber – geplant, gefertigt und montiert von raumton in Berlin-Schöneberg."
-- **CTA (primär):** „Jetzt kostenlose Beratung anfragen" → scrollt zu Anfrageformular
-- **CTA (sekundär):** „Referenzen ansehen" → /referenzen
-- **Visual:** Dunkler Gradient mit subtilen Gold-Akzenten
-- **Trust-Badge:** „1.500+ Projekte · 15+ Jahre · Made in Berlin"
-- **Animation:** Framer Motion — Headline-Wörter word-by-word einblenden
+- **Headline:** „Berlin hört besser. Seit 2006.“
+  *(Alternativ: „Wir machen Räume angenehm leise.“)*
+- **Subheadline:** „Individuelle Schallabsorber – geplant, gefertigt und montiert von raumton in Berlin-Schöneberg.“
+- **CTA (primär):** „Jetzt kostenlose Beratung anfragen“ → scrollt zu Anfrageformular
+- **CTA (sekundär):** „Referenzen ansehen“ → /referenzen
+- **Visual:** Fullscreen-Video (Higgsfield) oder hochwertige Fotografie Showroom/Montage
+- **Trust-Badge:** „1.500+ Projekte · 15+ Jahre · Made in Berlin“
+- **Animation:** GSAP ScrollTrigger — Headline-Wörter per SplitText einblenden, Video parallax
 
 #### 3. Social Proof Strip (direkt unter Hero)
 - Logos der bekanntesten Kunden: BVG, Deutsche Bahn, HelloFresh, Berliner Philharmoniker, Commerzbank, Sparkasse, Fraunhofer
 - Laufband (infinite horizontal marquee)
-- **Text oben:** „Vertrauen von über 1.500 Kunden – darunter:"
+- **Text oben:** „Vertrauen von über 1.500 Kunden – darunter:“
 
 #### 4. Problem / Pain (Warum Akustik wichtig ist)
-- **Headline:** „Lärm kostet Konzentration. Hall kostet Aufträge."
+- **Headline:** „Lärm kostet Konzentration. Hall kostet Aufträge.“
 - 3 Kacheln mit Icon + kurzer Copy:
   - Großraumbüro: Mitarbeiterproduktivität sinkt bei >55 dB
   - Restaurant: Gäste bleiben kürzer, wenn es zu laut ist
@@ -346,7 +346,7 @@ Details: siehe `CLAUDE-Master-Website Kopie.md`
 - **Animation:** Staggered fade-in on scroll
 
 #### 5. Leistungen (Services)
-- **Headline:** „Alles aus einer Hand — von der Messung bis zur Montage"
+- **Headline:** „Alles aus einer Hand — von der Messung bis zur Montage“
 - **Prozess-Visualisierung (4 Schritte):**
   1. Kostenlose Beratung & Messung
   2. Individuelle Planung & Design
@@ -357,43 +357,42 @@ Details: siehe `CLAUDE-Master-Website Kopie.md`
 - **Animation:** Cards staggered on scroll
 
 #### 6. Referenzen / Case Studies Preview
-- **Headline:** „Was raumton messbar verändert"
+- **Headline:** „Was raumton messbar verändert“
 - 3 Featured Projects als große Cards:
   - Bild | Kundenname | Branche | RT60 Vorher → Nachher (wenn vorhanden)
   - Kurze Beschreibung (1 Satz)
-- **CTA:** „Alle Referenzen ansehen" → /referenzen
+- **CTA:** „Alle Referenzen ansehen“ → /referenzen
 - **Animation:** Horizontal scroll / parallax cards on scroll
 
 #### 7. Über uns / Vertrauen (Manufaktur-Sektion)
-- **Headline:** „Berliner Handwerk. Seit 2006."
+- **Headline:** „Berliner Handwerk. Seit 2006.“
 - Foto: Werkstatt / Leo Ripper + Ulli Müller / Team
-- Copy: Gründungsgeschichte, Generationsübergabe, Made in Schöneberg
+- Copy: Gründungsgeschichte, Generationsbergabe, Made in Schöneberg
 - **Keydata:** 20 Jahre Erfahrung · 2. Generation · Eigene Fertigung · 300+ Farben & Texturen
-- Link: „Unser Team kennenlernen" → /ueber-uns
+- Link: „Unser Team kennenlernen“ → /ueber-uns
 - **Animation:** Image parallax + counter animation (Zahlen zählen hoch)
 
 #### 8. Testimonials
-- **Headline:** „Was unsere Kunden sagen"
+- **Headline:** „Was unsere Kunden sagen“
 - 5–8 Testimonials als Slider/Karten:
   - Format: Zitat + Name + Position + Unternehmen + Foto (wenn möglich)
 - Google Bewertungs-Badge (falls Widget vorhanden)
 - **Animation:** Auto-sliding carousel, Framer Motion
 
 #### 9. Online-Anfrage-Formular (Haupt-CTA-Sektion)
-- **Headline:** „Kostenlose Erstberatung — wir melden uns innerhalb von 1 Werktag"
+- **Headline:** „Kostenlose Erstberatung — wir melden uns innerhalb von 1 Werktag“
 - **4-Schritt-Formular:**
   1. Raumtyp (Büro · Gastronomie · Konferenz · Wohnen · Sonstiges) — Button-Select
   2. Raumgröße (m²) — Slider oder Eingabe
   3. Herausforderung (Freitext oder Checkboxen: Nachhall · Sprachverständlichkeit · Lautstärke)
   4. Kontaktdaten (Name · E-Mail · Tel · Adresse optional)
-- **Bestätigung:** Inline-Success-Message „Danke! Wir melden uns innerhalb von 1 Werktag."
+- **Bestätigung:** Inline-Success-Message „Danke! Wir melden uns innerhalb von 1 Werktag.“
 - **Animation:** Progress-Bar zwischen Steps, smooth transitions
-- **Backend:** Resend API via Next.js Server Action
 
 #### 10. FAQ Preview (NEU)
-- **Headline:** „Häufige Fragen"
+- **Headline:** „Häufige Fragen“
 - 5 wichtigste FAQs als Accordion (expandierbar)
-- Link: „Alle Fragen ansehen" → /faq
+- Link: „Alle Fragen ansehen“ → /faq
 - **FAQ-Inhalte (erste 5):**
   1. Wie lange dauert ein Projekt von Beratung bis Montage?
   2. Was kostet eine Raumakustik-Lösung ungefähr?
@@ -402,13 +401,13 @@ Details: siehe `CLAUDE-Master-Website Kopie.md`
   5. Kann ich Muster vor dem Kauf bestellen?
 
 #### 11. Showroom CTA
-- **Headline:** „Erleben Sie Akustik live — im Showroom Berlin-Schöneberg"
+- **Headline:** „Erleben Sie Akustik live — im Showroom Berlin-Schöneberg“
 - Adresse + Öffnungszeiten + Google Maps Embed
-- CTA: „Termin vereinbaren" (mailto / Formular)
+- CTA: „Termin vereinbaren“ (mailto / Formular)
 - **Animation:** Map fade-in on scroll
 
 #### 12. Footer
-- Logo + Slogan „einfach schön leise"
+- Logo + Slogan „einfach schön leise“
 - Navigation: Leistungen · Referenzen · Showroom · Über uns · FAQ · Kontakt
 - Rechtliches: Impressum · Datenschutz
 - Kontaktdaten: Tel 030 / 70 50 95 11 · info@raumton.com
@@ -419,7 +418,7 @@ Details: siehe `CLAUDE-Master-Website Kopie.md`
 
 ### /faq — FAQ-Seite (vollständig)
 
-- **Headline:** „Häufige Fragen zu raumton & Raumakustik"
+- **Headline:** „Häufige Fragen zu raumton & Raumakustik“
 - Kategorisierte Accordions:
   - **Über raumton:** Geschichte, Team, Showroom, Liefergebiet
   - **Produkte & Materialien:** Absorber-Typen, Farben, Nachhaltigkeit, Muster
@@ -464,7 +463,7 @@ Typografie:
   Größen:     Fluid Typography mit clamp()
 
 Spacing:
-  Sektionsabstand: 120px–200px (viel Weißraum)
+  Sektionsabstand: 120px–200px (viel Weißramm)
   Max-Width Content: 1200px
   Max-Width Hero: Full-bleed
 
@@ -480,9 +479,9 @@ Animationen:
 ### Konversions-Hierarchie
 
 ```
-Primär-CTA:  „Kostenlos beraten lassen" → Anfrageformular (Sektion 9)
-Sekundär-CTA: „Referenzen ansehen" → /referenzen
-Tertiär-CTA:  „Showroom besuchen" → Sektion 11 / Termin
+Primär-CTA:  „Kostenlos beraten lassen“ → Anfrageformular (Sektion 9)
+Sekundär-CTA: „Referenzen ansehen“ → /referenzen
+Tertiär-CTA:  „Showroom besuchen“ → Sektion 11 / Termin
 ```
 
 ---

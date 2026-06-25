@@ -9,15 +9,14 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Pflichtfelder fehlen' }, { status: 400 })
     }
 
-    // Anfrage in Konsole loggen (Demo-Modus — E-Mail-Integration folgt)
     console.log('=== Neue Anfrage ===')
     console.log(`Name:            ${name}`)
     console.log(`E-Mail:          ${email}`)
-    console.log(`Telefon:         ${telefon || '—'}`)
+    console.log(`Telefon:         ${telefon || '-'}`)
     console.log(`Raumtyp:         ${raumtyp}`)
-    console.log(`Raumgröße:       ${flaeche} m²`)
-    console.log(`Herausforderung: ${Array.isArray(herausforderung) ? herausforderung.join(', ') : '—'}`)
-    console.log(`Nachricht:       ${nachricht || '—'}`)
+    console.log(`Raumgroesse:     ${flaeche} m2`)
+    console.log(`Herausforderung: ${Array.isArray(herausforderung) ? herausforderung.join(', ') : '-'}`)
+    console.log(`Nachricht:       ${nachricht || '-'}`)
     console.log('===================')
 
     return NextResponse.json({ success: true })
