@@ -5,68 +5,44 @@ import Footer from '@/components/layout/Footer'
 import AnfrageFormular from '@/components/sections/AnfrageFormular'
 
 export const metadata: Metadata = {
-  title: 'Bueroakustik Berlin. Grossraumbuero & Konferenzraum | raumton',
+  title: 'Büroakustik Berlin – Großraumbüro & Konferenzraum | raumton',
   description:
-    'Schlechte Bueroakustik kostet Produktivitaet und Mitarbeiter. raumton misst, plant und optimiert Ihre Bueroakustik in Berlin. Kostenlose Erstberatung.',
+    'Professionelle Büroakustik für Großraumbüros, Konferenzräume und Open Spaces in Berlin. Messung, Planung, Fertigung und Montage von raumton seit 2006.',
 }
 
 const STATS = [
+  { wert: '>55 dB', label: 'Kritischer Lärmpegel', text: 'Ab 55 Dezibel sinkt die kognitive Leistung messbar – Fehler häufen sich.' },
+  { wert: '−15 %', label: 'Produktivitätsverlust', text: 'Studien belegen: Lärm am Arbeitsplatz kostet bis zu 15 % Produktivität.' },
+  { wert: '3×', label: 'Mehr Stress', text: 'Mitarbeiter in lauten Büros berichten dreimal häufiger von Erschöpfung.' },
+]
+
+const SCHMERZEN = [
   {
-    stat: '>55 dB',
-    label: 'Kritischer Laermpegel',
-    text: 'Ab hier sinkt die kognitive Leistung messbar. In den meisten Grossraumbueoros ist dieser Pegel Normalzustand.',
+    titel: 'Großraumbüro: alle sprechen lauter',
+    text: 'Weil alle lauter sprechen, spricht jeder noch lauter. Der Kreislauf ist bekannt – aber lösbar. Deckenabsorber und Tischtrennwände brechen ihn dauerhaft.',
   },
   {
-    stat: '-66%',
-    label: 'Weniger Fokuszeit',
-    text: 'In lauten Bueoros verlieren Mitarbeiter bis zu zwei Drittel ihrer Fokuszeit durch akustische Ablenkung.',
+    titel: 'Meetings ohne Sprachverständlichkeit',
+    text: 'Hall im Konferenzraum macht hybride Meetings zur Qual. Niemand versteht die Hälfte. Gezielte Wandabsorber lösen das Problem ohne optische Kompromisse.',
   },
   {
-    stat: '3x',
-    label: 'Mehr Stress',
-    text: 'Laermbedingter Stress ist einer der Hauptgruende fuer krankheitsbedingte Fehlzeiten im Buero.',
+    titel: 'Mitarbeiter fliehen ins Homeoffice',
+    text: 'Wenn das Büro lauter ist als zu Hause, verliert das Büro. Gute Akustik ist ein unterschätzter Faktor für Präsenz und Arbeitgeberattraktivität.',
   },
 ]
 
-const PROBLEMS = [
-  {
-    title: 'Meetings werden zur Qual',
-    text: 'Wer im Konferenzraum dreimal nachfragen muss, verliert den Faden. Schlechte Sprachverstaendlichkeit kostet Zeit und hinterlaesst den falschen Eindruck beim Kunden.',
-  },
-  {
-    title: 'Mitarbeiter buchen Homeoffice wegen Laerm',
-    text: 'Der Hauptgrund, warum Mitarbeiter das Buero meiden, ist nicht die Pendelzeit. Es ist der Geraeuschpegel. Schlechte Akustik kostet Praesenz, Teamkohaeision und Innovationspotenzial.',
-  },
-  {
-    title: 'Erschoepfung, die sich nicht erklaeren laesst',
-    text: 'Dauernde Hintergrundgeraeusche machen muede, auch wenn niemand laut spricht. Das Gehirn filtert aktiv heraus. Das kostet Energie. Jeden Tag.',
-  },
+const PRODUKTE = [
+  { name: 'Deckenabsorber', text: 'Maximale Wirkung bei minimalem Platzbedarf. Hängesysteme und Deckensegel schlucken den Hall von oben – dort, wo er entsteht.' },
+  { name: 'Wandabsorber', text: 'Textil ummantelte Paneele in über 300 Farben. Integrieren sich ins Raumdesign oder setzen bewusste Akzente.' },
+  { name: 'Tischtrennwände', text: 'Schallschutz direkt am Arbeitsplatz. Reduzieren Direktschall zwischen Schreibtischen ohne bauliche Eingriffe.' },
+  { name: 'Deckensegel', text: 'Freischwebende Absorber-Elemente für offene Räume. Akustisch wirksam, architektonisch ein Statement.' },
 ]
 
-const PRODUCTS = [
-  {
-    name: 'Deckenabsorber',
-    text: 'Wirken auf die gesamte Raumflaeche und reduzieren den Nachhall am effektivsten. Unauffaellig oder als Designelement.',
-  },
-  {
-    name: 'Wandabsorber',
-    text: 'Strategisch an Reflexionsflaechn platziert. In ueber 300 Farben und Texturen passend zu Ihrer CI.',
-  },
-  {
-    name: 'Tischtrennwaende',
-    text: 'Fokusschutz am Arbeitsplatz. Reduzieren direkte Schalluebertragung zwischen Tischen, ohne den Raum zu teilen.',
-  },
-  {
-    name: 'Deckensegel',
-    text: 'Freischwebend oder abgehaengt. Akustisch hocheffektiv und als Gestaltungselement in offenen Flaechen ideal.',
-  },
-]
-
-const PROCESS = [
-  { nr: '01', title: 'Kostenlose Erstberatung', text: 'Telefonisch oder vor Ort in Berlin-Schoeneberg. Wir hoeren zu, bevor wir irgendetwas empfehlen.' },
-  { nr: '02', title: 'RT60-Messung vor Ort', text: 'Wir messen die Nachhallzeit Ihres Raumes und zeigen Ihnen, wo das Problem liegt und was danach realistisch besser wird.' },
-  { nr: '03', title: 'Individuelle Planung', text: 'Auf Basis der Messung entwickeln wir eine Loesung mit 3D-Visualisierung. Farben und Materialien nach Wahl.' },
-  { nr: '04', title: 'Fertigung & Montage', text: 'Gefertigt in Berlin-Schoeneberg. Montage in der Regel in einem Tag, blitzsauber und termingerecht.' },
+const PROZESS = [
+  { nr: '01', titel: 'Kostenlose Messung', text: 'Wir kommen zu Ihnen, messen die Nachhallzeit (RT60) und zeigen, wo das Problem liegt.' },
+  { nr: '02', titel: 'Individuelle Planung', text: '3D-Visualisierung mit Farben und Materialien passend zu Ihrem Büro und CI.' },
+  { nr: '03', titel: 'Berliner Fertigung', text: 'Alle Absorber werden in unserem Berliner Atelier in Schöneberg gefertigt – ca. 3 Wochen.' },
+  { nr: '04', titel: 'Montage in einem Tag', text: 'Professionelle Montage – blitzsauber, termingerecht, ohne Betriebsunterbrechung.' },
 ]
 
 export default function BueroPage() {
@@ -75,159 +51,210 @@ export default function BueroPage() {
       <Navigation />
       <main>
         {/* Hero */}
-        <section className="relative bg-[#0A0A0A] pt-32 pb-24 overflow-hidden">
+        <div className="relative min-h-[60vh] flex items-center bg-[#0A0A0A] overflow-hidden pt-32 pb-20">
           <div className="absolute inset-0 z-0">
             <Image
               src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80"
-              alt="Moderner Konferenzraum"
+              alt="Modernes Großraumbüro Berlin"
               fill
-              className="object-cover opacity-20"
+              className="object-cover opacity-15"
               priority
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0A]/80 to-[#0A0A0A]" />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0A]/70 via-[#0A0A0A]/50 to-[#0A0A0A]" />
           </div>
           <div className="container-wide relative z-10">
-            <p className="text-[#C8A96E] text-xs tracking-widest uppercase mb-4">Leistungen / Buero</p>
+            <span className="text-[#C8A96E] text-sm tracking-widest uppercase mb-4 block">
+              Leistungen / Büro
+            </span>
             <h1
-              className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white max-w-2xl mb-6 leading-tight"
+              className="text-5xl sm:text-6xl lg:text-7xl text-white mb-6 max-w-3xl leading-tight"
               style={{ fontFamily: 'var(--font-playfair), serif' }}
             >
               Mehr Konzentration.{' '}
-              <span className="text-[#C8A96E]">Weniger Laerm.</span>
+              <span className="text-[#C8A96E]">Weniger Lärm.</span>
             </h1>
-            <p className="text-[#A0A0A0] text-lg max-w-xl mb-10">
-              Die meisten Bueoros in Berlin sind zu laut. Das sagen nicht Mitarbeiter im Gespraech. Das zeigt das Messgeraet.
+            <p className="text-[#A0A0A0] text-lg max-w-2xl leading-relaxed">
+              Schlechte Büroakustik kostet Produktivität, erhöht Stress und treibt
+              Mitarbeiter ins Homeoffice. raumton optimiert Ihr Büro messbar – von der
+              Messung bis zur Montage.
             </p>
-            <a
-              href="#anfrage"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#C8A96E] text-[#0A0A0A] font-semibold hover:bg-[#D9BE8C] transition-colors"
-            >
-              Kostenlose Bueroakustik-Beratung anfragen
-            </a>
           </div>
-        </section>
+        </div>
 
         {/* Stats */}
-        <section className="bg-white py-16">
+        <div className="bg-white py-16">
           <div className="container-wide">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-[#E2DDD6]">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-[#E5E5E5]">
               {STATS.map((s) => (
-                <div key={s.stat} className="bg-white p-10">
-                  <div className="text-5xl font-light text-[#B8955A] mb-2" style={{ fontFamily: 'var(--font-display), serif' }}>{s.stat}</div>
-                  <div className="text-[#1C1917] text-sm font-semibold mb-2">{s.label}</div>
-                  <p className="text-[#6B6560] text-sm leading-relaxed">{s.text}</p>
+                <div key={s.wert} className="bg-white p-10">
+                  <div
+                    className="text-5xl font-bold text-[#B8955A] mb-2"
+                    style={{ fontFamily: 'var(--font-playfair), serif' }}
+                  >
+                    {s.wert}
+                  </div>
+                  <div className="text-[#1A1A1A] font-semibold mb-2">{s.label}</div>
+                  <p className="text-[#606060] text-sm leading-relaxed">{s.text}</p>
                 </div>
               ))}
             </div>
           </div>
-        </section>
+        </div>
 
-        {/* Problem */}
-        <section className="bg-[#F2EFE9] py-20">
+        {/* Pain Points */}
+        <div className="bg-[#F2EFE9] py-24">
           <div className="container-wide">
-            <h2 className="text-3xl font-light text-[#1C1917] mb-12" style={{ fontFamily: 'var(--font-display), serif' }}>
-              Was passiert, wenn die Akustik nicht stimmt
+            <span className="text-[#B8955A] text-sm tracking-widest uppercase mb-4 block">
+              Das Problem
+            </span>
+            <h2
+              className="text-3xl sm:text-4xl text-[#1A1A1A] mb-12 max-w-2xl"
+              style={{ fontFamily: 'var(--font-playfair), serif' }}
+            >
+              Lärm kostet mehr als Sie denken.
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {PROBLEMS.map((p) => (
-                <div key={p.title} className="bg-white p-8 border-t-2 border-[#B8955A]">
-                  <h3 className="text-[#1C1917] font-semibold mb-3">{p.title}</h3>
-                  <p className="text-[#6B6560] text-sm leading-relaxed">{p.text}</p>
+              {SCHMERZEN.map((s) => (
+                <div key={s.titel} className="bg-white p-8 border-t-2 border-[#B8955A]">
+                  <h3 className="text-[#1A1A1A] font-semibold mb-3">{s.titel}</h3>
+                  <p className="text-[#606060] text-sm leading-relaxed">{s.text}</p>
                 </div>
               ))}
             </div>
           </div>
-        </section>
+        </div>
 
-        {/* Products */}
-        <section className="bg-white py-20">
+        {/* Produkte */}
+        <div className="bg-[#0D0D0D] py-24">
           <div className="container-wide">
-            <h2 className="text-3xl font-light text-[#1C1917] mb-4" style={{ fontFamily: 'var(--font-display), serif' }}>
-              Welche Produkte wir fuer Bueoros einsetzen
+            <span className="text-[#C8A96E] text-sm tracking-widest uppercase mb-4 block">
+              Unsere Lösungen
+            </span>
+            <h2
+              className="text-3xl sm:text-4xl text-white mb-12 max-w-2xl"
+              style={{ fontFamily: 'var(--font-playfair), serif' }}
+            >
+              Das richtige Produkt für jeden Büroraum.
             </h2>
-            <p className="text-[#6B6560] mb-12 max-w-xl">Nicht jeder Raum braucht dieselbe Loesung. Wir waehlen Produkte nach Messergebnis, Raumgeometrie und Ihrem Design.</p>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {PRODUCTS.map((p) => (
-                <div key={p.name} className="p-6 border border-[#E2DDD6] hover:border-[#B8955A] transition-colors">
-                  <div className="w-8 h-px bg-[#B8955A] mb-4" />
-                  <h3 className="text-[#1C1917] font-semibold mb-2">{p.name}</h3>
-                  <p className="text-[#6B6560] text-sm leading-relaxed">{p.text}</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-[#1A1A1A]">
+              {PRODUKTE.map((p) => (
+                <div key={p.name} className="bg-[#0D0D0D] p-8">
+                  <div className="w-8 h-px bg-[#C8A96E] mb-6" />
+                  <h3 className="text-white font-semibold mb-3">{p.name}</h3>
+                  <p className="text-[#A0A0A0] text-sm leading-relaxed">{p.text}</p>
                 </div>
               ))}
             </div>
           </div>
-        </section>
+        </div>
 
-        {/* Process */}
-        <section className="bg-[#F2EFE9] py-20">
+        {/* Prozess */}
+        <div className="bg-white py-24">
           <div className="container-wide">
-            <h2 className="text-3xl font-light text-[#1C1917] mb-12" style={{ fontFamily: 'var(--font-display), serif' }}>
-              Wie ein Projekt bei uns ablaeuft
+            <span className="text-[#B8955A] text-sm tracking-widest uppercase mb-4 block">
+              Unser Prozess
+            </span>
+            <h2
+              className="text-3xl sm:text-4xl text-[#1A1A1A] mb-12"
+              style={{ fontFamily: 'var(--font-playfair), serif' }}
+            >
+              Von der Messung bis zur Montage — alles aus einer Hand.
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-[#E2DDD6]">
-              {PROCESS.map((s) => (
-                <div key={s.nr} className="bg-[#F2EFE9] p-8">
-                  <div className="text-4xl font-bold text-[#E2DDD6] mb-4">{s.nr}</div>
-                  <h3 className="text-[#1C1917] font-semibold mb-2">{s.title}</h3>
-                  <p className="text-[#6B6560] text-sm leading-relaxed">{s.text}</p>
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-[#E5E5E5]">
+              {PROZESS.map((s) => (
+                <div key={s.nr} className="bg-white p-8">
+                  <div className="text-5xl font-bold text-[#F0EDE7] mb-4 select-none"
+                    style={{ fontFamily: 'var(--font-playfair), serif' }}>
+                    {s.nr}
+                  </div>
+                  <h3 className="text-[#1A1A1A] font-semibold mb-2">{s.titel}</h3>
+                  <p className="text-[#606060] text-sm leading-relaxed">{s.text}</p>
                 </div>
               ))}
             </div>
           </div>
-        </section>
+        </div>
 
         {/* Testimonial */}
-        <section className="bg-white py-20">
-          <div className="container-wide">
-            <div className="max-w-3xl border-l-4 border-[#B8955A] pl-8">
-              <p className="text-xl text-[#1C1917] font-light leading-relaxed mb-6" style={{ fontFamily: 'var(--font-display), serif' }}>
-                &ldquo;Der Konferenzraum ist endlich wieder benutzbar. Vorher haben wir Meetings angespannt beendet, wegen des Halls, nicht wegen des Inhalts. Seit raumton schreiben wir einfach das Protokoll und gehen.&rdquo;
+        <div className="bg-[#F2EFE9] py-24">
+          <div className="container-wide max-w-3xl">
+            <div className="border-l-4 border-[#B8955A] pl-8">
+              <p className="text-xl text-[#1A1A1A] leading-relaxed mb-6 italic">
+                „Der Konferenzraum ist endlich wieder benutzbar. Vorher haben wir Meetings
+                angespannt beendet – wegen des Halls, nicht wegen des Inhalts. Seit raumton
+                schreiben wir einfach das Protokoll und gehen.“
               </p>
-              <p className="text-[#1C1917] font-semibold text-sm">Sandra K. &mdash; Office Managerin, Technologieunternehmen Berlin</p>
-              <p className="text-[#6B6560] text-xs mt-4">Aehnliche Projekte: RepRisk Germany GmbH &middot; Rolls-Royce Power Systems AG &middot; S-Kreditpartner GmbH</p>
+              <div>
+                <div className="font-semibold text-[#1A1A1A]">Sandra K.</div>
+                <div className="text-[#606060] text-sm">Office Managerin · Technologieunternehmen, Berlin</div>
+              </div>
             </div>
           </div>
-        </section>
+        </div>
 
         {/* FAQ */}
-        <section className="bg-[#F2EFE9] py-20">
-          <div className="container-wide">
-            <h2 className="text-3xl font-light text-[#1C1917] mb-10" style={{ fontFamily: 'var(--font-display), serif' }}>
-              Haeufige Fragen zur Bueroakustik
+        <div className="bg-white py-24">
+          <div className="container-wide max-w-3xl">
+            <span className="text-[#B8955A] text-sm tracking-widest uppercase mb-4 block">
+              Häufige Fragen
+            </span>
+            <h2
+              className="text-3xl text-[#1A1A1A] mb-10"
+              style={{ fontFamily: 'var(--font-playfair), serif' }}
+            >
+              Was Sie wissen möchten.
             </h2>
-            <div className="max-w-2xl space-y-4">
+            <div className="divide-y divide-[#E5E5E5]">
               {[
-                { q: 'Was kostet Bueroakustik?', a: 'Ein typischer Konferenzraum (ca. 30 m2) liegt ab ca. 1.500 bis 3.000 Euro, inkl. Planung und Montage. Fuer Grossraumbueoros kalkulieren wir individuell. Unser Angebot ist kostenlos und unverbindlich.' },
-                { q: 'Wie lange dauert die Montage?', a: 'In der Regel ein Tag. Wir koordinieren den Termin so, dass der Betrieb nicht beeintraechtigt wird, auch abends oder am Wochenende moeglich.' },
-                { q: 'Muss ich waehrend der Montage das Buero raeumen?', a: 'Nicht zwingend. Viele Montagen erfolgen ausserhalb der Kernarbeitszeiten. Wir stimmen das Vorgehen vorab mit Ihnen ab.' },
-                { q: 'Gibt es eine Garantie auf die Wirkung?', a: 'Ja. Wir messen die Akustik vor und nach der Montage. Wenn das Ergebnis nicht unseren gemeinsamen Zielen entspricht, bessern wir nach, kostenlos.' },
-              ].map((faq) => (
-                <details key={faq.q} className="bg-white border border-[#E2DDD6] p-6 group">
-                  <summary className="text-[#1C1917] font-semibold cursor-pointer list-none flex justify-between items-center">
-                    {faq.q}
-                    <span className="text-[#B8955A] text-xl">+</span>
+                {
+                  frage: 'Wie lange dauert ein Büroprojekt?',
+                  antwort: 'Von der ersten Beratung bis zur fertigen Montage dauert es in der Regel 5–7 Wochen. Die Montage selbst ist in einem Tag abgeschlossen.',
+                },
+                {
+                  frage: 'Was kostet die Akustikoptimierung für ein Büro?',
+                  antwort: 'Ein Konferenzraum (ca. 30 m²) liegt ab ca. 1.500–3.000 €. Großraumbüros werden individuell kalkuliert. Angebot ist kostenlos.',
+                },
+                {
+                  frage: 'Müssen wir den Betrieb unterbrechen?',
+                  antwort: 'Nein. Unsere Montage ist in der Regel in einem Tag abgeschlossen und erfolgt, wenn möglich, außerhalb der Kernarbeitszeiten.',
+                },
+                {
+                  frage: 'Sind die Absorber rückstandsfrei entfernbar?',
+                  antwort: 'Ja. Unsere Befestigungssysteme hinterlassen keine bleibenden Schäden – ideal auch für Mietobjekte.',
+                },
+              ].map((item) => (
+                <details key={item.frage} className="group py-5">
+                  <summary className="flex items-center justify-between cursor-pointer list-none text-[#1A1A1A] font-medium hover:text-[#B8955A] transition-colors">
+                    {item.frage}
+                    <span className="text-[#B8955A] text-xl group-open:rotate-45 transition-transform duration-200 ml-4 flex-shrink-0">+</span>
                   </summary>
-                  <p className="text-[#6B6560] text-sm leading-relaxed mt-4">{faq.a}</p>
+                  <p className="mt-4 text-[#606060] text-sm leading-relaxed">{item.antwort}</p>
                 </details>
               ))}
             </div>
           </div>
-        </section>
+        </div>
 
         {/* CTA Banner */}
-        <section className="bg-[#1C1917] py-20">
+        <div className="bg-[#1C1917] py-20">
           <div className="container-wide text-center">
-            <h2 className="text-3xl sm:text-4xl font-light text-white mb-4" style={{ fontFamily: 'var(--font-display), serif' }}>
-              Ihr Buero verdient bessere Akustik.
+            <h2
+              className="text-3xl sm:text-4xl text-white mb-4"
+              style={{ fontFamily: 'var(--font-playfair), serif' }}
+            >
+              Bereit für ein ruhigeres Büro?
             </h2>
-            <p className="text-[#A8A29E] mb-8 max-w-lg mx-auto">
-              Kostenlose Erstberatung. Kein Verkaufsdruck. Ehrliche Einschaetzung, ob raumton die richtige Loesung ist oder nicht.
+            <p className="text-[#A0A0A0] mb-8 max-w-xl mx-auto">
+              Kostenlose Vor-Ort-Beratung und Akustikmessung – innerhalb von 1 Werktag Rückmeldung.
             </p>
-            <a href="#anfrage" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C8A96E] text-[#0A0A0A] font-semibold hover:bg-[#D9BE8C] transition-colors">
-              Jetzt kostenlos beraten lassen
+            <a
+              href="#anfrage"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-[#C8A96E] text-[#0A0A0A] font-semibold hover:bg-[#D9BE8C] transition-colors duration-200"
+            >
+              Jetzt kostenlose Beratung sichern
             </a>
           </div>
-        </section>
+        </div>
 
         <AnfrageFormular />
       </main>
