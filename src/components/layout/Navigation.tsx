@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, Phone } from 'lucide-react'
 
@@ -10,7 +11,7 @@ const NAV_LINKS = [
   { label: 'Leistungen', href: '/leistungen' },
   { label: 'Referenzen', href: '/referenzen' },
   { label: 'Showroom', href: '/showroom' },
-  { label: 'Über uns', href: '/ueber-uns' },
+  { label: 'Ueber uns', href: '/ueber-uns' },
   { label: 'FAQ', href: '/faq' },
 ]
 
@@ -56,15 +57,17 @@ export default function Navigation() {
         }`}
       >
         <div className="container-wide flex items-center justify-between h-[72px]">
-          <Link href="/" className="flex items-baseline gap-3 group">
-            <span
-              className="text-[22px] font-semibold tracking-tight text-[#1C1917] group-hover:text-[#B8955A] transition-colors duration-300"
-              style={{ fontFamily: 'var(--font-display), serif' }}
-            >
-              raumton
-            </span>
+          <Link href="/" className="flex items-center gap-3 group">
+            <Image
+              src="https://raw.githubusercontent.com/Autolution-ai/Raumton/main/Logo.png"
+              alt="raumton"
+              width={120}
+              height={40}
+              className="h-8 w-auto"
+              priority
+            />
             <span className="hidden sm:block text-[11px] text-[#A8A29E] tracking-[0.12em] uppercase font-light">
-              einfach schön leise
+              einfach schoen leise
             </span>
           </Link>
 
@@ -94,7 +97,7 @@ export default function Navigation() {
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className="lg:hidden p-2 text-[#1C1917]"
-            aria-label="Menü"
+            aria-label="Menue"
           >
             {menuOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
@@ -134,9 +137,9 @@ export default function Navigation() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: NAV_LINKS.length * 0.07 }}
                 onClick={() => setMenuOpen(false)}
-                className="mt-4 px-8 py-3 bg-[#1C1917] text-white text-base font-medium"
+                className="mt-4 px-8 py-3 bg-[#C8A96E] text-[#0A0A0A] text-base font-semibold"
               >
-                Beratung anfragen
+                Kostenlose Beratung sichern
               </motion.a>
             </nav>
             <div className="absolute bottom-10 text-center text-sm text-[#A8A29E]">
