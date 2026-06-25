@@ -1,118 +1,112 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { motion, useInView } from 'framer-motion'
+import { useRef } from 'react'
 import Link from 'next/link'
-import { Building2, Utensils, GraduationCap, ArrowRight } from 'lucide-react'
-import { fadeUp, staggerContainer, viewportOptions } from '@/lib/animations'
-import { LEISTUNGEN, PROZESS_SCHRITTE } from '@/lib/constants'
+import { ArrowRight } from 'lucide-react'
 
-const ICONS: Record<string, React.ComponentType<{ size?: number; className?: string }>> = {
-  'building-2': Building2,
-  utensils: Utensils,
-  'graduation-cap': GraduationCap,
-}
+const PROZESS = [
+  { nr: '01', title: 'Kostenlose Beratung', text: 'Telefonisch, per Video oder direkt im Showroom – wir hören zu, bevor wir irgendetwas empfehlen.' },
+  { nr: '02', title: 'Messung & Analyse', text: 'Wir messen die Akustik Ihres Raumes und zeigen, was danach realistisch besser wird.' },
+  { nr: '03', title: 'Planung & Design', text: 'Individuelle Lösung mit 3D-Darstellung – Farben und Materialien passend zu Ihrem Raum.' },
+  { nr: '04', title: 'Fertigung & Montage', text: 'Gefertigt in Berlin-Schöneberg. Montage in der Regel an einem Tag – blitzsauber und termingerecht.' },
+]
+
+const SERVICES = [
+  {
+    label: 'Büro & Großraumbüro',
+    text: 'Wir messen, planen und optimieren Ihre Büroakustik – damit Mitarbeiter sich konzentrieren können und Meetings funktionieren.',
+    href: '/leistungen/buero',
+  },
+  {
+    label: 'Gastronomie',
+    text: 'Gäste bleiben länger, wenn sie sich unterhalten können. Wir integrieren Absorber so, dass die Lösung unsichtbar bleibt.',
+    href: '/leistungen/gastro',
+  },
+  {
+    label: 'Bildung & Kita',
+    text: 'Kinder werden nicht ruhiger befohlen. Aber wenn der Raum es zulässt, werden sie es von selbst.',
+    href: '/leistungen/bildung',
+  },
+]
 
 export default function Leistungen() {
-  return (
-    <section className="section-padding bg-[#0D0D0D]">
-      <div className="container-wide">
-        {/* Headline */}
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={viewportOptions}
-          variants={fadeUp}
-          className="mb-20"
-        >
-          <span className="text-[#C8A96E] text-sm tracking-widest uppercase mb-4 block">
-            Unsere Leistungen
-          </span>
-          <h2
-            className="text-4xl sm:text-5xl lg:text-6xl text-white max-w-2xl"
-            style={{ fontFamily: 'var(--font-playfair), serif' }}
-          >
-            Beratung, Planung, Fertigung, Montage —{' '}
-            <span className="text-gradient-gold">bei uns aus einer Hand.</span>
-          </h2>
-        </motion.div>
+  const ref = useRef(null)
+  const inView = useInView(ref, { once: true, margin: '-60px' })
 
-        {/* Prozess */}
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={viewportOptions}
-          variants={staggerContainer}
-          className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-[#1A1A1A] mb-24"
-        >
-          {PROZESS_SCHRITTE.map((schritt, i) => (
+  return (
+    <section className="bg-[#FAFAF8] section-padding">
+      <div className="container-wide" ref={ref}>
+        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-16 pb-12 border-b border-[#E2DDD6]">
+          <div>
             <motion.div
-              key={schritt.nr}
-              variants={fadeUp}
-              className="bg-[#0D0D0D] p-8 relative"
+              initial={{ opacity: 0, y: 16 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6 }}
+              className="flex items-center gap-3 mb-4"
             >
-              <div className="text-5xl font-bold text-[#1E1E1E] mb-4 select-none">
-                {schritt.nr}
-              </div>
-              <h3 className="text-white font-semibold mb-2">{schritt.title}</h3>
-              <p className="text-[#A0A0A0] text-sm leading-relaxed">
-                {schritt.beschreibung}
-              </p>
-              {i < PROZESS_SCHRITTE.length - 1 && (
-                <div className="hidden lg:block absolute top-8 right-0 translate-x-1/2 z-10">
-                  <ArrowRight size={16} className="text-[#252525]" />
-                </div>
-              )}
+              <div className="divider" />
+              <span className="section-label">Leistungen</span>
+            </motion.div>
+            <motion.h2
+              initial={{ opacity: 0, y: 24 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              style={{ fontFamily: 'var(--font-display), serif' }}
+              className="text-[clamp(2rem,4vw,3.5rem)] font-light text-[#1C1917]"
+            >
+              Alles aus einer Hand.
+            </motion.h2>
+          </div>
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={inView ? { opacity: 1 } : {}}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-[#6B6560] max-w-sm text-sm leading-relaxed"
+          >
+            Von der ersten Beratung bis zur fertigen Montage begleiten wir jedes Projekt persönlich – in Berlin und bundesweit.
+          </motion.p>
+        </div>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-[#E2DDD6] mb-20">
+          {PROZESS.map((step, i) => (
+            <motion.div
+              key={step.nr}
+              initial={{ opacity: 0, y: 20 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: 0.1 + i * 0.1 }}
+              className="bg-[#FAFAF8] p-8"
+            >
+              <p className="text-[#B8955A] text-xs tracking-widest mb-4 font-medium">{step.nr}</p>
+              <p className="text-[#1C1917] font-medium text-base mb-3">{step.title}</p>
+              <p className="text-[#6B6560] text-sm leading-relaxed">{step.text}</p>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
 
-        {/* Leistungskarten */}
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={viewportOptions}
-          variants={staggerContainer}
-          className="grid grid-cols-1 md:grid-cols-3 gap-6"
-        >
-          {LEISTUNGEN.map((leistung) => {
-            const Icon = ICONS[leistung.icon]
-            return (
-              <motion.div key={leistung.slug} variants={fadeUp}>
-                <Link
-                  href={`/leistungen/${leistung.slug}`}
-                  className="block p-8 border border-[#252525] hover:border-[#C8A96E]/40 bg-[#141414] hover:bg-[#171717] transition-all duration-300 group h-full"
+        <div className="grid md:grid-cols-3 gap-6">
+          {SERVICES.map((s, i) => (
+            <motion.div
+              key={s.label}
+              initial={{ opacity: 0, y: 24 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.3 + i * 0.1 }}
+            >
+              <Link href={s.href} className="group block bg-white border border-[#E2DDD6] p-8 hover:border-[#B8955A] transition-colors duration-200">
+                <p
+                  style={{ fontFamily: 'var(--font-display), serif' }}
+                  className="text-2xl font-light text-[#1C1917] mb-4 group-hover:text-[#B8955A] transition-colors"
                 >
-                  <div className="w-10 h-10 border border-[#252525] flex items-center justify-center mb-6 group-hover:border-[#C8A96E] transition-colors">
-                    <Icon size={18} className="text-[#C8A96E]" />
-                  </div>
-                  <h3
-                    className="text-xl text-white font-semibold mb-2"
-                    style={{ fontFamily: 'var(--font-playfair), serif' }}
-                  >
-                    {leistung.title}
-                  </h3>
-                  <p className="text-[#C8A96E] text-sm font-medium mb-3">
-                    {leistung.headline}
-                  </p>
-                  <p className="text-[#A0A0A0] text-sm leading-relaxed mb-6">
-                    {leistung.beschreibung}
-                  </p>
-                  <ul className="space-y-1.5 mb-6">
-                    {leistung.punkte.map((punkt) => (
-                      <li key={punkt} className="flex items-center gap-2 text-sm text-[#606060]">
-                        <span className="w-1 h-1 rounded-full bg-[#C8A96E] flex-shrink-0" />
-                        {punkt}
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="flex items-center gap-2 text-sm text-[#C8A96E] group-hover:gap-3 transition-all">
-                    Mehr erfahren <ArrowRight size={14} />
-                  </div>
-                </Link>
-              </motion.div>
-            )
-          })}
-        </motion.div>
+                  {s.label}
+                </p>
+                <p className="text-[#6B6560] text-sm leading-relaxed mb-6">{s.text}</p>
+                <span className="flex items-center gap-2 text-[#B8955A] text-sm font-medium">
+                  Mehr erfahren <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                </span>
+              </Link>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   )
