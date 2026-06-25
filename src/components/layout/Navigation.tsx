@@ -4,8 +4,10 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, Phone } from 'lucide-react'
+import { RAUMTON_LOGO } from '@/lib/logo'
 
 const NAV_LINKS = [
+  { label: 'Startseite', href: '/' },
   { label: 'Leistungen', href: '/leistungen' },
   { label: 'Referenzen', href: '/referenzen' },
   { label: 'Showroom', href: '/showroom' },
@@ -41,16 +43,14 @@ export default function Navigation() {
         }`}
       >
         <div className="container-wide flex items-center justify-between h-[72px]">
-          <Link href="/" className="flex items-baseline gap-3 group">
-            <span
-              className="text-[22px] font-semibold tracking-tight text-[#1C1917] group-hover:text-[#B8955A] transition-colors duration-300"
-              style={{ fontFamily: 'var(--font-display), serif' }}
-            >
-              raumton
-            </span>
-            <span className="hidden sm:block text-[11px] text-[#A8A29E] tracking-[0.12em] uppercase font-light">
-              einfach schön leise
-            </span>
+          {/* Logo – links to homepage */}
+          <Link href="/" className="flex items-center flex-shrink-0">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={RAUMTON_LOGO}
+              alt="raumton – einfach schön leise"
+              className="h-6 w-auto"
+            />
           </Link>
 
           <nav className="hidden lg:flex items-center gap-7">
