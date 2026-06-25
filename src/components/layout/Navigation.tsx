@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, Phone } from 'lucide-react'
@@ -16,10 +16,23 @@ const NAV_LINKS = [
 
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false)
+  const [navHidden, setNavHidden] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const lastScrollY = useRef(0)
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 60)
+    const handleScroll = () => {
+      const currentY = window.scrollY
+      if (currentY < 80) {
+        setNavHidden(false)
+      } else if (currentY > lastScrollY.current + 8) {
+        setNavHidden(true)
+      } else if (currentY < lastScrollY.current - 8) {
+        setNavHidden(false)
+      }
+      setScrolled(currentY > 40)
+      lastScrollY.current = currentY
+    }
     window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
@@ -31,11 +44,12 @@ export default function Navigation() {
 
   return (
     <>
-      <motion.header
-        initial={{ y: -20, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      <header
+        style={{
+          transform: navHidden && !menuOpen ? 'translateY(-100%)' : 'translateY(0)',
+          transition: 'transform 300ms ease-in-out, background-color 300ms ease-in-out, border-color 300ms ease-in-out',
+        }}
+        className={`fixed top-0 left-0 right-0 z-50 will-change-transform ${
           scrolled
             ? 'bg-[#FAFAF8]/95 backdrop-blur-sm border-b border-[#E2DDD6]'
             : 'bg-[#FAFAF8]/80 backdrop-blur-sm'
@@ -67,19 +81,13 @@ export default function Navigation() {
             ))}
           </nav>
 
-          <div className="hidden lg:flex items-center gap-5">
+          <div className="hidden lg:flex items-center">
             <a
               href="tel:+493070509511"
               className="flex items-center gap-2 text-sm text-[#6B6560] hover:text-[#1C1917] transition-colors"
             >
               <Phone size={13} />
               <span>030 / 70 50 95 11</span>
-            </a>
-            <a
-              href="#anfrage"
-              className="px-5 py-2.5 bg-[#1C1917] text-white text-sm font-medium hover:bg-[#B8955A] transition-colors duration-200 tracking-wide"
-            >
-              Beratung anfragen
             </a>
           </div>
 
@@ -91,7 +99,7 @@ export default function Navigation() {
             {menuOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
         </div>
-      </motion.header>
+      </header>
 
       <AnimatePresence>
         {menuOpen && (

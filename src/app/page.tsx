@@ -1,5 +1,6 @@
 import Navigation from '@/components/layout/Navigation'
 import Footer from '@/components/layout/Footer'
+import FloatingCTA from '@/components/layout/FloatingCTA'
 import Hero from '@/components/sections/Hero'
 import SocialProofStrip from '@/components/sections/SocialProofStrip'
 import ProblemPain from '@/components/sections/ProblemPain'
@@ -28,6 +29,7 @@ export default function Home() {
         <ShowroomCTA />
       </main>
       <Footer />
+      <FloatingCTA />
     </>
   )
 }
