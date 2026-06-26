@@ -66,7 +66,7 @@ export default function UeberUns() {
           >
             <div className="relative h-[500px] lg:h-[600px] overflow-hidden">
               <Image
-                src="https://raw.githubusercontent.com/Autolution-ai/Raumton/main/Raumton-Inhaber.webp"
+                src="/Raumton-Inhaber.webp"
                 alt="Ulli Mueller und Leo Ripper. Gruender und Geschaeftsfuehrer von raumton in der Berliner Werkstatt"
                 fill
                 className="object-cover object-top"
