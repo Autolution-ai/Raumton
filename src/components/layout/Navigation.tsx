@@ -51,7 +51,7 @@ export default function Navigation() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
             <Image
-              src="https://raw.githubusercontent.com/Autolution-ai/Raumton/main/Logo.png"
+              src="/Logo.png"
               alt="raumton"
               width={120}
               height={40}

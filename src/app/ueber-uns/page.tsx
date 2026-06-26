@@ -56,7 +56,7 @@ export default function UeberUnsPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
             <div className="relative h-[500px]">
               <Image
-                src="https://raw.githubusercontent.com/Autolution-ai/Raumton/main/Raumton-Inhaber.webp"
+                src="/Raumton-Inhaber.webp"
                 alt="Ulli Mueller und Leo Ripper. Gruender und Geschaeftsfuehrer von raumton in der Berliner Werkstatt"
                 fill
                 className="object-cover object-top"
