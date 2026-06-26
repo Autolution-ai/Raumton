@@ -1,11 +1,12 @@
 import Navigation from '@/components/layout/Navigation'
 import Footer from '@/components/layout/Footer'
-import FloatingCTA from '@/components/layout/FloatingCTA'
 import Hero from '@/components/sections/Hero'
 import SocialProofStrip from '@/components/sections/SocialProofStrip'
 import ProblemPain from '@/components/sections/ProblemPain'
+import Zielraeume from '@/components/sections/Zielraeume'
 import Leistungen from '@/components/sections/Leistungen'
 import ReferenzenPreview from '@/components/sections/ReferenzenPreview'
+import CTABar from '@/components/sections/CTABar'
 import UeberUns from '@/components/sections/UeberUns'
 import Testimonials from '@/components/sections/Testimonials'
 import AnfrageFormular from '@/components/sections/AnfrageFormular'
@@ -20,8 +21,10 @@ export default function Home() {
         <Hero />
         <SocialProofStrip />
         <ProblemPain />
+        <Zielraeume />
         <Leistungen />
         <ReferenzenPreview />
+        <CTABar />
         <UeberUns />
         <Testimonials />
         <AnfrageFormular />
@@ -29,7 +32,6 @@ export default function Home() {
         <ShowroomCTA />
       </main>
       <Footer />
-      <FloatingCTA />
     </>
   )
 }
