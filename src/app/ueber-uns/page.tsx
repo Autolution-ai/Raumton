@@ -5,117 +5,92 @@ import Footer from '@/components/layout/Footer'
 import AnfrageFormular from '@/components/sections/AnfrageFormular'
 
 export const metadata: Metadata = {
-  title: 'Ueber raumton. Berliner Manufaktur seit 2006',
-  description:
-    'raumton GmbH: Seit 2006 Berliner Experten fuer Raumakustik. Gegruendet von Ulli Mueller, gefuehrt von Leo Ripper. Eigene Produktion in Berlin-Schoeneberg.',
+  title: 'Über raumton – Berliner Manufaktur seit 2006',
+  description: 'raumton GmbH: Seit 2006 Berliner Experten für Raumakustik. Gegründet von Ulli Müller, geführt von Leo Ripper. Eigene Produktion in Berlin-Schöneberg.',
 }
 
 const WERTE = [
-  {
-    title: 'Berliner Ursprung',
-    text: 'Gegruendet in Berlin, produziert in Berlin. Wir kennen die Raeume dieser Stadt. Und wissen, wie verschieden sie klingen koennen.',
-  },
-  {
-    title: 'Keine Mineralfasern',
-    text: 'Wir verwenden konsequent mineralfaserfreie Materialien. Nicht weil es vorgeschrieben ist, sondern weil wir es fuer richtig halten.',
-  },
-  {
-    title: '100% recycelbar',
-    text: 'Alle Absorber lassen sich vollstaendig recyceln. Wir waehlen Materialien, hinter denen wir auch in zehn Jahren noch stehen.',
-  },
-  {
-    title: '2. Generation',
-    text: 'Seit 2022 fuehrt Leo Ripper das Unternehmen. Und hat dabei nichts veraendert, was die Qualitaet ausmacht.',
-  },
+  { title: 'Berliner Ursprung', text: 'Gegründet in Berlin, produziert in Berlin. Wir kennen die Räume dieser Stadt – und wissen, wie verschieden sie klingen können.' },
+  { title: 'Keine Mineralfasern', text: 'Wir verwenden konsequent mineralfaserfreie Materialien. Nicht weil es vorgeschrieben ist, sondern weil wir es für richtig halten.' },
+  { title: '100% recycelbar', text: 'Alle Absorber lassen sich vollständig recyceln. Wir wählen Materialien, hinter denen wir auch in zehn Jahren noch stehen.' },
+  { title: '2. Generation', text: 'Seit 2022 führt Leo Ripper das Unternehmen – und hat dabei nichts verändert, was die Qualität ausmacht.' },
+]
+
+const ZAHLEN = [
+  { wert: '20', einheit: 'Jahre', label: 'Erfahrung in der Raumakustik' },
+  { wert: '1.500+', einheit: '', label: 'Projekte erfolgreich abgeschlossen' },
+  { wert: '300+', einheit: '', label: 'Farben und Texturen verfügbar' },
+  { wert: '3', einheit: 'Wochen', label: 'Lieferzeit nach Auftragseingang' },
 ]
 
 export default function UeberUnsPage() {
   return (
     <>
       <Navigation />
-      <main className="pt-32">
-        {/* Hero */}
-        <div className="container-wide mb-24">
-          <div className="max-w-3xl">
-            <span className="text-[#C8A96E] text-sm tracking-widest uppercase mb-4 block">
-              Ueber raumton
-            </span>
-            <h1
-              className="text-5xl sm:text-6xl lg:text-7xl text-white mb-8"
-              style={{ fontFamily: 'var(--font-playfair), serif' }}
-            >
-              Wer hinter
-              <br />
-              <span className="text-gradient-gold">raumton steckt.</span>
-            </h1>
-          </div>
-        </div>
-
-        {/* Bild + Story */}
-        <div className="container-wide mb-24">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
-            <div className="relative h-[500px]">
-              <Image
-                src="/Raumton-Inhaber.webp"
-                alt="Ulli Mueller und Leo Ripper. Gruender und Geschaeftsfuehrer von raumton in der Berliner Werkstatt"
-                fill
-                className="object-cover object-top"
-              />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/50 to-transparent p-6">
-                <p className="text-white text-sm font-medium">Ulli Mueller &amp; Leo Ripper</p>
-                <p className="text-white/70 text-xs">Gruender &amp; Geschaeftsfuehrung. Berlin-Schoeneberg</p>
-              </div>
-            </div>
-            <div className="flex flex-col justify-center">
-              <h2
-                className="text-3xl text-white mb-6"
-                style={{ fontFamily: 'var(--font-playfair), serif' }}
-              >
-                Vom Tonstudio zur Berliner Manufaktur
-              </h2>
-              <div className="space-y-4 text-[#A0A0A0] leading-relaxed">
-                <p>
-                  Ulli Mueller gruendete raumton 2006 aus einer einfachen Ueberzeugung: Gute
-                  Raumakustik sollte fuer jeden zugaenglich sein. Nicht nur fuer Tonstudios und
-                  Rundfunkhaeuser. Als erfahrener Audiotechniker und Studiobauer kannte er die
-                  Kraft des guten Klangs und wollte sie in ganz normale Bueros, Restaurants und
-                  Bildungseinrichtungen bringen.
-                </p>
-                <p>
-                  Was klein begann, wuchs schnell. 1.500+ Projekte spaeter ist raumton die erste
-                  Adresse fuer Raumakustik in Berlin. Mit Kunden von der Kita um die Ecke bis
-                  zum DAX40-Konzern und Bundesministerium.
-                </p>
-                <p>
-                  Seit 2022 fuehrt Leo Ripper das Unternehmen in zweiter Generation. Die
-                  Werkzeuge haben sich veraendert, das Prinzip nicht: erst zuhoeren, dann
-                  messen, dann liefern. In Berlin-Schoeneberg, wie von Anfang an.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Werte */}
-        <div className="bg-[#0D0D0D] py-24">
+      <main className="bg-white">
+        <div className="pt-32 pb-16 bg-white">
           <div className="container-wide">
-            <h2
-              className="text-3xl text-white mb-12 text-center"
-              style={{ fontFamily: 'var(--font-playfair), serif' }}
-            >
-              Unsere Werte
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-[#1A1A1A]">
-              {WERTE.map((wert) => (
-                <div key={wert.title} className="bg-[#0D0D0D] p-8">
-                  <h3 className="text-[#C8A96E] font-semibold mb-3">{wert.title}</h3>
-                  <p className="text-[#A0A0A0] text-sm leading-relaxed">{wert.text}</p>
+            <span className="text-[#C8A96E] text-sm tracking-widest uppercase mb-4 block">Über raumton</span>
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl text-[#1A1A1A] mb-6 max-w-3xl leading-tight" style={{ fontFamily: 'var(--font-playfair), serif' }}>Berliner Handwerk.{' '}<span className="text-[#C8A96E]">Seit 2006.</span></h1>
+            <p className="text-[#606060] text-lg max-w-2xl leading-relaxed">Wir planen, fertigen und montieren individuelle Schallabsorber – direkt aus Berlin-Schöneberg, seit fast zwei Jahrzehnten.</p>
+          </div>
+        </div>
+        <div className="bg-[#F9F7F4] py-16">
+          <div className="container-wide">
+            <div className="grid grid-cols-2 lg:grid-cols-4 divide-y lg:divide-y-0 lg:divide-x divide-[#E5E2DC]">
+              {ZAHLEN.map((z) => (
+                <div key={z.label} className="px-10 py-8 first:pl-0 last:pr-0">
+                  <div className="text-5xl font-bold text-[#C8A96E] mb-1 leading-none" style={{ fontFamily: 'var(--font-playfair), serif' }}>{z.wert}{z.einheit && <span className="text-2xl ml-1">{z.einheit}</span>}</div>
+                  <p className="text-[#888] text-sm leading-relaxed mt-2">{z.label}</p>
                 </div>
               ))}
             </div>
           </div>
         </div>
-
+        <div className="bg-white py-24">
+          <div className="container-wide">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+              <div className="relative h-[500px]">
+                <Image src="https://raw.githubusercontent.com/Autolution-ai/Raumton/main/Raumton-Inhaber.webp" alt="Ulli Müller und Leo Ripper" fill className="object-cover object-top" />
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/40 to-transparent p-6">
+                  <p className="text-white text-sm font-medium">Ulli Müller &amp; Leo Ripper</p>
+                  <p className="text-white/70 text-xs">Gründer &amp; Geschäftsführung · Berlin-Schöneberg</p>
+                </div>
+              </div>
+              <div>
+                <span className="text-[#C8A96E] text-sm tracking-widest uppercase mb-3 block">Unsere Geschichte</span>
+                <h2 className="text-3xl sm:text-4xl text-[#1A1A1A] mb-8" style={{ fontFamily: 'var(--font-playfair), serif' }}>Vom Tonstudio zur Berliner Manufaktur.</h2>
+                <div className="space-y-5 text-[#606060] leading-relaxed text-sm">
+                  <p>Ulli Müller gründete raumton 2006 aus einer einfachen Überzeugung: Gute Raumakustik sollte für jeden zugänglich sein – nicht nur für Tonstudios und Rundfunkhäuser.</p>
+                  <p>Was klein begann, wuchs schnell. 1.500+ Projekte später ist raumton die erste Adresse für Raumakustik in Berlin – mit Kunden von der Kita um die Ecke bis zum DAX40-Konzern und Bundesministerium.</p>
+                  <p>Seit 2022 führt Leo Ripper das Unternehmen in zweiter Generation. Die Werkzeuge haben sich verändert, das Prinzip nicht: erst zuhören, dann messen, dann liefern.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="bg-[#F9F7F4] py-24">
+          <div className="container-wide">
+            <div className="max-w-xl mb-14">
+              <span className="text-[#C8A96E] text-sm tracking-widest uppercase mb-3 block">Was uns antreibt</span>
+              <h2 className="text-3xl sm:text-4xl text-[#1A1A1A]" style={{ fontFamily: 'var(--font-playfair), serif' }}>Unsere Werte.</h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {WERTE.map((wert) => (
+                <div key={wert.title} className="border-t border-[#C8A96E] pt-6">
+                  <h3 className="text-[#1A1A1A] font-semibold mb-3">{wert.title}</h3>
+                  <p className="text-[#888] text-sm leading-relaxed">{wert.text}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+        <div className="bg-white py-20 border-t border-[#EBEBEB]">
+          <div className="container-wide text-center">
+            <h2 className="text-3xl sm:text-4xl text-[#1A1A1A] mb-4" style={{ fontFamily: 'var(--font-playfair), serif' }}>Lernen Sie uns persönlich kennen.</h2>
+            <a href="#anfrage" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C8A96E] text-white font-semibold hover:bg-[#B8955A] transition-colors duration-200">Jetzt kostenlos beraten lassen</a>
+          </div>
+        </div>
         <AnfrageFormular />
       </main>
       <Footer />
