@@ -1,99 +1,49 @@
 'use client'
 
-import { motion, useInView } from 'framer-motion'
-import { useRef } from 'react'
-import Image from 'next/image'
+import { motion } from 'framer-motion'
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowRight } from 'lucide-react'
+import { fadeUp, staggerContainer, viewportOptions } from '@/lib/animations'
+import { REFERENZEN } from '@/lib/constants'
 
-const PROJEKTE = [
-  {
-    kunde: 'Brasserie Colette Tim Raue',
-    branche: 'Gastronomie',
-    beschreibung: 'Wandabsorber und Deckensegel für das Berliner Gourmet-Restaurant. Kein einziger Schließtag während der Installation.',
-    bild: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=700&q=80',
-  },
-  {
-    kunde: 'Auswärtiges Amt Berlin',
-    branche: 'Öffentlich',
-    beschreibung: 'Konferenz- und Besprechungsräume einer Bundesbehörde. Repräsentativ im Auftritt, messbar im Ergebnis.',
-    bild: 'https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=700&q=80',
-  },
-  {
-    kunde: 'RepRisk Germany GmbH',
-    branche: 'Büro',
-    beschreibung: 'Offener Grundriss, harte Böden, viele Schreibtische. Maßgefertigte Absorber in den Corporate-Farben des Unternehmens.',
-    bild: 'https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=700&q=80',
-  },
-]
+const FEATURED = REFERENZEN.slice(0, 3)
 
 export default function ReferenzenPreview() {
-  const ref = useRef(null)
-  const inView = useInView(ref, { once: true, margin: '-60px' })
-
   return (
-    <section className="bg-white section-padding">
-      <div className="container-wide" ref={ref}>
-        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-14">
-          <div>
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6 }}
-              className="flex items-center gap-3 mb-4"
-            >
-              <div className="divider" />
-              <span className="section-label">Referenzen</span>
-            </motion.div>
-            <motion.h2
-              initial={{ opacity: 0, y: 24 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              style={{ fontFamily: 'var(--font-display), serif' }}
-              className="text-[clamp(2rem,4vw,3.5rem)] font-light text-[#1C1917]"
-            >
-              Projekte, die wirken.
-            </motion.h2>
-          </div>
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={inView ? { opacity: 1 } : {}}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            <Link
-              href="/referenzen"
-              className="flex items-center gap-2 text-sm text-[#B8955A] hover:gap-3 transition-all font-medium"
-            >
-              Alle Referenzen <ArrowRight size={14} />
+    <section className="section-padding bg-[#F9F7F4]">
+      <div className="container-wide">
+        <motion.div initial="hidden" whileInView="visible" viewport={viewportOptions} variants={staggerContainer} className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+          <motion.div variants={fadeUp}>
+            <span className="text-[#C8A96E] text-sm tracking-widest uppercase mb-4 block">Referenzprojekte</span>
+            <h2 className="text-4xl sm:text-5xl text-[#1A1A1A]" style={{ fontFamily: 'var(--font-playfair), serif' }}>Was raumton{' '}<span className="text-[#C8A96E]">messbar verändert.</span></h2>
+          </motion.div>
+          <motion.div variants={fadeUp}>
+            <Link href="/referenzen" className="flex items-center gap-2 text-sm text-[#888] hover:text-[#C8A96E] transition-colors group">
+              Alle Referenzen <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
             </Link>
           </motion.div>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-6">
-          {PROJEKTE.map((p, i) => (
-            <motion.div
-              key={p.kunde}
-              initial={{ opacity: 0, y: 24 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.1 + i * 0.12 }}
-              className="group"
-            >
-              <div className="relative h-56 mb-5 overflow-hidden bg-[#F2EFE9]">
-                <Image
-                  src={p.bild}
-                  alt={p.kunde}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute top-4 left-4">
-                  <span className="bg-white/90 text-[#6B6560] text-xs px-3 py-1 tracking-wide">{p.branche}</span>
-                </div>
+        </motion.div>
+        <motion.div initial="hidden" whileInView="visible" viewport={viewportOptions} variants={staggerContainer} className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {FEATURED.map((ref) => (
+            <motion.div key={ref.id} variants={fadeUp} className="group border border-[#EBEBEB] hover:border-[#C8A96E]/40 hover:shadow-md transition-all duration-300 overflow-hidden bg-white">
+              <div className="relative h-56 overflow-hidden bg-[#F9F7F4]">
+                <Image src={ref.bild} alt={ref.kunde} fill className="object-cover group-hover:scale-105 transition-transform duration-500" sizes="(max-width: 768px) 100vw, 33vw" />
+                <div className="absolute top-4 left-4 px-3 py-1 bg-white/90 text-[#C8A96E] text-xs tracking-widest uppercase font-medium">{ref.branche}</div>
               </div>
-              <p className="text-[#A8A29E] text-xs tracking-widest uppercase mb-2">{p.kunde}</p>
-              <p className="text-[#1C1917] text-sm leading-relaxed">{p.beschreibung}</p>
+              <div className="p-6 bg-white">
+                <h3 className="text-[#1A1A1A] font-semibold mb-2">{ref.kunde}</h3>
+                <p className="text-[#888] text-sm leading-relaxed mb-4">{ref.beschreibung}</p>
+                <Link href="/referenzen" className="text-sm text-[#C8A96E] flex items-center gap-1 group-hover:gap-2 transition-all font-medium">Details ansehen <ArrowRight size={12} /></Link>
+              </div>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
+        <motion.div initial="hidden" whileInView="visible" viewport={viewportOptions} variants={fadeUp} className="text-center mt-14">
+          <Link href="/referenzen" className="inline-flex items-center gap-2 px-8 py-3 border border-[#DDDAD4] text-[#606060] hover:border-[#C8A96E] hover:text-[#C8A96E] transition-all duration-200 text-sm">
+            Alle {REFERENZEN.length} Referenzen ansehen <ArrowRight size={16} />
+          </Link>
+        </motion.div>
       </div>
     </section>
   )

@@ -13,24 +13,25 @@ export default function FloatingCTA() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  const handleClick = () => {
+    const el = document.getElementById('anfrage')
+    if (el) el.scrollIntoView({ behavior: 'smooth' })
+  }
+
   return (
     <AnimatePresence>
       {visible && (
-        <motion.div
-          initial={{ opacity: 0, y: 20, scale: 0.95 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          exit={{ opacity: 0, y: 20, scale: 0.95 }}
-          transition={{ duration: 0.3, ease: 'easeOut' }}
-          className="fixed bottom-6 right-6 z-40"
+        <motion.button
+          initial={{ y: 100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          exit={{ y: 100, opacity: 0 }}
+          transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+          onClick={handleClick}
+          className="fixed bottom-6 right-6 z-40 flex items-center gap-2 bg-[#C8A96E] text-[#0A0A0A] px-5 py-3 font-semibold text-sm hover:bg-[#D9BE8C] transition-colors shadow-lg rounded-sm"
         >
-          <a
-            href="#anfrage"
-            className="flex items-center gap-2.5 px-5 py-3.5 bg-[#C8A96E] text-[#0A0A0A] text-sm font-semibold shadow-2xl hover:bg-[#D9BE8C] transition-colors duration-200 group"
-          >
-            <Phone size={14} />
-            Kostenlose Beratung sichern
-          </a>
-        </motion.div>
+          <Phone className="w-4 h-4" />
+          Kostenlose Beratung sichern
+        </motion.button>
       )}
     </AnimatePresence>
   )
