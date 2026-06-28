@@ -6,17 +6,27 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, Phone } from 'lucide-react'
 
 function Logotype({ dark }: { dark: boolean }) {
+  // Echtes raumton-Logo, per CSS-Maske eingefärbt: weiß über dem Hero,
+  // dunkel auf der weißen Nav.
   return (
     <span
-      className="flex items-baseline gap-[1px] text-2xl font-semibold tracking-tight transition-colors duration-300"
+      role="img"
+      aria-label="raumton"
+      className="block transition-colors duration-300"
       style={{
-        fontFamily: 'var(--font-playfair), serif',
-        color: dark ? '#1A1A1A' : '#FFFFFF',
+        width: '134px',
+        height: '28px',
+        backgroundColor: dark ? '#1A1A1A' : '#FFFFFF',
+        WebkitMaskImage: 'url(/logo-raumton.png)',
+        maskImage: 'url(/logo-raumton.png)',
+        WebkitMaskRepeat: 'no-repeat',
+        maskRepeat: 'no-repeat',
+        WebkitMaskSize: 'contain',
+        maskSize: 'contain',
+        WebkitMaskPosition: 'left center',
+        maskPosition: 'left center',
       }}
-    >
-      raumton
-      <span className="ml-[2px] inline-block h-[6px] w-[6px] rounded-full bg-[#C8A96E]" />
-    </span>
+    />
   )
 }
 
