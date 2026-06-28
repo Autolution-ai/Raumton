@@ -146,28 +146,26 @@ export const FAQS = [
 
 // Kundenlogos für den Social-Proof-Marquee, exakt die vom Kunden gewählten
 // 18 Unternehmen (Reihenfolge wie in der Logo-Übersicht).
-// `file` = echtes Markenlogo in Originalfarbe (lokal in /public/logos).
-// Ohne `file` wird vorübergehend ein Wortmarken-Schriftzug gerendert,
-// bis die Originallogos hochgeladen sind.
-export const KUNDEN_LOGOS: { name: string; file?: string }[] = [
-  { name: 'Sparkasse', file: '/logos/sparkasse.svg' },
-  { name: 'HelloFresh', file: '/logos/hellofresh.svg' },
-  { name: 'BVG', file: '/logos/bvg.svg' },
-  { name: 'Commerzbank', file: '/logos/commerzbank.svg' },
-  { name: 'Deutsche Bahn', file: '/logos/deutsche-bahn.svg' },
-  { name: 'Lieferando' },
-  { name: 'Berliner Philharmoniker' },
-  { name: 'UNESCO' },
-  { name: 'ENERTRAG' },
-  { name: 'Diakonie' },
-  { name: 'Clark' },
-  { name: 'dena' },
-  { name: 'ista' },
-  { name: 'Fraunhofer' },
-  { name: 'Hella Aglaia' },
-  { name: 'lekker' },
-  { name: 'Securitas' },
-  { name: 'Spreewaldhof' },
+// `file` = echtes Markenlogo in Originalfarbe (transparente PNGs in /public/logos).
+export const KUNDEN_LOGOS: { name: string; file: string }[] = [
+  { name: 'Sparkasse', file: '/logos/sparkasse.png' },
+  { name: 'HelloFresh', file: '/logos/hellofresh.png' },
+  { name: 'BVG', file: '/logos/bvg.png' },
+  { name: 'Commerzbank', file: '/logos/commerzbank.png' },
+  { name: 'Deutsche Bahn', file: '/logos/deutsche-bahn.png' },
+  { name: 'Lieferando', file: '/logos/lieferando.png' },
+  { name: 'Berliner Philharmoniker', file: '/logos/berliner-philharmoniker.png' },
+  { name: 'UNESCO', file: '/logos/unesco.png' },
+  { name: 'ENERTRAG', file: '/logos/enertrag.png' },
+  { name: 'Diakonie', file: '/logos/diakonie.png' },
+  { name: 'Clark', file: '/logos/clark.png' },
+  { name: 'dena', file: '/logos/dena.png' },
+  { name: 'ista', file: '/logos/ista.png' },
+  { name: 'Fraunhofer', file: '/logos/fraunhofer.png' },
+  { name: 'Hella Aglaia', file: '/logos/hella-aglaia.png' },
+  { name: 'lekker', file: '/logos/lekker.png' },
+  { name: 'Securitas', file: '/logos/securitas.png' },
+  { name: 'Spreewaldhof', file: '/logos/spreewaldhof.png' },
 ]
 
 export const LEISTUNGEN = [
