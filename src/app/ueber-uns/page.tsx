@@ -5,15 +5,15 @@ import Footer from '@/components/layout/Footer'
 import AnfrageFormular from '@/components/sections/AnfrageFormular'
 
 export const metadata: Metadata = {
-  title: 'Über raumton – Berliner Manufaktur seit 2006',
+  title: 'Über raumton, Berliner Manufaktur seit 2006',
   description: 'raumton GmbH: Seit 2006 Berliner Experten für Raumakustik. Gegründet von Ulli Müller, geführt von Leo Ripper. Eigene Produktion in Berlin-Schöneberg.',
 }
 
 const WERTE = [
-  { title: 'Berliner Ursprung', text: 'Gegründet in Berlin, produziert in Berlin. Wir kennen die Räume dieser Stadt – und wissen, wie verschieden sie klingen können.' },
+  { title: 'Berliner Ursprung', text: 'Gegründet in Berlin, produziert in Berlin. Wir kennen die Räume dieser Stadt, und wissen, wie verschieden sie klingen können.' },
   { title: 'Keine Mineralfasern', text: 'Wir verwenden konsequent mineralfaserfreie Materialien. Nicht weil es vorgeschrieben ist, sondern weil wir es für richtig halten.' },
   { title: '100% recycelbar', text: 'Alle Absorber lassen sich vollständig recyceln. Wir wählen Materialien, hinter denen wir auch in zehn Jahren noch stehen.' },
-  { title: '2. Generation', text: 'Seit 2022 führt Leo Ripper das Unternehmen – und hat dabei nichts verändert, was die Qualität ausmacht.' },
+  { title: '2. Generation', text: 'Seit 2022 führt Leo Ripper das Unternehmen, und hat dabei nichts verändert, was die Qualität ausmacht.' },
 ]
 
 const ZAHLEN = [
@@ -32,7 +32,7 @@ export default function UeberUnsPage() {
           <div className="container-wide">
             <span className="text-[#C8A96E] text-sm tracking-widest uppercase mb-4 block">Über raumton</span>
             <h1 className="text-5xl sm:text-6xl lg:text-7xl text-[#1A1A1A] mb-6 max-w-3xl leading-tight" style={{ fontFamily: 'var(--font-playfair), serif' }}>Berliner Handwerk.{' '}<span className="text-[#C8A96E]">Seit 2006.</span></h1>
-            <p className="text-[#606060] text-lg max-w-2xl leading-relaxed">Wir planen, fertigen und montieren individuelle Schallabsorber – direkt aus Berlin-Schöneberg, seit fast zwei Jahrzehnten.</p>
+            <p className="text-[#606060] text-lg max-w-2xl leading-relaxed">Wir planen, fertigen und montieren individuelle Schallabsorber, direkt aus Berlin-Schöneberg, seit fast zwei Jahrzehnten.</p>
           </div>
         </div>
         <div className="bg-[#F9F7F4] py-16">
@@ -61,8 +61,8 @@ export default function UeberUnsPage() {
                 <span className="text-[#C8A96E] text-sm tracking-widest uppercase mb-3 block">Unsere Geschichte</span>
                 <h2 className="text-3xl sm:text-4xl text-[#1A1A1A] mb-8" style={{ fontFamily: 'var(--font-playfair), serif' }}>Vom Tonstudio zur Berliner Manufaktur.</h2>
                 <div className="space-y-5 text-[#606060] leading-relaxed text-sm">
-                  <p>Ulli Müller gründete raumton 2006 aus einer einfachen Überzeugung: Gute Raumakustik sollte für jeden zugänglich sein – nicht nur für Tonstudios und Rundfunkhäuser.</p>
-                  <p>Was klein begann, wuchs schnell. 1.500+ Projekte später ist raumton die erste Adresse für Raumakustik in Berlin – mit Kunden von der Kita um die Ecke bis zum DAX40-Konzern und Bundesministerium.</p>
+                  <p>Ulli Müller gründete raumton 2006 aus einer einfachen Überzeugung: Gute Raumakustik sollte für jeden zugänglich sein, nicht nur für Tonstudios und Rundfunkhäuser.</p>
+                  <p>Was klein begann, wuchs schnell. 1.500+ Projekte später ist raumton die erste Adresse für Raumakustik in Berlin, mit Kunden von der Kita um die Ecke bis zum DAX40-Konzern und Bundesministerium.</p>
                   <p>Seit 2022 führt Leo Ripper das Unternehmen in zweiter Generation. Die Werkzeuge haben sich verändert, das Prinzip nicht: erst zuhören, dann messen, dann liefern.</p>
                 </div>
               </div>

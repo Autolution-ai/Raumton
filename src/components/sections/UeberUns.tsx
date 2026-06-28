@@ -43,7 +43,7 @@ export default function UeberUns() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           <motion.div initial="hidden" whileInView="visible" viewport={viewportOptions} variants={fadeLeft} className="relative">
             <div className="relative h-[500px] lg:h-[600px] overflow-hidden">
-              <Image src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?w=1000&q=80" alt="Manufaktur und Handwerk bei raumton in Berlin-Schöneberg" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
+              <Image src="/Raumton-Inhaber.webp" alt="Ulli Müller und Leo Ripper, der Familienbetrieb hinter raumton" fill className="object-cover object-top" sizes="(max-width: 1024px) 100vw, 50vw" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
             </div>
             <div className="absolute -bottom-6 -right-6 bg-[#C8A96E] text-white p-6 text-center">
@@ -55,8 +55,8 @@ export default function UeberUns() {
           <motion.div initial="hidden" whileInView="visible" viewport={viewportOptions} variants={staggerContainer}>
             <motion.span variants={fadeUp} className="text-[#C8A96E] text-sm tracking-widest uppercase mb-4 block">Über raumton</motion.span>
             <motion.h2 variants={fadeUp} className="text-4xl sm:text-5xl text-[#1A1A1A] mb-6" style={{ fontFamily: 'var(--font-playfair), serif' }}>Berliner Manufaktur.{' '}<span className="text-[#C8A96E]">Echtes Handwerk.</span></motion.h2>
-            <motion.p variants={fadeUp} className="text-[#606060] leading-relaxed mb-4 text-sm">Ulli Müller gründete raumton 2006 als Audiotechniker und Studiobauer – mit dem Gedanken, dass gute Akustik nicht nur in Rundfunkhäusern und Tonstudios funktionieren muss.</motion.p>
-            <motion.p variants={fadeUp} className="text-[#606060] leading-relaxed mb-8 text-sm">Seit 2022 führt Leo Ripper das Unternehmen in zweiter Generation. Neue Energie – aber dieselbe Überzeugung: Akustik, die funktioniert, und Lösungen, die wirklich zum Raum passen.</motion.p>
+            <motion.p variants={fadeUp} className="text-[#606060] leading-relaxed mb-4 text-sm">Ulli Müller gründete raumton 2006 als Audiotechniker und Studiobauer, mit dem Gedanken, dass gute Akustik nicht nur in Rundfunkhäusern und Tonstudios funktionieren muss.</motion.p>
+            <motion.p variants={fadeUp} className="text-[#606060] leading-relaxed mb-8 text-sm">Seit 2022 führt Leo Ripper das Unternehmen in zweiter Generation. Neue Energie, aber dieselbe Überzeugung: Akustik, die funktioniert, und Lösungen, die wirklich zum Raum passen.</motion.p>
             <motion.div variants={staggerContainer} className="grid grid-cols-2 gap-6 mb-8">
               {ZAHLEN.map((z) => (
                 <motion.div key={z.label} variants={fadeUp} className="border-t border-[#E5E2DC] pt-4">

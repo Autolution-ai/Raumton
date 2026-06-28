@@ -8,9 +8,9 @@ import ImagePlaceholder from '@/components/ui/ImagePlaceholder'
 
 // Raumtypen exakt wie auf der bestehenden raumton-Website.
 // `image: null` -> Platzhalter. Sobald echte Fotos im Repo liegen, hier den
-// Pfad eintragen (z. B. '/raeume/grossraumbuero.jpg') – sonst nichts ändern.
+// Pfad eintragen (z. B. '/raeume/grossraumbuero.jpg'), sonst nichts ändern.
 const rooms: { name: string; sub: string; image: string | null }[] = [
-  { name: 'Großraumbüro', sub: 'Konzentration im Open Space – trotz vieler Menschen auf einer Fläche.', image: null },
+  { name: 'Großraumbüro', sub: 'Konzentration im Open Space, trotz vieler Menschen auf einer Fläche.', image: null },
   { name: 'Kleines Büro', sub: 'Ruhe für Einzel- und Teambüros, in denen jedes Wort zählt.', image: null },
   { name: 'Konferenzraum', sub: 'Sprachverständlichkeit für Meetings, Calls und Entscheidungen.', image: null },
   { name: 'Präsentationsraum', sub: 'Klarer Klang für Vorträge, Schulungen und Veranstaltungen.', image: null },
@@ -27,7 +27,7 @@ export default function Zielraeume() {
             Für welchen Raum?
           </motion.p>
           <motion.h2 variants={fadeUp} className="text-4xl md:text-5xl text-white leading-tight max-w-2xl" style={{ fontFamily: 'var(--font-playfair), serif' }}>
-            Wir optimieren jeden Raum – in Berlin und darüber hinaus.
+            Wir optimieren jeden Raum, in Berlin und darüber hinaus.
           </motion.h2>
         </motion.div>
 
@@ -56,7 +56,7 @@ export default function Zielraeume() {
           ))}
         </motion.div>
 
-        {/* CTA statt Klickstrecke – führt direkt zur Anfrage */}
+        {/* CTA statt Klickstrecke, führt direkt zur Anfrage */}
         <motion.div
           variants={fadeUp}
           initial="hidden"

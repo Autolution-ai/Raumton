@@ -11,12 +11,12 @@ export default function ShowroomCTA() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <motion.div initial="hidden" whileInView="visible" viewport={viewportOptions} variants={staggerContainer}>
             <motion.span variants={fadeUp} className="text-[#C8A96E] text-sm tracking-widest uppercase mb-4 block">Showroom</motion.span>
-            <motion.h2 variants={fadeUp} className="text-4xl sm:text-5xl text-[#1A1A1A] mb-6" style={{ fontFamily: 'var(--font-playfair), serif' }}>Erleben Sie Akustik live –{' '}<span className="text-[#C8A96E]">in Berlin-Schöneberg.</span></motion.h2>
-            <motion.p variants={fadeUp} className="text-[#606060] leading-relaxed mb-10 text-sm">Farben und Materialien überzeugen erst, wenn man sie anfässt. Im Showroom liegen alle unsere Musterplatten aus – über 300 Farben und Texturen.</motion.p>
+            <motion.h2 variants={fadeUp} className="text-4xl sm:text-5xl text-[#1A1A1A] mb-6" style={{ fontFamily: 'var(--font-playfair), serif' }}>Erleben Sie Akustik live{' '}<span className="text-[#C8A96E]">in Berlin-Schöneberg.</span></motion.h2>
+            <motion.p variants={fadeUp} className="text-[#606060] leading-relaxed mb-10 text-sm">Farben und Materialien überzeugen erst, wenn man sie anfässt. Im Showroom liegen alle unsere Musterplatten aus, über 300 Farben und Texturen.</motion.p>
             <motion.div variants={staggerContainer} className="space-y-4 mb-10">
               {[
                 { icon: MapPin, text: 'Berlin-Schöneberg (genaue Adresse auf Anfrage)' },
-                { icon: Clock, text: 'Mo–Fr 9–18 Uhr | Termine nach Vereinbarung' },
+                { icon: Clock, text: 'Mo. bis Fr., 9 bis 18 Uhr | Termine nach Vereinbarung' },
                 { icon: Phone, text: '030 / 70 50 95 11', href: 'tel:+493070509511' },
                 { icon: Mail, text: 'info@raumton.com', href: 'mailto:info@raumton.com' },
               ].map((item) => {

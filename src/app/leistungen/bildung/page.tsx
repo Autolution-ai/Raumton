@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 }
 
 const STATS = [
-  { wert: '85 dB', label: 'Lärmpegel in Kitas', text: 'Typische Schallpegel in schlecht gedämmten Gruppenräumen – vergleichbar mit einer Kreissäge.' },
+  { wert: '85 dB', label: 'Lärmpegel in Kitas', text: 'Typische Schallpegel in schlecht gedämmten Gruppenräumen, vergleichbar mit einer Kreissäge.' },
   { wert: '−40 %', label: 'Weniger Konzentration', text: 'Hoher Lärmpegel reduziert die Konzentrationsähigkeit von Kindern um bis zu 40 %.' },
   { wert: '30 %', label: 'Lehrkraft-Ausfälle', text: 'Ein Drittel aller Stimmerkrankungen bei Lehrkräften ist auf dauerhaften Lärm zurückzuführen.' },
 ]
@@ -19,7 +19,7 @@ const STATS = [
 const SCHMERZEN = [
   {
     titel: 'Lärm verhindert Lernen',
-    text: 'Kinder, die sich gegenseitig nicht verstehen, lernen schlechter. Schlechte Akustik ist ein struktureller Bildungsnachteil – der sich mit Absorbern beheben lässt.',
+    text: 'Kinder, die sich gegenseitig nicht verstehen, lernen schlechter. Schlechte Akustik ist ein struktureller Bildungsnachteil, der sich mit Absorbern beheben lässt.',
   },
   {
     titel: 'Stimme und Gesundheit der Lehrkräfte',
@@ -27,22 +27,22 @@ const SCHMERZEN = [
   },
   {
     titel: 'Fehlende Rückzugsorte für Kinder',
-    text: 'Manche Kinder reagieren stärker auf Lärm. Ruhige Rückzugsbereiche mit guter Akustik sind pädagogisch wertvoll – und mit den richtigen Produkten einfach realisierbar.',
+    text: 'Manche Kinder reagieren stärker auf Lärm. Ruhige Rückzugsbereiche mit guter Akustik sind pädagogisch wertvoll, und mit den richtigen Produkten einfach realisierbar.',
   },
 ]
 
 const PRODUKTE = [
   { name: 'Wandabsorber', text: 'Robust, waschbar und in allen RAL-Farben erhältlich. Sicher für Kinder nach Norm, einfach zu reinigen.' },
   { name: 'Deckenabsorber', text: 'Montiert außerhalb der Reichweite von Kindern. Hohe Wirksamkeit, keine Verletzungsgefahr, kein Wartungsaufwand.' },
-  { name: 'Deckensegel', text: 'Großformatige Elemente für hohe Gruppenräume. Kommen in jeder Farbe – ein echter Hingucker, der nebenbei die Akustik rettet.' },
-  { name: 'Raumteiler', text: 'Akustisch wirksame Trennelemente für Gruppenräume. Strukturieren den Raum ohne feste Wände – flexibel und kindgerecht.' },
+  { name: 'Deckensegel', text: 'Großformatige Elemente für hohe Gruppenräume. Kommen in jeder Farbe, ein echter Hingucker, der nebenbei die Akustik rettet.' },
+  { name: 'Raumteiler', text: 'Akustisch wirksame Trennelemente für Gruppenräume. Strukturieren den Raum ohne feste Wände, flexibel und kindgerecht.' },
 ]
 
 const PROZESS = [
   { nr: '01', titel: 'Beratung & Messung', text: 'Wir besuchen Ihre Einrichtung außerhalb der Betreuungszeiten und messen ungestört.' },
-  { nr: '02', titel: 'Planung mit Farbe', text: 'Absorber können in den Farben Ihres Einrichtungskonzepts geliefert werden – bunt ist erlaubt.' },
+  { nr: '02', titel: 'Planung mit Farbe', text: 'Absorber können in den Farben Ihres Einrichtungskonzepts geliefert werden, bunt ist erlaubt.' },
   { nr: '03', titel: 'Berliner Fertigung', text: 'Gefertigt in Berlin-Schöneberg. Alle Materialien sind mineralfaserfrei und 100 % recycelbar.' },
-  { nr: '04', titel: 'Schnelle Montage', text: 'Montage in einem Tag, außerhalb der Öffnungszeiten – damit der Betrieb ungestört weiterläuft.' },
+  { nr: '04', titel: 'Schnelle Montage', text: 'Montage in einem Tag, außerhalb der Öffnungszeiten, damit der Betrieb ungestört weiterläuft.' },
 ]
 
 export default function BildungPage() {
@@ -66,7 +66,7 @@ export default function BildungPage() {
             </h1>
             <p className="text-[#606060] text-lg max-w-2xl leading-relaxed mb-8">
               Kinder und Lehrkräfte reagieren besonders empfindlich auf Lärm. raumton
-              schafft angenehme Lernumgebungen – bunt, robust und ohne Einschränkung
+              schafft angenehme Lernumgebungen, bunt, robust und ohne Einschränkung
               für den laufenden Betrieb.
             </p>
             <a
@@ -143,7 +143,7 @@ export default function BildungPage() {
                 className="text-3xl sm:text-4xl text-[#1A1A1A]"
                 style={{ fontFamily: 'var(--font-playfair), serif' }}
               >
-                Robust, sicher, bunt – und akustisch wirksam.
+                Robust, sicher, bunt, und akustisch wirksam.
               </h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -169,7 +169,7 @@ export default function BildungPage() {
                 className="text-3xl sm:text-4xl text-[#1A1A1A]"
                 style={{ fontFamily: 'var(--font-playfair), serif' }}
               >
-                Außerhalb der Betreuungszeiten – ohne Unterbrechung.
+                Außerhalb der Betreuungszeiten, ohne Unterbrechung.
               </h2>
             </div>
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-10">
@@ -194,7 +194,7 @@ export default function BildungPage() {
           <div className="container-wide max-w-3xl">
             <div className="border-l-4 border-[#C8A96E] pl-8">
               <p className="text-xl text-[#1A1A1A] leading-relaxed mb-6 italic">
-                „Die Kinder sind ruhiger geworden – nicht weil wir es verlangt haben,
+                „Die Kinder sind ruhiger geworden, nicht weil wir es verlangt haben,
                 sondern weil der Raum es ihnen einfach ermöglicht. Ich hätte nicht
                 gedacht, dass Akustik so einen Unterschied macht.“
               </p>
@@ -226,11 +226,11 @@ export default function BildungPage() {
                 },
                 {
                   frage: 'Können Absorber in Kitafarben geliefert werden?',
-                  antwort: 'Selbstverständlich. Wir bieten über 300 Farben – von klassischem Beige bis zu kräftigem Blau oder Rot. Abstimmung nach Ihrem Raumkonzept inklusive.',
+                  antwort: 'Selbstverständlich. Wir bieten über 300 Farben, von klassischem Beige bis zu kräftigem Blau oder Rot. Abstimmung nach Ihrem Raumkonzept inklusive.',
                 },
                 {
                   frage: 'Was kostet eine Kita-Akustiklösung?',
-                  antwort: 'Ein Gruppenraum (ca. 40 m²) liegt typischerweise bei 1.800–3.500 €. Wir erstellen Ihnen ein kostenloses Angebot nach der Messung.',
+                  antwort: 'Ein Gruppenraum (ca. 40 m²) liegt typischerweise bei 1.800 bis 3.500 €. Wir erstellen Ihnen ein kostenloses Angebot nach der Messung.',
                 },
                 {
                   frage: 'Können Kitas staatliche Förderung nutzen?',
@@ -259,7 +259,7 @@ export default function BildungPage() {
               Bessere Akustik. Besseres Lernen.
             </h2>
             <p className="text-[#888] mb-8 max-w-xl mx-auto text-sm leading-relaxed">
-              Kostenlose Vor-Ort-Beratung und Akustikmessung – wir melden uns innerhalb von 1 Werktag.
+              Kostenlose Vor-Ort-Beratung und Akustikmessung, wir melden uns innerhalb von 1 Werktag.
             </p>
             <a
               href="#anfrage"

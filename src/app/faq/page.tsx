@@ -4,8 +4,8 @@ import Footer from '@/components/layout/Footer'
 import { FAQS } from '@/lib/constants'
 
 export const metadata: Metadata = {
-  title: 'FAQ – Alles zu Schallabsorber & Akustik | raumton',
-  description: 'Häufige Fragen zu Raumakustik, Preisen, Ablauf und Materialien – raumton beantwortet alles rund um Schallabsorber und Akustiklösungen in Berlin.',
+  title: 'FAQ, Alles zu Schallabsorber & Akustik | raumton',
+  description: 'Häufige Fragen zu Raumakustik, Preisen, Ablauf und Materialien, raumton beantwortet alles rund um Schallabsorber und Akustiklösungen in Berlin.',
 }
 
 const KATEGORIEN = [
@@ -23,7 +23,7 @@ export default function FAQPage() {
           <div className="container-wide max-w-3xl">
             <span className="text-[#C8A96E] text-sm tracking-widest uppercase mb-4 block">FAQ</span>
             <h1 className="text-5xl sm:text-6xl text-[#1A1A1A] mb-6" style={{ fontFamily: 'var(--font-playfair), serif' }}>Häufige Fragen zu raumton & Raumakustik.</h1>
-            <p className="text-[#606060] text-lg leading-relaxed">Alles was Sie wissen möchten – von Kosten und Ablauf bis zur Technik hinter unseren Lösungen. Nicht gefunden? <a href="tel:+493070509511" className="text-[#C8A96E] hover:underline">030 / 70 50 95 11</a></p>
+            <p className="text-[#606060] text-lg leading-relaxed">Alles was Sie wissen möchten, von Kosten und Ablauf bis zur Technik hinter unseren Lösungen. Nicht gefunden? <a href="tel:+493070509511" className="text-[#C8A96E] hover:underline">030 / 70 50 95 11</a></p>
           </div>
         </div>
         <div className="bg-[#F9F7F4] py-16">
@@ -52,7 +52,7 @@ export default function FAQPage() {
         <div className="bg-white py-20 border-t border-[#EBEBEB]">
           <div className="container-wide text-center">
             <h2 className="text-3xl sm:text-4xl text-[#1A1A1A] mb-4" style={{ fontFamily: 'var(--font-playfair), serif' }}>Noch Fragen? Wir sind für Sie da.</h2>
-            <p className="text-[#888] mb-8 max-w-xl mx-auto text-sm leading-relaxed">Kostenlose Vor-Ort-Beratung und Akustikmessung – wir melden uns innerhalb von 1 Werktag.</p>
+            <p className="text-[#888] mb-8 max-w-xl mx-auto text-sm leading-relaxed">Kostenlose Vor-Ort-Beratung und Akustikmessung, wir melden uns innerhalb von 1 Werktag.</p>
             <a href="#anfrage" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C8A96E] text-white font-semibold hover:bg-[#B8955A] transition-colors duration-200">Kostenlos beraten lassen</a>
           </div>
         </div>

@@ -3,7 +3,7 @@ import Navigation from '@/components/layout/Navigation'
 import Footer from '@/components/layout/Footer'
 import AnfrageFormular from '@/components/sections/AnfrageFormular'
 
-export const metadata: Metadata = { title: 'Kontakt – raumton GmbH Berlin', description: 'Kontaktieren Sie raumton GmbH in Berlin. Telefonisch, per E-Mail oder über unser Online-Formular. Kostenlose Erstberatung.' }
+export const metadata: Metadata = { title: 'Kontakt, raumton GmbH Berlin', description: 'Kontaktieren Sie raumton GmbH in Berlin. Telefonisch, per E-Mail oder über unser Online-Formular. Kostenlose Erstberatung.' }
 
 export default function KontaktPage() {
   return (
@@ -13,7 +13,7 @@ export default function KontaktPage() {
         <div className="container-wide mb-16">
           <span className="text-[#C8A96E] text-sm tracking-widest uppercase mb-4 block">Kontakt</span>
           <h1 className="text-5xl sm:text-6xl text-white mb-6" style={{ fontFamily: 'var(--font-playfair), serif' }}>Sprechen wir.</h1>
-          <p className="text-[#A0A0A0] text-lg max-w-xl">Kostenlose Erstberatung – telefonisch, per E-Mail oder über das Formular. Wir melden uns innerhalb von 1 Werktag.</p>
+          <p className="text-[#A0A0A0] text-lg max-w-xl">Kostenlose Erstberatung, telefonisch, per E-Mail oder über das Formular. Wir melden uns innerhalb von 1 Werktag.</p>
         </div>
         <div className="container-wide mb-20">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-[#1A1A1A]">

@@ -6,11 +6,11 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'sw
 const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-playfair', display: 'swap' })
 
 export const metadata: Metadata = {
-  title: 'raumton – Schallabsorber & Raumakustik Berlin | Seit 2006',
+  title: 'raumton, Schallabsorber & Raumakustik Berlin | Seit 2006',
   description: 'Individuelle Schallabsorber und Raumakustik-Lösungen für Büro, Gastronomie und Bildung. Geplant, gefertigt und montiert von raumton in Berlin-Schöneberg seit 2006.',
   keywords: ['Raumakustik Berlin', 'Schallabsorber Berlin', 'Akustik Büro Berlin', 'Deckenabsorber', 'Wandabsorber'],
   authors: [{ name: 'raumton GmbH' }],
-  openGraph: { title: 'raumton – Schallabsorber & Raumakustik Berlin | Seit 2006', description: 'Individuelle Schallabsorber – geplant, gefertigt und montiert in Berlin-Schöneberg.', url: 'https://www.raumton.com', siteName: 'raumton GmbH', locale: 'de_DE', type: 'website' },
+  openGraph: { title: 'raumton, Schallabsorber & Raumakustik Berlin | Seit 2006', description: 'Individuelle Schallabsorber, geplant, gefertigt und montiert in Berlin-Schöneberg.', url: 'https://www.raumton.com', siteName: 'raumton GmbH', locale: 'de_DE', type: 'website' },
   alternates: { canonical: 'https://www.raumton.com' },
   robots: { index: true, follow: true },
 }

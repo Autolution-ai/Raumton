@@ -21,7 +21,7 @@ export default function ReferenzenPage() {
           <div className="container-wide">
             <span className="text-[#C8A96E] text-sm tracking-widest uppercase mb-4 block">Referenzprojekte</span>
             <h1 className="text-5xl sm:text-6xl text-[#1A1A1A] mb-6 max-w-2xl leading-tight" style={{ fontFamily: 'var(--font-playfair), serif' }}>Was raumton messbar{' '}<span className="text-[#C8A96E]">verändert.</span></h1>
-            <p className="text-[#606060] text-lg max-w-2xl leading-relaxed">Über 1.500 Projekte in Berlin und deutschlandweit. Hier ist eine Auswahl unserer Referenzen – von DAX40-Konzernen bis zur Kita.</p>
+            <p className="text-[#606060] text-lg max-w-2xl leading-relaxed">Über 1.500 Projekte in Berlin und deutschlandweit. Hier ist eine Auswahl unserer Referenzen, von DAX40-Konzernen bis zur Kita.</p>
           </div>
         </div>
         <div className="bg-[#F9F7F4] py-8 border-y border-[#EBEBEB]">

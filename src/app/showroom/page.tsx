@@ -4,13 +4,13 @@ import Footer from '@/components/layout/Footer'
 import AnfrageFormular from '@/components/sections/AnfrageFormular'
 
 export const metadata: Metadata = {
-  title: 'Showroom Berlin-Schöneberg – raumton GmbH',
+  title: 'Showroom Berlin-Schöneberg, raumton GmbH',
   description: 'Besuchen Sie unseren Showroom in Berlin-Schöneberg. Alle Absorber anfärben, 300+ Farben erleben. Termine nach Vereinbarung.',
 }
 
 const INFOS: string[][] = [
   ['Adresse', 'Berlin-Schöneberg (genaue Adresse nach Terminvereinbarung)'],
-  ['Öffnungszeiten', 'Mo–Fr 9–18 Uhr | Termine nach Vereinbarung'],
+  ['Öffnungszeiten', 'Mo. bis Fr., 9 bis 18 Uhr | Termine nach Vereinbarung'],
   ['Telefon', '030 / 70 50 95 11'],
   ['E-Mail', 'info@raumton.com'],
 ]
@@ -52,7 +52,7 @@ export default function ShowroomPage() {
         <div className="bg-[#F9F7F4] py-20 border-t border-[#EBEBEB]">
           <div className="container-wide text-center">
             <h2 className="text-3xl sm:text-4xl text-[#1A1A1A] mb-4" style={{ fontFamily: 'var(--font-playfair), serif' }}>Lieber erst online anfragen?</h2>
-            <p className="text-[#888] mb-8 max-w-xl mx-auto text-sm leading-relaxed">Kostenlose Vor-Ort-Beratung und Akustikmessung – wir melden uns innerhalb von 1 Werktag.</p>
+            <p className="text-[#888] mb-8 max-w-xl mx-auto text-sm leading-relaxed">Kostenlose Vor-Ort-Beratung und Akustikmessung, wir melden uns innerhalb von 1 Werktag.</p>
             <a href="#anfrage" className="inline-flex items-center gap-2 px-8 py-4 bg-[#C8A96E] text-white font-semibold hover:bg-[#B8955A] transition-colors duration-200">Jetzt kostenlose Beratung sichern</a>
           </div>
         </div>

@@ -14,11 +14,11 @@ export default function ReferenzenPreview() {
         <motion.div initial="hidden" whileInView="visible" viewport={viewportOptions} variants={staggerContainer} className="max-w-2xl mb-14">
           <motion.span variants={fadeUp} className="text-[#C8A96E] text-sm tracking-widest uppercase mb-4 block">Referenzprojekte</motion.span>
           <motion.h2 variants={fadeUp} className="text-4xl sm:text-5xl text-[#1A1A1A]" style={{ fontFamily: 'var(--font-playfair), serif' }}>
-            Was raumton{' '}<span className="text-[#C8A96E]">messbar verändert.</span>
+            Was wir für unsere Kunden{' '}<span className="text-[#C8A96E]">erreicht haben.</span>
           </motion.h2>
         </motion.div>
 
-        {/* Alle Projekte auf einen Blick – keine Klickstrecke */}
+        {/* Alle Projekte auf einen Blick, keine Klickstrecke */}
         <motion.div initial="hidden" whileInView="visible" viewport={viewportOptions} variants={staggerContainer} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {REFERENZEN.map((ref) => {
             // `image: null` -> Platzhalter. Foto-Pfad später in constants.ts ergänzen.

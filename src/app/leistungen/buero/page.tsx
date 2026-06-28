@@ -5,13 +5,13 @@ import Footer from '@/components/layout/Footer'
 import AnfrageFormular from '@/components/sections/AnfrageFormular'
 
 export const metadata: Metadata = {
-  title: 'Büroakustik Berlin – Großraumbüro & Konferenzraum | raumton',
+  title: 'Büroakustik Berlin, Großraumbüro & Konferenzraum | raumton',
   description:
     'Professionelle Büroakustik für Großraumbüros, Konferenzräume und Open Spaces in Berlin. Messung, Planung, Fertigung und Montage von raumton seit 2006.',
 }
 
 const STATS = [
-  { wert: '>55 dB', label: 'Kritischer Lärmpegel', text: 'Ab 55 Dezibel sinkt die kognitive Leistung messbar – Fehler häufen sich.' },
+  { wert: '>55 dB', label: 'Kritischer Lärmpegel', text: 'Ab 55 Dezibel sinkt die kognitive Leistung messbar, Fehler häufen sich.' },
   { wert: '−15 %', label: 'Produktivitätsverlust', text: 'Studien belegen: Lärm am Arbeitsplatz kostet bis zu 15 % Produktivität.' },
   { wert: '3×', label: 'Mehr Stress', text: 'Mitarbeiter in lauten Büros berichten dreimal häufiger von Erschöpfung.' },
 ]
@@ -19,7 +19,7 @@ const STATS = [
 const SCHMERZEN = [
   {
     titel: 'Großraumbüro: alle sprechen lauter',
-    text: 'Weil alle lauter sprechen, spricht jeder noch lauter. Der Kreislauf ist bekannt – aber lösbar. Deckenabsorber und Tischtrennwände brechen ihn dauerhaft.',
+    text: 'Weil alle lauter sprechen, spricht jeder noch lauter. Der Kreislauf ist bekannt, aber lösbar. Deckenabsorber und Tischtrennwände brechen ihn dauerhaft.',
   },
   {
     titel: 'Meetings ohne Sprachverständlichkeit',
@@ -32,7 +32,7 @@ const SCHMERZEN = [
 ]
 
 const PRODUKTE = [
-  { name: 'Deckenabsorber', text: 'Maximale Wirkung bei minimalem Platzbedarf. Hängesysteme und Deckensegel schlucken den Hall von oben – dort, wo er entsteht.' },
+  { name: 'Deckenabsorber', text: 'Maximale Wirkung bei minimalem Platzbedarf. Hängesysteme und Deckensegel schlucken den Hall von oben, dort, wo er entsteht.' },
   { name: 'Wandabsorber', text: 'Textil ummantelte Paneele in über 300 Farben. Integrieren sich ins Raumdesign oder setzen bewusste Akzente.' },
   { name: 'Tischtrennwände', text: 'Schallschutz direkt am Arbeitsplatz. Reduzieren Direktschall zwischen Schreibtischen ohne bauliche Eingriffe.' },
   { name: 'Deckensegel', text: 'Freischwebende Absorber-Elemente für offene Räume. Akustisch wirksam, architektonisch ein Statement.' },
@@ -41,8 +41,8 @@ const PRODUKTE = [
 const PROZESS = [
   { nr: '01', titel: 'Kostenlose Messung', text: 'Wir kommen zu Ihnen, messen die Nachhallzeit (RT60) und zeigen, wo das Problem liegt.' },
   { nr: '02', titel: 'Individuelle Planung', text: '3D-Visualisierung mit Farben und Materialien passend zu Ihrem Büro und CI.' },
-  { nr: '03', titel: 'Berliner Fertigung', text: 'Alle Absorber werden in unserem Atelier in Berlin-Schöneberg gefertigt – ca. 3 Wochen.' },
-  { nr: '04', titel: 'Montage in einem Tag', text: 'Professionelle Montage – blitzsauber, termingerecht, ohne Betriebsunterbrechung.' },
+  { nr: '03', titel: 'Berliner Fertigung', text: 'Alle Absorber werden in unserem Atelier in Berlin-Schöneberg gefertigt, ca. 3 Wochen.' },
+  { nr: '04', titel: 'Montage in einem Tag', text: 'Professionelle Montage, blitzsauber, termingerecht, ohne Betriebsunterbrechung.' },
 ]
 
 export default function BueroPage() {
@@ -66,7 +66,7 @@ export default function BueroPage() {
             </h1>
             <p className="text-[#606060] text-lg max-w-2xl leading-relaxed mb-8">
               Schlechte Büroakustik kostet Produktivität, erhöht Stress und treibt
-              Mitarbeiter ins Homeoffice. raumton optimiert Ihr Büro messbar – von der
+              Mitarbeiter ins Homeoffice. raumton optimiert Ihr Büro messbar, von der
               Messung bis zur Montage.
             </p>
             <a
@@ -195,7 +195,7 @@ export default function BueroPage() {
             <div className="border-l-4 border-[#C8A96E] pl-8">
               <p className="text-xl text-[#1A1A1A] leading-relaxed mb-6 italic">
                 „Der Konferenzraum ist endlich wieder benutzbar. Vorher haben wir Meetings
-                angespannt beendet – wegen des Halls, nicht wegen des Inhalts. Seit raumton
+                angespannt beendet, wegen des Halls, nicht wegen des Inhalts. Seit raumton
                 schreiben wir einfach das Protokoll und gehen.“
               </p>
               <div>
@@ -222,11 +222,11 @@ export default function BueroPage() {
               {[
                 {
                   frage: 'Wie lange dauert ein Büroprojekt?',
-                  antwort: 'Von der ersten Beratung bis zur fertigen Montage dauert es in der Regel 5–7 Wochen. Die Montage selbst ist in einem Tag abgeschlossen.',
+                  antwort: 'Von der ersten Beratung bis zur fertigen Montage dauert es in der Regel 5 bis 7 Wochen. Die Montage selbst ist in einem Tag abgeschlossen.',
                 },
                 {
                   frage: 'Was kostet die Akustikoptimierung für ein Büro?',
-                  antwort: 'Ein Konferenzraum (ca. 30 m²) liegt ab ca. 1.500–3.000 €. Großraumbüros werden individuell kalkuliert. Das Angebot ist kostenlos.',
+                  antwort: 'Ein Konferenzraum (ca. 30 m²) liegt ab ca. 1.500 bis 3.000 €. Großraumbüros werden individuell kalkuliert. Das Angebot ist kostenlos.',
                 },
                 {
                   frage: 'Müssen wir den Betrieb unterbrechen?',
@@ -234,7 +234,7 @@ export default function BueroPage() {
                 },
                 {
                   frage: 'Sind die Absorber rückstandsfrei entfernbar?',
-                  antwort: 'Ja. Unsere Befestigungssysteme hinterlassen keine bleibenden Schäden – ideal auch für Mietobjekte.',
+                  antwort: 'Ja. Unsere Befestigungssysteme hinterlassen keine bleibenden Schäden, ideal auch für Mietobjekte.',
                 },
               ].map((item) => (
                 <details key={item.frage} className="group py-5">
@@ -259,7 +259,7 @@ export default function BueroPage() {
               Bereit für ein ruhigeres Büro?
             </h2>
             <p className="text-[#888] mb-8 max-w-xl mx-auto text-sm leading-relaxed">
-              Kostenlose Vor-Ort-Beratung und Akustikmessung – innerhalb von 1 Werktag Rückmeldung.
+              Kostenlose Vor-Ort-Beratung und Akustikmessung, innerhalb von 1 Werktag Rückmeldung.
             </p>
             <a
               href="#anfrage"

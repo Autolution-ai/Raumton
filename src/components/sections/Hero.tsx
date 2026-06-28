@@ -27,7 +27,7 @@ const PHASES: Phase[] = [
     badge: 'raumton wirkt',
     badgeColor: 'text-[#C8A96E]',
     headline: 'Maßarbeit aus Berlin-Schöneberg.',
-    copy: 'Wir messen, planen und fertigen jeden Absorber individuell – abgestimmt auf Ihre Raumgeometrie, Ihr Raumklima, Ihren Stil.',
+    copy: 'Wir messen, planen und fertigen jeden Absorber individuell, abgestimmt auf Ihre Raumgeometrie, Ihr Raumklima, Ihren Stil.',
   },
   {
     badge: 'NACHHER',
