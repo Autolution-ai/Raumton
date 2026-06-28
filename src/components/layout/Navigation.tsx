@@ -3,8 +3,22 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
-import { LOGO_DATA_URI } from '@/lib/logo'
 import { Menu, X, Phone } from 'lucide-react'
+
+function Logotype({ dark }: { dark: boolean }) {
+  return (
+    <span
+      className="flex items-baseline gap-[1px] text-2xl font-semibold tracking-tight transition-colors duration-300"
+      style={{
+        fontFamily: 'var(--font-playfair), serif',
+        color: dark ? '#1A1A1A' : '#FFFFFF',
+      }}
+    >
+      raumton
+      <span className="ml-[2px] inline-block h-[6px] w-[6px] rounded-full bg-[#C8A96E]" />
+    </span>
+  )
+}
 
 const NAV_LINKS = [
   { label: 'Leistungen', href: '/leistungen' },
@@ -44,14 +58,19 @@ export default function Navigation() {
         }`}
       >
         <div className="container-wide flex items-center justify-between h-20">
-          <Link href="/" className="flex items-center gap-3 group">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={LOGO_DATA_URI} alt="raumton" className="h-8 w-auto" />
+          <Link href="/" className="flex items-center group" aria-label="raumton Startseite">
+            <Logotype dark={scrolled} />
           </Link>
 
           <nav className="hidden lg:flex items-center gap-8">
             {NAV_LINKS.map((link) => (
-              <Link key={link.href} href={link.href} className="text-sm text-[#606060] hover:text-[#1A1A1A] transition-colors duration-200 relative group">
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`text-sm transition-colors duration-200 relative group ${
+                  scrolled ? 'text-[#606060] hover:text-[#1A1A1A]' : 'text-white/80 hover:text-white'
+                }`}
+              >
                 {link.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-px bg-[#C8A96E] group-hover:w-full transition-all duration-300" />
               </Link>
@@ -59,7 +78,12 @@ export default function Navigation() {
           </nav>
 
           <div className="hidden lg:flex items-center gap-4">
-            <a href="tel:+493070509511" className="flex items-center gap-2 text-sm text-[#606060] hover:text-[#1A1A1A] transition-colors">
+            <a
+              href="tel:+493070509511"
+              className={`flex items-center gap-2 text-sm transition-colors ${
+                scrolled ? 'text-[#606060] hover:text-[#1A1A1A]' : 'text-white/80 hover:text-white'
+              }`}
+            >
               <Phone size={14} />
               <span>030 / 70 50 95 11</span>
             </a>
@@ -68,7 +92,11 @@ export default function Navigation() {
             </a>
           </div>
 
-          <button onClick={() => setMenuOpen(!menuOpen)} className="lg:hidden p-2 text-[#1A1A1A]" aria-label="Menü öffnen">
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className={`lg:hidden p-2 transition-colors ${scrolled || menuOpen ? 'text-[#1A1A1A]' : 'text-white'}`}
+            aria-label="Menü öffnen"
+          >
             {menuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>

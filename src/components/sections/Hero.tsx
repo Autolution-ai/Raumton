@@ -13,7 +13,6 @@ interface Phase {
   badgeColor: string
   headline: string
   copy: string
-  stat?: string
   showCta?: boolean
 }
 
@@ -23,7 +22,6 @@ const PHASES: Phase[] = [
     badgeColor: 'text-white/60',
     headline: 'Kennen Sie diesen Raum?',
     copy: 'Nachhall, der Gespräche unverständlich macht. Lärm, der Konzentration kostet. Viele Räume wurden nie akustisch gedacht.',
-    stat: 'RT₆₀ ≈ 1,8 Sek.',
   },
   {
     badge: 'raumton wirkt',
@@ -35,8 +33,7 @@ const PHASES: Phase[] = [
     badge: 'NACHHER',
     badgeColor: 'text-[#C8A96E]',
     headline: 'Der gleiche Raum. Neu erlebt.',
-    copy: 'Stille, die produktiv macht.',
-    stat: 'RT₆₀ ≈ 0,4 Sek.',
+    copy: 'Spürbar leiser. Angenehm ruhig. Ein Raum, in dem man wieder gerne arbeitet, isst und spricht.',
     showCta: true,
   },
 ]
@@ -146,14 +143,7 @@ export default function Hero() {
                 <h1 className="mb-6 text-5xl font-bold leading-[1.05] text-white sm:text-6xl lg:text-7xl" style={{ fontFamily: 'var(--font-playfair), serif' }}>{currentPhase.headline}</h1>
               )}
 
-              <p className="mb-6 max-w-xl text-lg leading-relaxed text-white/90 sm:text-xl">{currentPhase.copy}</p>
-
-              {currentPhase.stat && (
-                <div className="mb-8 inline-flex items-center gap-2 border border-[#C8A96E]/40 bg-black/30 px-4 py-2 backdrop-blur-sm">
-                  <span className="h-1.5 w-1.5 rounded-full bg-[#C8A96E]" />
-                  <span className="text-sm font-mono font-medium text-[#C8A96E]">{currentPhase.stat}</span>
-                </div>
-              )}
+              <p className="mb-8 max-w-xl text-lg leading-relaxed text-white/90 sm:text-xl">{currentPhase.copy}</p>
 
               {currentPhase.showCta && (
                 <div className="flex flex-col gap-4 sm:flex-row">

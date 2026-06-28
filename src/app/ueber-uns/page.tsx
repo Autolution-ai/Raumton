@@ -51,7 +51,7 @@ export default function UeberUnsPage() {
           <div className="container-wide">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
               <div className="relative h-[500px]">
-                <Image src="https://raw.githubusercontent.com/Autolution-ai/Raumton/main/Raumton-Inhaber.webp" alt="Ulli Müller und Leo Ripper" fill className="object-cover object-top" />
+                <Image src="/Raumton-Inhaber.webp" alt="Ulli Müller und Leo Ripper" fill className="object-cover object-top" sizes="(max-width: 1024px) 100vw, 50vw" />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/40 to-transparent p-6">
                   <p className="text-white text-sm font-medium">Ulli Müller &amp; Leo Ripper</p>
                   <p className="text-white/70 text-xs">Gründer &amp; Geschäftsführung · Berlin-Schöneberg</p>
