@@ -18,17 +18,21 @@
 
 @layer base {
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
-  body { background-color: #0A0A0A; color: #F5F5F5; font-family: 'Inter', system-ui, sans-serif; line-height: 1.6; }
+  html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; overflow-x: clip; }
+  /* verhindert horizontales Wackeln / Seitwärts-Scrollen auf Mobile */
+  body { background-color: #0A0A0A; color: #F5F5F5; font-family: 'Inter', system-ui, sans-serif; line-height: 1.6; overflow-x: clip; width: 100%; max-width: 100%; }
   h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; line-height: 1.15; letter-spacing: -0.01em; }
   ::selection { background-color: #C8A96E; color: #0A0A0A; }
   :focus-visible { outline: 2px solid #C8A96E; outline-offset: 2px; }
 }
 
 @layer utilities {
-  .section-padding { padding-top: 120px; padding-bottom: 120px; }
-  .container-wide { width: 100%; max-width: 1280px; margin-left: auto; margin-right: auto; padding-left: 24px; padding-right: 24px; }
-  .container-narrow { width: 100%; max-width: 800px; margin-left: auto; margin-right: auto; padding-left: 24px; padding-right: 24px; }
+  .section-padding { padding-top: 72px; padding-bottom: 72px; }
+  @media (min-width: 768px) { .section-padding { padding-top: 120px; padding-bottom: 120px; } }
+  .container-wide { width: 100%; max-width: 1280px; margin-left: auto; margin-right: auto; padding-left: 20px; padding-right: 20px; }
+  @media (min-width: 640px) { .container-wide { padding-left: 24px; padding-right: 24px; } }
+  .container-narrow { width: 100%; max-width: 800px; margin-left: auto; margin-right: auto; padding-left: 20px; padding-right: 20px; }
+  @media (min-width: 640px) { .container-narrow { padding-left: 24px; padding-right: 24px; } }
   .text-gradient-gold { background: linear-gradient(135deg, #C8A96E 0%, #E8CC99 50%, #C8A96E 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
   .border-subtle { border: 1px solid #252525; }
 }
