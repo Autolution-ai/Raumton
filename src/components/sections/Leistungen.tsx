@@ -2,19 +2,27 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { Building2, Utensils, GraduationCap, ArrowRight, Layers, PanelLeft, Columns2, AlignJustify, Archive, AlignVerticalDistributeCenter, Blinds } from 'lucide-react'
+import Image from 'next/image'
+import { Building2, Utensils, GraduationCap, ArrowRight } from 'lucide-react'
 import { fadeUp, staggerContainer, viewportOptions } from '@/lib/animations'
 import { LEISTUNGEN, PROZESS_SCHRITTE } from '@/lib/constants'
+import ImagePlaceholder from '@/components/ui/ImagePlaceholder'
 
 const ICONS: Record<string, React.ComponentType<{ size?: number; className?: string }>> = {
   'building-2': Building2, utensils: Utensils, 'graduation-cap': GraduationCap,
 }
 
-const PRODUKTE = [
-  { name: 'Deckenabsorber', Icon: Layers }, { name: 'Wandabsorber', Icon: PanelLeft },
-  { name: 'Trennwand-Absorber', Icon: Columns2 }, { name: 'Tischtrennwand-Absorber', Icon: AlignJustify },
-  { name: 'Schrankaufsatz-Absorber', Icon: Archive }, { name: 'Standabsorber', Icon: AlignVerticalDistributeCenter },
-  { name: 'Akustik-Vorhänge', Icon: Blinds },
+// Produkttypen exakt wie auf der bestehenden raumton-Website.
+// `image: null` -> Platzhalter. Sobald echte Produktfotos im Repo liegen,
+// hier den Pfad eintragen (z. B. '/produkte/deckenabsorber.jpg').
+const PRODUKTE: { name: string; sub: string; image: string | null }[] = [
+  { name: 'Deckenabsorber', sub: 'Frei abgehängt oder direkt an der Decke', image: null },
+  { name: 'Wandabsorber', sub: 'Als Akustikbild oder flächig integriert', image: null },
+  { name: 'Trennwand-Absorber', sub: 'Raumteiler, die gleichzeitig dämpfen', image: null },
+  { name: 'Tischtrennwand-Absorber', sub: 'Ruhe direkt am Arbeitsplatz', image: null },
+  { name: 'Schrankaufsatz-Absorber', sub: 'Nutzt vorhandene Möbel als Träger', image: null },
+  { name: 'Standabsorber', sub: 'Flexibel & ohne Montage versetzbar', image: null },
+  { name: 'Akustik-Vorhänge', sub: 'Schallschluckend und blickdicht zugleich', image: null },
 ]
 
 export default function Leistungen() {
@@ -44,15 +52,24 @@ export default function Leistungen() {
         <motion.div initial="hidden" whileInView="visible" viewport={viewportOptions} variants={fadeUp} className="mb-20">
           <span className="text-[#C8A96E] text-xs tracking-widest uppercase mb-4 block">Unsere Produkte</span>
           <h3 className="text-2xl sm:text-3xl text-[#1A1A1A] mb-8" style={{ fontFamily: 'var(--font-playfair), serif' }}>7 Absorber-Typen. Über 300 Farben. Grenzenlose Kombinationen.</h3>
-          <motion.div initial="hidden" whileInView="visible" viewport={viewportOptions} variants={staggerContainer} className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-3 mb-5">
-            {PRODUKTE.map(({ name, Icon }) => (
-              <motion.div key={name} variants={fadeUp} className="flex flex-col items-center gap-2 p-4 border border-[#EBEBEB] hover:border-[#C8A96E]/40 transition-colors duration-200 bg-white">
-                <Icon size={20} className="text-[#C8A96E] flex-shrink-0" />
-                <span className="text-[#1A1A1A] text-xs text-center leading-tight font-medium">{name}</span>
+          <motion.div initial="hidden" whileInView="visible" viewport={viewportOptions} variants={staggerContainer} className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mb-6">
+            {PRODUKTE.map(({ name, sub, image }) => (
+              <motion.div key={name} variants={fadeUp} className="overflow-hidden border border-[#EBEBEB] bg-white">
+                <div className="relative h-36 w-full overflow-hidden">
+                  {image ? (
+                    <Image src={image} alt={name} fill className="object-cover" sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw" />
+                  ) : (
+                    <ImagePlaceholder />
+                  )}
+                </div>
+                <div className="p-4">
+                  <h4 className="text-[#1A1A1A] text-sm font-semibold leading-tight">{name}</h4>
+                  <p className="text-[#999] text-xs leading-snug mt-1">{sub}</p>
+                </div>
               </motion.div>
             ))}
           </motion.div>
-          <Link href="/showroom" className="text-sm text-[#C8A96E] hover:text-[#b8944f] transition-colors font-medium">Alle Produkte im Showroom erleben →</Link>
+          <p className="text-[#AAA] text-xs italic">Produktfotos zu jedem Absorber-Typ folgen in Kürze.</p>
         </motion.div>
 
         <motion.div initial="hidden" whileInView="visible" viewport={viewportOptions} variants={staggerContainer} className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
