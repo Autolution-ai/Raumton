@@ -2,7 +2,7 @@ import Navigation from '@/components/layout/Navigation'
 import Footer from '@/components/layout/Footer'
 import Hero from '@/components/sections/Hero'
 import SocialProofStrip from '@/components/sections/SocialProofStrip'
-import ProblemPain from '@/components/sections/ProblemPain'
+import Willkommen from '@/components/sections/Willkommen'
 import Zielraeume from '@/components/sections/Zielraeume'
 import Leistungen from '@/components/sections/Leistungen'
 import ReferenzenPreview from '@/components/sections/ReferenzenPreview'
@@ -20,7 +20,7 @@ export default function Home() {
       <main>
         <Hero />
         <SocialProofStrip />
-        <ProblemPain />
+        <Willkommen />
         <Zielraeume />
         <Leistungen />
         <ReferenzenPreview />

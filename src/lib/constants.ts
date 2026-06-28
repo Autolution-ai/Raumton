@@ -144,21 +144,25 @@ export const FAQS = [
   },
 ]
 
-export const KUNDEN_LOGOS = [
-  { name: 'Deutsche Bahn' },
-  { name: 'BVG' },
-  { name: 'HelloFresh' },
-  { name: 'Commerzbank' },
-  { name: 'Sparkasse' },
+// Kundenlogos für den Social-Proof-Marquee.
+// `file` = echtes Markenlogo (SVG, lokal in /public/logos). Ohne `file` wird
+// ein gepflegter Wortmarken-Schriftzug gerendert.
+export const KUNDEN_LOGOS: { name: string; file?: string }[] = [
+  { name: 'Deutsche Bahn', file: '/logos/deutsche-bahn.svg' },
+  { name: 'Commerzbank', file: '/logos/commerzbank.svg' },
+  { name: 'Sparkasse', file: '/logos/sparkasse.svg' },
+  { name: 'HelloFresh', file: '/logos/hellofresh.svg' },
+  { name: 'BVG', file: '/logos/bvg.svg' },
   { name: 'Berliner Philharmoniker' },
   { name: 'Fraunhofer' },
   { name: 'UNESCO' },
   { name: 'Lieferando' },
+  { name: 'Vattenfall' },
   { name: 'Securitas' },
+  { name: 'Diakonie' },
+  { name: 'ENERTRAG' },
   { name: 'ISTA' },
   { name: 'Clark' },
-  { name: 'ENERTRAG' },
-  { name: 'Diakonie' },
 ]
 
 export const LEISTUNGEN = [

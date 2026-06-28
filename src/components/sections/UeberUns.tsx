@@ -43,7 +43,7 @@ export default function UeberUns() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           <motion.div initial="hidden" whileInView="visible" viewport={viewportOptions} variants={fadeLeft} className="relative">
             <div className="relative h-[500px] lg:h-[600px] overflow-hidden">
-              <Image src="https://raw.githubusercontent.com/Autolution-ai/Raumton/main/Raumton-Inhaber.webp" alt="Ulli Müller und Leo Ripper" fill className="object-cover object-top" sizes="(max-width: 1024px) 100vw, 50vw" />
+              <Image src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?w=1000&q=80" alt="Manufaktur und Handwerk bei raumton in Berlin-Schöneberg" fill className="object-cover" sizes="(max-width: 1024px) 100vw, 50vw" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
             </div>
             <div className="absolute -bottom-6 -right-6 bg-[#C8A96E] text-white p-6 text-center">
