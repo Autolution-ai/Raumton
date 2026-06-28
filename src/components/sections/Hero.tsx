@@ -118,7 +118,7 @@ export default function Hero() {
 
   return (
     <section ref={trackRef} className="relative hero-track">
-      <div className="sticky top-0 hero-screen w-full overflow-hidden bg-[#EDEAE5]">
+      <div className="sticky top-0 hero-screen w-full overflow-hidden bg-[#0A0A0A]">
         {/* Fortschrittsbalken */}
         <div className="absolute top-0 left-0 right-0 z-30 h-[3px] bg-white/10">
           <div ref={progressBarRef} className="h-full bg-[#C8A96E]" style={{ width: '0%' }} />
@@ -131,12 +131,16 @@ export default function Hero() {
           ))}
         </div>
 
-        <video ref={videoRef} className="absolute inset-0 h-full w-full object-cover" src="/hero-room.mp4" muted playsInline preload="auto" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/20 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-black/10" />
+        {/* Mobile: ganzes Video oben in voller Breite (16:9, kein Crop). Desktop: Vollflächig. */}
+        <video ref={videoRef} className="absolute top-0 left-0 w-full h-[56.25vw] object-cover sm:inset-0 sm:h-full" src="/hero-room.mp4" muted playsInline preload="auto" />
+        {/* Lesbarkeits-Overlays nur auf Desktop (über dem vollflächigen Video) */}
+        <div className="hidden sm:block absolute inset-0 bg-gradient-to-r from-black/55 via-black/20 to-transparent" />
+        <div className="hidden sm:block absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-black/10" />
 
-        <div className="container-wide relative z-10 flex h-full flex-col justify-center">
-          <div className="max-w-3xl">
+        {/* Text: mobil unterhalb des Video-Bands, Desktop mittig über dem Video */}
+        <div className="absolute inset-x-0 bottom-0 top-[56.25vw] sm:top-0 z-10 flex items-center">
+          <div className="container-wide w-full max-w-3xl sm:max-w-none">
+            <div className="sm:max-w-3xl">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="mb-6 sm:mb-8 flex items-center gap-3">
               <span className="h-px w-8 bg-[#C8A96E]" />
               <span className="text-xs sm:text-sm font-medium uppercase tracking-widest text-[#E8CC99]">Berliner Manufaktur seit 2006</span>
@@ -149,30 +153,31 @@ export default function Hero() {
                 </div>
 
                 {phase === 0 ? (
-                  <h1 className="mb-6 text-4xl font-bold leading-[1.08] text-white sm:text-6xl lg:text-7xl" style={{ fontFamily: 'var(--font-playfair), serif' }}>
+                  <h1 className="mb-4 sm:mb-6 text-3xl font-bold leading-[1.1] text-white sm:text-6xl lg:text-7xl" style={{ fontFamily: 'var(--font-playfair), serif' }}>
                     {currentPhase.headline.split(' ').map((word, i) => (
-                      <motion.span key={word + i} initial={{ opacity: 0, y: 60 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 + i * 0.15, ease: [0.25, 0.46, 0.45, 0.94] }} className="mr-4 inline-block">{word}</motion.span>
+                      <motion.span key={word + i} initial={{ opacity: 0, y: 60 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 + i * 0.15, ease: [0.25, 0.46, 0.45, 0.94] }} className="mr-3 sm:mr-4 inline-block">{word}</motion.span>
                     ))}
                   </h1>
                 ) : (
-                  <h1 className="mb-6 text-4xl font-bold leading-[1.08] text-white sm:text-6xl lg:text-7xl" style={{ fontFamily: 'var(--font-playfair), serif' }}>{currentPhase.headline}</h1>
+                  <h1 className="mb-4 sm:mb-6 text-3xl font-bold leading-[1.1] text-white sm:text-6xl lg:text-7xl" style={{ fontFamily: 'var(--font-playfair), serif' }}>{currentPhase.headline}</h1>
                 )}
 
-                <p className="mb-8 max-w-xl text-base leading-relaxed text-white/90 sm:text-xl">{currentPhase.copy}</p>
+                <p className="mb-6 sm:mb-8 max-w-xl text-sm leading-relaxed text-white/90 sm:text-xl">{currentPhase.copy}</p>
 
                 {currentPhase.showCta && (
                   <div className="flex flex-col gap-4 sm:flex-row">
-                    <a href="#anfrage" className="inline-flex items-center justify-center gap-2 bg-[#C8A96E] px-8 py-4 text-base font-semibold text-white transition-colors duration-200 hover:bg-[#B8955A]">
+                    <a href="#anfrage" className="inline-flex items-center justify-center gap-2 bg-[#C8A96E] px-6 py-3.5 sm:px-8 sm:py-4 text-sm sm:text-base font-semibold text-white transition-colors duration-200 hover:bg-[#B8955A]">
                       Kostenlose Beratung sichern <ChevronRight size={18} />
                     </a>
                   </div>
                 )}
               </motion.div>
             </AnimatePresence>
+            </div>
           </div>
         </div>
 
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 1.6 }} className="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 text-xs uppercase tracking-widest text-white/70">
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 1.6 }} className="hidden sm:flex absolute bottom-6 left-1/2 z-10 -translate-x-1/2 text-xs uppercase tracking-widest text-white/70">
           <span className="flex flex-col items-center gap-2">Scrollen<span className="block h-8 w-px animate-pulse bg-white/50" /></span>
         </motion.div>
       </div>
