@@ -12,13 +12,13 @@ import ImagePlaceholder from '@/components/ui/ImagePlaceholder'
 // hier den Pfad eintragen (z. B. '/produkte/deckenabsorber.jpg').
 // `span` / `tall` steuern das Bento-Layout.
 const PRODUKTE: { name: string; sub: string; image: string | null; span: string; tall?: boolean }[] = [
-  { name: 'Deckenabsorber', sub: 'Frei abgehängt oder direkt an der Decke montiert', image: null, span: 'lg:col-span-3', tall: true },
-  { name: 'Wandabsorber', sub: 'Als Akustikbild oder flächig in die Wand integriert', image: null, span: 'lg:col-span-3', tall: true },
-  { name: 'Trennwand-Absorber', sub: 'Raumteiler, die gleichzeitig den Schall schlucken', image: null, span: 'lg:col-span-2' },
-  { name: 'Tischtrennwand-Absorber', sub: 'Ruhe direkt am Arbeitsplatz', image: null, span: 'lg:col-span-2' },
-  { name: 'Schrankaufsatz-Absorber', sub: 'Nutzt vorhandene Möbel als Träger', image: null, span: 'lg:col-span-2' },
-  { name: 'Standabsorber', sub: 'Flexibel und ohne Montage versetzbar', image: null, span: 'lg:col-span-3' },
-  { name: 'Akustik-Vorhänge', sub: 'Schallschluckend und blickdicht zugleich', image: null, span: 'lg:col-span-3' },
+  { name: 'Deckenabsorber', sub: 'Frei abgehängt oder direkt an der Decke montiert', image: '/produkte/deckenabsorber.webp', span: 'lg:col-span-3', tall: true },
+  { name: 'Wandabsorber', sub: 'Als Akustikbild oder flächig in die Wand integriert', image: '/produkte/wandabsorber.webp', span: 'lg:col-span-3', tall: true },
+  { name: 'Trennwand-Absorber', sub: 'Raumteiler, die gleichzeitig den Schall schlucken', image: '/produkte/trennwand-absorber.webp', span: 'lg:col-span-2' },
+  { name: 'Tischtrennwand-Absorber', sub: 'Ruhe direkt am Arbeitsplatz', image: '/produkte/tischtrennwand-absorber.webp', span: 'lg:col-span-2' },
+  { name: 'Schrankaufsatz-Absorber', sub: 'Nutzt vorhandene Möbel als Träger', image: '/produkte/schrankaufsatz-absorber.webp', span: 'lg:col-span-2' },
+  { name: 'Standabsorber', sub: 'Flexibel und ohne Montage versetzbar', image: '/produkte/standabsorber.webp', span: 'lg:col-span-3' },
+  { name: 'Akustik-Vorhänge', sub: 'Schallschluckend und blickdicht zugleich', image: '/produkte/akustik-vorhaenge.webp', span: 'lg:col-span-3' },
 ]
 
 export default function Leistungen() {
@@ -74,7 +74,6 @@ export default function Leistungen() {
               </motion.div>
             ))}
           </motion.div>
-          <p className="text-[#AAA] text-xs italic mt-5">Produktfotos zu jedem Absorber-Typ folgen in Kürze.</p>
         </motion.div>
 
         {/* CTA Box */}
