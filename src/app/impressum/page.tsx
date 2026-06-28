@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import Navigation from '@/components/layout/Navigation'
 import Footer from '@/components/layout/Footer'
 
-export const metadata: Metadata = { title: 'Impressum – raumton GmbH', robots: { index: false, follow: false } }
+export const metadata: Metadata = { title: 'Impressum, raumton GmbH', robots: { index: false, follow: false } }
 
 export default function ImpressumPage() {
   return (

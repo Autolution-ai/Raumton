@@ -7,41 +7,41 @@ import AnfrageFormular from '@/components/sections/AnfrageFormular'
 export const metadata: Metadata = {
   title: 'Akustik für Restaurants & Gastronomie Berlin | raumton',
   description:
-    'Schlechte Akustik kostet Umsatz. raumton optimiert Restaurants, Cafés und Bars in Berlin akustisch – dezent, designorientiert und messbar wirksam.',
+    'Schlechte Akustik kostet Umsatz. raumton optimiert Restaurants, Cafés und Bars in Berlin akustisch, dezent, designorientiert und messbar wirksam.',
 }
 
 const STATS = [
-  { wert: '72 dB', label: 'Durchschnittlicher Lärmpegel', text: 'In vielen Berliner Restaurants – deutlich über dem Wohlfühlbereich von 60–65 dB.' },
+  { wert: '72 dB', label: 'Durchschnittlicher Lärmpegel', text: 'In vielen Berliner Restaurants, deutlich über dem Wohlfühlbereich von 60 bis 65 dB.' },
   { wert: '−20 %', label: 'Umsatzeinbuße', text: 'Gäste, die sich nicht unterhalten können, bestellen weniger und kommen seltener wieder.' },
-  { wert: '−0,4 ★', label: 'Google-Bewertung', text: 'Lautstärke ist der häufigste Kritikpunkt in Restaurant-Rezensionen – und der leichteste zu lösen.' },
+  { wert: '−0,4 ★', label: 'Google-Bewertung', text: 'Lautstärke ist der häufigste Kritikpunkt in Restaurant-Rezensionen, und der leichteste zu lösen.' },
 ]
 
 const SCHMERZEN = [
   {
     titel: 'Gäste, die schreien statt reden',
-    text: 'Zu laute Restaurants erzeugen einen Teufelskreis: Alle sprechen lauter, weil alle lauter sprechen. Gäste empfinden das als stressig – auch wenn sie es nicht benennen können.',
+    text: 'Zu laute Restaurants erzeugen einen Teufelskreis: Alle sprechen lauter, weil alle lauter sprechen. Gäste empfinden das als stressig, auch wenn sie es nicht benennen können.',
   },
   {
     titel: 'Schlechtere Bewertungen, weniger Stammgäste',
-    text: 'Lautstärke ist der meistkritisierte Punkt in Online-Rezensionen. Dabei ist er der einfachste zu beheben – ohne einen einzigen Schließtag.',
+    text: 'Lautstärke ist der meistkritisierte Punkt in Online-Rezensionen. Dabei ist er der einfachste zu beheben, ohne einen einzigen Schließtag.',
   },
   {
     titel: 'Design vs. Akustik: ein falscher Kompromiss',
-    text: 'Harte Böden, große Glasflächen, hohe Decken – das sieht gut aus, klingt aber schlecht. Unsere Absorber fügen sich ins Interior ein, ohne es zu dominieren.',
+    text: 'Harte Böden, große Glasflächen, hohe Decken, das sieht gut aus, klingt aber schlecht. Unsere Absorber fügen sich ins Interior ein, ohne es zu dominieren.',
   },
 ]
 
 const PRODUKTE = [
   { name: 'Wandabsorber', text: 'Textil ummantelt in über 300 Farben und Texturen. Wirksam gegen Nachhall, sichtbar nur als Designelement.' },
-  { name: 'Akustikpaneele', text: 'Wandfüllende Flächen oder gezielte Akzente – individuell nach Raumgeometrie und Raumkonzept geplant.' },
+  { name: 'Akustikpaneele', text: 'Wandfüllende Flächen oder gezielte Akzente, individuell nach Raumgeometrie und Raumkonzept geplant.' },
   { name: 'Deckensegel', text: 'Freischwebende Elemente für hohe Räume. Hohe akustische Wirksamkeit bei minimalem visuellem Eingriff.' },
-  { name: 'Akustikvorhänge', text: 'Flexible Lösung für Bereiche mit variablen Anforderungen – ideal für Eventlocations und Mehrzweckräume.' },
+  { name: 'Akustikvorhänge', text: 'Flexible Lösung für Bereiche mit variablen Anforderungen, ideal für Eventlocations und Mehrzweckräume.' },
 ]
 
 const PROZESS = [
-  { nr: '01', titel: 'Messung im laufenden Betrieb', text: 'Wir kommen zu Ihnen – auch abends oder am frühen Morgen. Keine Betriebsunterbrechung nötig.' },
+  { nr: '01', titel: 'Messung im laufenden Betrieb', text: 'Wir kommen zu Ihnen, auch abends oder am frühen Morgen. Keine Betriebsunterbrechung nötig.' },
   { nr: '02', titel: 'Diskretes Design', text: 'Absorber, die Ihr Raumkonzept respektieren. Farben und Materialien werden mit Ihnen abgestimmt.' },
-  { nr: '03', titel: 'Berliner Fertigung', text: 'Handgefertigt in Berlin-Schöneberg – Lieferzeit ca. 3 Wochen nach Auftragseingang.' },
+  { nr: '03', titel: 'Berliner Fertigung', text: 'Handgefertigt in Berlin-Schöneberg, Lieferzeit ca. 3 Wochen nach Auftragseingang.' },
   { nr: '04', titel: 'Montage ohne Schließtag', text: 'Montage in einem Tag, außerhalb Ihrer Kernzeiten. Ohne Baulärm, ohne Schmutz.' },
 ]
 
@@ -65,7 +65,7 @@ export default function GastroPage() {
               <span className="text-[#C8A96E]">wenn es angenehm ist.</span>
             </h1>
             <p className="text-[#606060] text-lg max-w-2xl leading-relaxed mb-8">
-              Zu laute Restaurants bekommen schlechtere Bewertungen – und Gäste kommen
+              Zu laute Restaurants bekommen schlechtere Bewertungen, und Gäste kommen
               seltener zurück. raumton löst das Problem, ohne Ihrem Design zu schaden.
             </p>
             <a
@@ -117,7 +117,7 @@ export default function GastroPage() {
                 className="text-3xl sm:text-4xl text-[#1A1A1A]"
                 style={{ fontFamily: 'var(--font-playfair), serif' }}
               >
-                Lärm verliert Gäste – still und ohne Kündigung.
+                Lärm verliert Gäste, still und ohne Kündigung.
               </h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -193,7 +193,7 @@ export default function GastroPage() {
           <div className="container-wide max-w-3xl">
             <div className="border-l-4 border-[#C8A96E] pl-8">
               <p className="text-xl text-[#1A1A1A] leading-relaxed mb-6 italic">
-                „Ein Gast hat mich gefragt, was ich verändert habe – er wusste nicht
+                „Ein Gast hat mich gefragt, was ich verändert habe, er wusste nicht
                 genau warum, aber er fand es angenehmer. Das ist eigentlich das größte
                 Kompliment.“
               </p>
@@ -221,7 +221,7 @@ export default function GastroPage() {
               {[
                 {
                   frage: 'Wie dezent sind die Absorber in einem Restaurant?',
-                  antwort: 'Sehr dezent. Wir bieten über 300 Farben und Texturen – von wandfüllenden Paneelen bis zu kaum sichtbaren Deckensegeln. Viele unserer Gastro-Kunden berichten, dass Gäste die Veränderung spüren, aber nicht sehen.',
+                  antwort: 'Sehr dezent. Wir bieten über 300 Farben und Texturen, von wandfüllenden Paneelen bis zu kaum sichtbaren Deckensegeln. Viele unserer Gastro-Kunden berichten, dass Gäste die Veränderung spüren, aber nicht sehen.',
                 },
                 {
                   frage: 'Können Sie während des laufenden Betriebs arbeiten?',
@@ -255,7 +255,7 @@ export default function GastroPage() {
               className="text-3xl sm:text-4xl text-[#1A1A1A] mb-4"
               style={{ fontFamily: 'var(--font-playfair), serif' }}
             >
-              Gäste sollen sich wohlfühlen – nicht schreien.
+              Gäste sollen sich wohlfühlen, nicht schreien.
             </h2>
             <p className="text-[#888] mb-8 max-w-xl mx-auto text-sm leading-relaxed">
               Kostenlose Vor-Ort-Beratung und Akustikmessung. Wir melden uns innerhalb von 1 Werktag.

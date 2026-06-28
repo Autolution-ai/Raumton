@@ -6,14 +6,14 @@ import { Check, ArrowRight, Phone } from 'lucide-react'
 import { fadeUp, fadeLeft, staggerContainer, viewportOptions } from '@/lib/animations'
 
 const VORTEILE = [
-  '15+ Jahre Erfahrung – über 1.500 zufriedene Kunden',
+  '15+ Jahre Erfahrung, über 1.500 zufriedene Kunden',
   'Kostenlose Erstberatung, auf Wunsch bei Ihnen vor Ort',
   'Alles aus einer Hand: Planung, Fertigung & Montage',
   'Maßgefertigt auf den Millimeter für Ihre Räume',
-  'Über 300 Farben & Texturen – passend zu Ihrem Design',
+  'Über 300 Farben & Texturen, passend zu Ihrem Design',
   'Eigene Manufaktur in Berlin-Schöneberg',
   'Mineralfaserfrei & 100 % recyclingfähige Materialien',
-  'Festpreis & Termintreue – von der Anfrage bis zur Montage',
+  'Festpreis & Termintreue, von der Anfrage bis zur Montage',
 ]
 
 export default function Willkommen() {
@@ -21,7 +21,7 @@ export default function Willkommen() {
     <section className="section-padding bg-[#F9F7F4]">
       <div className="container-wide">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Bild – persönlicher Bezug */}
+          {/* Bild, persönlicher Bezug */}
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -32,7 +32,7 @@ export default function Willkommen() {
             <div className="relative h-[440px] lg:h-[560px] overflow-hidden rounded-sm">
               <Image
                 src="/Raumton-Inhaber.webp"
-                alt="Ulli Müller und Leo Ripper – die Inhaber von raumton"
+                alt="Ulli Müller und Leo Ripper, die Inhaber von raumton"
                 fill
                 className="object-cover object-top"
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -70,13 +70,13 @@ export default function Willkommen() {
               <span className="text-[#C8A96E]">Wir machen ihn leise.</span>
             </motion.h2>
             <motion.p variants={fadeUp} className="text-[#555] leading-relaxed mb-4">
-              Lärm und Hall kosten jeden Tag Konzentration, Umsatz und Wohlbefinden – meist,
+              Lärm und Hall kosten jeden Tag Konzentration, Umsatz und Wohlbefinden, meist,
               ohne dass es jemand bewusst bemerkt. Genau hier setzen wir an: Als Berliner
               Manufaktur planen, fertigen und montieren wir Schallabsorber, die wirken und
               dabei zu Ihrem Raum passen.
             </motion.p>
             <motion.p variants={fadeUp} className="text-[#555] leading-relaxed mb-8">
-              Ein Ansprechpartner, ein Festpreis, ein Team – von der ersten Messung bis zur
+              Ein Ansprechpartner, ein Festpreis, ein Team, von der ersten Messung bis zur
               fertigen Montage. So einfach kann gute Akustik sein.
             </motion.p>
 

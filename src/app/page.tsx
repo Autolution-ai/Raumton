@@ -8,7 +8,6 @@ import Leistungen from '@/components/sections/Leistungen'
 import ReferenzenPreview from '@/components/sections/ReferenzenPreview'
 import CTABar from '@/components/sections/CTABar'
 import UeberUns from '@/components/sections/UeberUns'
-import Testimonials from '@/components/sections/Testimonials'
 import AnfrageFormular from '@/components/sections/AnfrageFormular'
 import FAQPreview from '@/components/sections/FAQPreview'
 import ShowroomCTA from '@/components/sections/ShowroomCTA'
@@ -26,7 +25,6 @@ export default function Home() {
         <ReferenzenPreview />
         <CTABar />
         <UeberUns />
-        <Testimonials />
         <FAQPreview />
         <ShowroomCTA />
         <AnfrageFormular />

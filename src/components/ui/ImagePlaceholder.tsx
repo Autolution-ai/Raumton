@@ -3,7 +3,7 @@ import { Camera } from 'lucide-react'
 /**
  * Platzhalter für noch nicht hochgeladene Fotos.
  * Sobald echte Bilder im Repo liegen, wird der Platzhalter im jeweiligen
- * Card durch <Image src={...} fill /> ersetzt – die Struktur bleibt gleich.
+ * Card durch <Image src={...} fill /> ersetzt, die Struktur bleibt gleich.
  */
 export default function ImagePlaceholder({
   dark = false,

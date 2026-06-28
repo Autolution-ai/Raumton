@@ -41,7 +41,7 @@ export default function AnfrageFormular() {
       <div className="container-wide">
         <motion.div initial="hidden" whileInView="visible" viewport={viewportOptions} variants={fadeUp} className="text-center mb-14">
           <span className="text-[#C8A96E] text-sm tracking-widest uppercase mb-4 block">Kostenlose Erstberatung</span>
-          <h2 className="text-4xl sm:text-5xl text-white" style={{ fontFamily: 'var(--font-playfair), serif' }}>Jetzt anfragen — wir melden uns.</h2>
+          <h2 className="text-4xl sm:text-5xl text-white" style={{ fontFamily: 'var(--font-playfair), serif' }}>Jetzt anfragen, wir melden uns.</h2>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-16 items-start max-w-6xl mx-auto">
@@ -61,7 +61,7 @@ export default function AnfrageFormular() {
                   <Phone size={18} className="text-[#C8A96E]" />
                   <span className="text-[#C8A96E] text-2xl font-semibold group-hover:text-[#B8955A] transition-colors" style={{ fontFamily: 'var(--font-playfair), serif' }}>030 / 70 50 95 11</span>
                 </a>
-                <p className="text-white/50 text-xs mt-2 ml-7">Mo–Fr 9–18 Uhr</p>
+                <p className="text-white/50 text-xs mt-2 ml-7">Mo. bis Fr., 9 bis 18 Uhr</p>
               </div>
             </motion.div>
           </div>
@@ -103,8 +103,8 @@ export default function AnfrageFormular() {
                         <span className="text-[#888] text-xl">m²</span>
                       </div>
                       <div className="flex gap-2 flex-wrap">
-                        {['<30', '30–60', '60–120', '120–250', '>250'].map((size) => (
-                          <button key={size} onClick={() => { const map: Record<string,string> = {'<30':'25','30–60':'45','60–120':'90','120–250':'180','>250':'300'}; setForm((f) => ({ ...f, flaeche: map[size] })) }} className="px-3 py-1.5 text-xs border border-[#DDDAD4] text-[#606060] hover:border-[#C8A96E] hover:text-[#C8A96E] transition-colors">{size} m²</button>
+                        {['<30', '30-60', '60-120', '120-250', '>250'].map((size) => (
+                          <button key={size} onClick={() => { const map: Record<string,string> = {'<30':'25','30-60':'45','60-120':'90','120-250':'180','>250':'300'}; setForm((f) => ({ ...f, flaeche: map[size] })) }} className="px-3 py-1.5 text-xs border border-[#DDDAD4] text-[#606060] hover:border-[#C8A96E] hover:text-[#C8A96E] transition-colors">{size} m²</button>
                         ))}
                       </div>
                     </motion.div>
@@ -163,7 +163,7 @@ export default function AnfrageFormular() {
               <div className="pt-6 border-t border-white/10">
                 <p className="text-white/50 text-xs uppercase tracking-widest mb-2">Lieber sofort sprechen?</p>
                 <a href="tel:+493070509511" className="flex items-center gap-2"><Phone size={16} className="text-[#C8A96E]" /><span className="text-[#C8A96E] text-lg font-semibold">030 / 70 50 95 11</span></a>
-                <p className="text-white/50 text-xs mt-1 ml-6">Mo–Fr 9–18 Uhr</p>
+                <p className="text-white/50 text-xs mt-1 ml-6">Mo. bis Fr., 9 bis 18 Uhr</p>
               </div>
             </div>
           </motion.div>

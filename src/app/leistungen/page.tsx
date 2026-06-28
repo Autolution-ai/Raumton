@@ -7,21 +7,21 @@ import Footer from '@/components/layout/Footer'
 import AnfrageFormular from '@/components/sections/AnfrageFormular'
 
 export const metadata: Metadata = {
-  title: 'Leistungen – Raumakustik für Büro, Gastronomie & Bildung | raumton',
+  title: 'Leistungen, Raumakustik für Büro, Gastronomie & Bildung | raumton',
   description: 'raumton bietet professionelle Raumakustik-Lösungen für Büros, Gastronomie und Bildungseinrichtungen in Berlin.',
 }
 
 const LEISTUNGEN = [
-  { slug: 'buero', titel: 'Büro & Konferenz', headline: 'Mehr Konzentration. Weniger Lärm.', text: 'Großraumbüros, Konferenzräume, Open Spaces – wir optimieren Ihr Büro akustisch, messbar und ohne Betriebsunterbrechung.', bild: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80' },
-  { slug: 'gastro', titel: 'Gastronomie', headline: 'Gäste bleiben länger, wenn es angenehm ist.', text: 'Restaurants, Cafés, Bars – schlechte Akustik kostet Umsatz. Wir lösen das Problem, ohne Ihrem Design zu schaden.', bild: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80' },
-  { slug: 'bildung', titel: 'Kitas & Schulen', headline: 'Bessere Akustik. Besseres Lernen.', text: 'Kinder und Lehrkräfte reagieren besonders empfindlich auf Lärm. raumton schafft angenehme Lernumgebungen – bunt, robust und kindgerecht.', bild: 'https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&q=80' },
+  { slug: 'buero', titel: 'Büro & Konferenz', headline: 'Mehr Konzentration. Weniger Lärm.', text: 'Großraumbüros, Konferenzräume, Open Spaces, wir optimieren Ihr Büro akustisch, messbar und ohne Betriebsunterbrechung.', bild: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80' },
+  { slug: 'gastro', titel: 'Gastronomie', headline: 'Gäste bleiben länger, wenn es angenehm ist.', text: 'Restaurants, Cafés, Bars, schlechte Akustik kostet Umsatz. Wir lösen das Problem, ohne Ihrem Design zu schaden.', bild: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80' },
+  { slug: 'bildung', titel: 'Kitas & Schulen', headline: 'Bessere Akustik. Besseres Lernen.', text: 'Kinder und Lehrkräfte reagieren besonders empfindlich auf Lärm. raumton schafft angenehme Lernumgebungen, bunt, robust und kindgerecht.', bild: 'https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&q=80' },
 ]
 
 const PROZESS = [
   { nr: '01', titel: 'Kostenlose Beratung', text: 'Wir kommen zu Ihnen, hören zu und messen die Nachhallzeit in Ihrem Raum.' },
-  { nr: '02', titel: 'Individuelle Planung', text: 'Maßgeschneiderte Lösung mit 3D-Visualisierung – passend zu Ihrem Raumkonzept.' },
+  { nr: '02', titel: 'Individuelle Planung', text: 'Maßgeschneiderte Lösung mit 3D-Visualisierung, passend zu Ihrem Raumkonzept.' },
   { nr: '03', titel: 'Berliner Fertigung', text: 'Handgefertigt in Berlin-Schöneberg. Lieferzeit ca. 3 Wochen nach Auftragseingang.' },
-  { nr: '04', titel: 'Montage in einem Tag', text: 'Professionelle Montage – ohne Betriebsunterbrechung, ohne Schmutz.' },
+  { nr: '04', titel: 'Montage in einem Tag', text: 'Professionelle Montage, ohne Betriebsunterbrechung, ohne Schmutz.' },
 ]
 
 export default function LeistungenPage() {
@@ -33,7 +33,7 @@ export default function LeistungenPage() {
           <div className="container-wide">
             <span className="text-[#C8A96E] text-sm tracking-widest uppercase mb-4 block">Leistungen</span>
             <h1 className="text-5xl sm:text-6xl lg:text-7xl text-[#1A1A1A] mb-6 max-w-3xl leading-tight" style={{ fontFamily: 'var(--font-playfair), serif' }}>Akustik für jeden{' '}<span className="text-[#C8A96E]">Einsatzbereich.</span></h1>
-            <p className="text-[#606060] text-lg max-w-2xl leading-relaxed">Egal ob Büro, Restaurant oder Bildungseinrichtung – wir entwickeln individuelle Akustiklösungen, die funktionieren und gut aussehen.</p>
+            <p className="text-[#606060] text-lg max-w-2xl leading-relaxed">Egal ob Büro, Restaurant oder Bildungseinrichtung, wir entwickeln individuelle Akustiklösungen, die funktionieren und gut aussehen.</p>
           </div>
         </div>
         <div className="bg-[#F9F7F4] py-16">

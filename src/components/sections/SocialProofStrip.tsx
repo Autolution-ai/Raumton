@@ -12,7 +12,7 @@ export default function SocialProofStrip() {
     <section className="py-14 border-y border-[#E2DDD6] bg-white overflow-hidden">
       <div className="container-wide mb-10">
         <motion.p initial="hidden" whileInView="visible" viewport={viewportOptions} variants={fadeUp} className="text-center text-xs text-[#A8A29E] tracking-widest uppercase">
-          Vertrauen von über 1.500 Kunden – darunter:
+          Vertrauen von über 1.500 Kunden, darunter:
         </motion.p>
       </div>
       <div className="relative flex overflow-hidden">
@@ -27,13 +27,13 @@ export default function SocialProofStrip() {
                 <img
                   src={logo.file}
                   alt={logo.name}
-                  className="h-9 w-auto max-w-[150px] object-contain opacity-70 transition-opacity duration-500 hover:opacity-100"
+                  className="h-9 w-auto max-w-[160px] object-contain opacity-90 transition-opacity duration-500 hover:opacity-100"
                   loading="lazy"
                   draggable={false}
                 />
               ) : (
                 <span
-                  className="text-base font-semibold tracking-wide text-[#C2C2C2] hover:text-[#7A7A7A] transition-colors duration-500 whitespace-nowrap select-none"
+                  className="text-base font-semibold tracking-wide text-[#1B2A4A]/80 hover:text-[#1B2A4A] transition-colors duration-500 whitespace-nowrap select-none"
                   style={{ fontFamily: 'var(--font-inter), sans-serif', letterSpacing: '0.02em' }}
                 >
                   {logo.name}

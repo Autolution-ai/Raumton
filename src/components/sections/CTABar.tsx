@@ -14,7 +14,7 @@ export default function CTABar() {
           <motion.div className="flex flex-col items-center md:items-start gap-4" initial="hidden" whileInView="visible" viewport={viewportOptions} variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.15, delayChildren: 0.1 } } }}>
             <motion.span variants={fadeUp} className="uppercase tracking-widest text-white/70 text-xs font-medium">Kostenlose Erstberatung</motion.span>
             <motion.h2 variants={fadeUp} className="font-['Playfair_Display'] text-3xl sm:text-4xl text-white font-bold leading-tight">Wie klingt Ihr Raum?</motion.h2>
-            <motion.p variants={fadeUp} className="text-white/80 text-sm sm:text-base max-w-md">Wir melden uns innerhalb von 1 Werktag. Kein Verkaufsanruf — echte Beratung.</motion.p>
+            <motion.p variants={fadeUp} className="text-white/80 text-sm sm:text-base max-w-md">Wir melden uns innerhalb von 1 Werktag. Kein Verkaufsanruf, echte Beratung.</motion.p>
             <motion.div variants={fadeUp} className="flex flex-wrap justify-center md:justify-start gap-6 mt-1">
               {trustBadges.map((badge) => <span key={badge} className="text-white/80 text-sm">{badge}</span>)}
             </motion.div>
