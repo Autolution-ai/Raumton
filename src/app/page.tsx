@@ -27,9 +27,9 @@ export default function Home() {
         <CTABar />
         <UeberUns />
         <Testimonials />
-        <AnfrageFormular />
         <FAQPreview />
         <ShowroomCTA />
+        <AnfrageFormular />
       </main>
       <Footer />
     </>
