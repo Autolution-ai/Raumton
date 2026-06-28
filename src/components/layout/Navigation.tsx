@@ -48,6 +48,22 @@ export default function Navigation() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  // Smooth-Scroll für Anker-Links per JS (CSS scroll-behavior entfernt wegen GSAP)
+  useEffect(() => {
+    const onClick = (e: MouseEvent) => {
+      const a = (e.target as HTMLElement)?.closest('a[href^="#"]') as HTMLAnchorElement | null
+      if (!a) return
+      const id = a.getAttribute('href')
+      if (!id || id === '#') return
+      const target = document.querySelector(id)
+      if (!target) return
+      e.preventDefault()
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+    document.addEventListener('click', onClick)
+    return () => document.removeEventListener('click', onClick)
+  }, [])
+
   useEffect(() => {
     if (menuOpen) {
       document.body.style.overflow = 'hidden'
