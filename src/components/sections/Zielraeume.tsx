@@ -10,12 +10,12 @@ import ImagePlaceholder from '@/components/ui/ImagePlaceholder'
 // `image: null` -> Platzhalter. Sobald echte Fotos im Repo liegen, hier den
 // Pfad eintragen (z. B. '/raeume/grossraumbuero.jpg'), sonst nichts ändern.
 const rooms: { name: string; sub: string; image: string | null }[] = [
-  { name: 'Großraumbüro', sub: 'Konzentration im Open Space, trotz vieler Menschen auf einer Fläche.', image: null },
-  { name: 'Kleines Büro', sub: 'Ruhe für Einzel- und Teambüros, in denen jedes Wort zählt.', image: null },
-  { name: 'Konferenzraum', sub: 'Sprachverständlichkeit für Meetings, Calls und Entscheidungen.', image: null },
-  { name: 'Präsentationsraum', sub: 'Klarer Klang für Vorträge, Schulungen und Veranstaltungen.', image: null },
-  { name: 'Spiel- & Lernraum', sub: 'Kita & Schule: weniger Lärmstress für Kinder und Erzieher.', image: null },
-  { name: 'Begegnungs- & Gasträume', sub: 'Restaurant, Café & Lobby: Gäste, die länger und lieber bleiben.', image: null },
+  { name: 'Großraumbüro', sub: 'Konzentration im Open Space, trotz vieler Menschen auf einer Fläche.', image: '/raeume/grossraumbuero.webp' },
+  { name: 'Kleines Büro', sub: 'Ruhe für Einzel- und Teambüros, in denen jedes Wort zählt.', image: '/raeume/kleines-buero.webp' },
+  { name: 'Konferenzraum', sub: 'Sprachverständlichkeit für Meetings, Calls und Entscheidungen.', image: '/raeume/konferenzraum.webp' },
+  { name: 'Präsentationsraum', sub: 'Klarer Klang für Vorträge, Schulungen und Veranstaltungen.', image: '/raeume/praesentationsraum.webp' },
+  { name: 'Spiel- & Lernraum', sub: 'Kita & Schule: weniger Lärmstress für Kinder und Erzieher.', image: '/raeume/spiel-lernraum.webp' },
+  { name: 'Begegnungs- & Gasträume', sub: 'Restaurant, Café & Lobby: Gäste, die länger und lieber bleiben.', image: '/raeume/begegnungsraum.webp' },
 ]
 
 export default function Zielraeume() {
@@ -65,7 +65,7 @@ export default function Zielraeume() {
           className="mt-12 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5 border-t border-white/10 pt-8"
         >
           <p className="text-white/50 text-sm">
-            Detailseiten & Projektfotos zu jedem Raumtyp folgen in Kürze.
+            Detailseiten zu jedem Raumtyp folgen in Kürze.
           </p>
           <a
             href="#anfrage"
