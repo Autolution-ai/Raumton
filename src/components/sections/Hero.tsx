@@ -134,13 +134,13 @@ export default function Hero() {
               </div>
 
               {phase === 0 ? (
-                <h1 className="mb-6 text-5xl font-bold leading-[1.05] text-white sm:text-6xl lg:text-7xl" style={{ fontFamily: 'var(--font-playfair), serif' }}>
+                <h1 className="mb-6 text-4xl font-bold leading-[1.08] text-white sm:text-6xl lg:text-7xl" style={{ fontFamily: 'var(--font-playfair), serif' }}>
                   {currentPhase.headline.split(' ').map((word, i) => (
                     <motion.span key={word + i} initial={{ opacity: 0, y: 60 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 + i * 0.15, ease: [0.25, 0.46, 0.45, 0.94] }} className="mr-4 inline-block">{word}</motion.span>
                   ))}
                 </h1>
               ) : (
-                <h1 className="mb-6 text-5xl font-bold leading-[1.05] text-white sm:text-6xl lg:text-7xl" style={{ fontFamily: 'var(--font-playfair), serif' }}>{currentPhase.headline}</h1>
+                <h1 className="mb-6 text-4xl font-bold leading-[1.08] text-white sm:text-6xl lg:text-7xl" style={{ fontFamily: 'var(--font-playfair), serif' }}>{currentPhase.headline}</h1>
               )}
 
               <p className="mb-8 max-w-xl text-lg leading-relaxed text-white/90 sm:text-xl">{currentPhase.copy}</p>
