@@ -188,16 +188,16 @@ export default function Hero() {
           ))}
         </div>
 
-        {/* Mobile: ganzes Bild oben als 16:9-Band (kein Crop). Desktop: vollflächig. */}
-        <canvas ref={canvasRef} className="absolute top-0 left-0 block w-full h-[56.25vw] bg-[#0A0A0A] sm:inset-0 sm:h-full" />
-        {/* Lesbarkeits-Overlays nur auf Desktop (über dem vollflächigen Bild) */}
-        <div className="hidden sm:block absolute inset-0 bg-gradient-to-r from-black/55 via-black/20 to-transparent" />
-        <div className="hidden sm:block absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-black/10" />
+        {/* Vollflächiges Bild (Desktop + Mobile) */}
+        <canvas ref={canvasRef} className="absolute inset-0 block h-full w-full bg-[#0A0A0A]" />
+        {/* Lesbarkeits-Overlays – mobil etwas kräftiger links, damit der Text über dem Raum lesbar ist */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/35 to-black/10 sm:from-black/55 sm:via-black/20 sm:to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-black/15 sm:from-black/30 sm:to-black/10" />
 
-        {/* Text: mobil unterhalb des Bild-Bands, Desktop mittig über dem Bild */}
-        <div className="absolute inset-x-0 bottom-0 top-[56.25vw] sm:top-0 z-10 flex items-center">
+        {/* Text: links im Raum, vertikal zentriert (Desktop + Mobile) */}
+        <div className="absolute inset-0 z-10 flex items-center">
           <div className="container-wide w-full">
-            <div className="sm:max-w-3xl">
+            <div className="max-w-md sm:max-w-3xl">
               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="mb-4 sm:mb-8 flex items-center gap-3">
                 <span className="h-px w-8 bg-[#C8A96E]" />
                 <span className="text-xs sm:text-sm font-medium uppercase tracking-widest text-[#E8CC99]">Berliner Manufaktur seit 2006</span>
